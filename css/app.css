@@ -3365,16 +3365,96 @@ input::-ms-clear {
 .dash__pad-3 {
   padding: 26px; }
 
+/* KHUNG SIDEBAR */
+.dash__box.dash__box--bg-white.dash__box--shadow {
+    background-color: #FFFFFF;
+    border-radius: 12px; 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); 
+    margin-bottom: 30px; 
+}
+
+/* CHỮ "Xin chào, Hân Nguyễn" */
+.dash__text.u-s-m-b-16 {
+    padding: 15px 25px 20px 25px; 
+    display: block;
+    margin-bottom: 20px !important; 
+    border-bottom: 1px solid #EEEEEE; 
+    font-size: 16px;
+    color: #555555; 
+    font-weight: 500;
+}
+/* THÊM MÀU VÀ LÀM NỔI BẬT TÊN  */
+.user-name {
+    font-weight: 700; 
+    color: #006B6F; 
+    font-size: 1.15em; 
+}
+/* MENU ĐIỀU HƯỚNG (.dash__f-list) */
 .dash__f-list {
-  margin: 0;
-  padding: 0;
-  list-style: none; }
-  .dash__f-list > li {
-    padding: 4px 0; }
-    .dash__f-list > li > a {
-      font-size: 13px;
-      display: block;
-      color: #000000; }
+    margin: 10px 0 20px 0;
+    padding: 0 15px;
+    list-style: none;
+}
+
+.dash__f-list > li {
+    padding: 0;
+    margin-bottom: 3px;
+}
+
+.dash__f-list > li > a {
+    font-size: 15px;
+    display: block;
+    color: #444444;
+    padding: 12px 15px;
+    border-radius: 8px;
+    transition: all 0.25s ease;
+    text-decoration: none;
+    font-weight: 500;
+}
+/* TRẠNG THÁI HOVER */
+.dash__f-list > li > a:hover {
+    background-color: #E6F0F0;
+    color: #006B6F;
+    padding-left: 20px;
+}
+/* TRẠNG THÁI ACTIVE (MỤC ĐANG CHỌN) */
+.dash__f-list > li > .dash-active {
+    background-color: #006B6F; 
+    color: #FFFFFF; 
+    font-weight: 600;
+    box-shadow: 0 3px 8px rgba(0, 107, 111, 0.3);
+}
+
+/* ======================================= */
+/* 10. NÚT LƯU (SAVE BUTTON) */
+/* Đồng bộ màu nút chính với chủ đề Xanh Teal */
+/* ======================================= */
+
+/* Định nghĩa biến màu (Nếu chưa có, hãy đảm bảo bạn sử dụng nó) */
+:root {
+    --main-color: #006B6F; /* Xanh Teal/Đậm Chủ Đạo */
+    --main-color-darker: #005A5D; /* Màu tối hơn khi hover */
+}
+
+.btn--e-brand-b-2 {
+    /* Mặc định: Nền Xanh Đậm, Chữ Trắng */
+    background-color: var(--main-color); 
+    color: #FFFFFF;
+    border: 2px solid var(--main-color); /* Viền cùng màu nền */
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 12px 25px;
+    border-radius: 8px; /* Bo tròn nút */
+    transition: all 0.3s ease;
+}
+
+/* Hiệu ứng HOVER: Nút tối hơn một chút khi rê chuột qua */
+.btn--e-brand-b-2:hover {
+    background-color: var(--main-color-darker); /* Màu xanh tối hơn */
+    border-color: var(--main-color-darker);
+    color: #FFFFFF;
+    box-shadow: 0 4px 10px rgba(0, 107, 111, 0.4);
+}
 
 .dash-l-r {
   display: -ms-flexbox;
@@ -3527,6 +3607,282 @@ input::-ms-clear {
   border-radius: 6px;
   width: 12rem; }
 
+body {
+    background-color: #F8F8F8; 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+}
+
+/* Heading chính: Quản lý tài khoản */
+.dash__box .dash__h1.u-s-m-b-14 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #006B6F; 
+    margin-bottom: 20px !important;
+}
+
+.dash__text.u-s-m-b-30 {
+    font-size: 15px;
+    color: #666666;
+    display: block;
+    margin-bottom: 30px !important;
+}
+
+/* Container LỚN bao ngoài */
+.dash__box.dash__box--shadow.dash__box--radius.dash__box--bg-white {
+    /* Container bao gồm tiêu đề, mô tả và 3 Info Cards */
+    background-color: #FFFFFF; 
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+/* 4. CÁC HỘP THÔNG TIN (INFO CARDS) */
+/* Info Card Container */
+.dash__box.dash__box--bg-grey.dash__box--shadow-2 {
+    background-color: #F8F8F8; 
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    padding: 0;
+    overflow: hidden;
+    height: 100%;
+    transition: all 0.3s ease; 
+}
+.dash__box.dash__box--bg-grey.dash__box--shadow-2:hover {
+    transform: translateY(-5px); 
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); 
+    background-color: #FFFFFF; 
+}
+.dash__box.dash__box--bg-grey.dash__box--shadow-2 .dash__h2.u-s-m-b-8 {
+    background-color: #006B6F; 
+    color: #FFFFFF;
+    font-weight: 700;
+    font-size: 1.2em;
+    padding: 15px 25px;
+    margin: 0 !important;
+    text-transform: uppercase;
+    line-height: 1.3;
+}
+.dash__box.dash__box--bg-grey.dash__box--shadow-2 .dash__pad-3 {
+    padding: 25px; 
+}
+
+.dash__link--secondary > a {
+    color: #00796B; 
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.dash__link--secondary > a:hover {
+    color: #006B6F;
+    text-decoration: underline;
+}
+
+/* TRẠNG THÁI HOVER MENU */
+.dash__f-list > li > a:hover {
+    background-color: #E6F0F0;
+    color: #006B6F; 
+    padding-left: 20px;
+}
+
+/* KHUNG SIDEBAR BO TRÒN */
+.dash__box.dash__box--bg-white.dash__box--shadow {
+    background-color: #FFFFFF;
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* MỤC ĐANG CHỌN */
+.dash__f-list > li > .dash-active {
+    background-color: #006B6F;
+    color: #FFFFFF;
+    font-weight: 600;
+    border-radius: 8px; 
+    box-shadow: 0 3px 8px rgba(0, 107, 111, 0.3);
+}
+/* 6. BẢNG ĐƠN HÀNG GẦN ĐÂY */
+.dash__box.dash__box--shadow.dash__box--bg-white.dash__box--radius {
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+/* 7. HỘP THỐNG KÊ ĐƠN HÀNG (ORDER STATS) */
+.dash__box.dash__box--bg-white.dash__box--shadow.dash__box--w {
+    border-radius: 12px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+    padding: 0;
+}
+
+.dash__pad-1 {
+    padding: 0; 
+}
+
+.dash__w-list {
+    margin: 0;
+    padding: 10px 10px;
+}
+
+.dash__w-list > li {
+    padding: 0;
+    margin-bottom: 10px;
+    border-bottom: none;
+}
+.dash__w-list > li:last-child {
+    margin-bottom: 0;
+}
+
+/* KHUNG TỪNG THỐNG KÊ (4, 0, 0) */
+.dash__w-wrap {
+    padding: 18px 0;
+    background-color: #F8F8F8; 
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    cursor: default; 
+}
+/* HIỆU ỨNG HOVER */
+.dash__w-wrap:hover {
+    background-color: var(--hover-bg); 
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Số đếm lớn (4, 0, 0) */
+.dash__w-text {
+    font-weight: 800;
+    font-size: 38px;
+    transition: color 0.3s;
+}
+
+/* ICON CIRCLE */
+.dash__w-icon {
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    font-size: 18px;
+}
+
+.dash__w-icon-style-1 {
+    background-color: rgba(0, 107, 111, 0.15); 
+}
+.dash__w-icon-style-1 > i {
+    color: var(--main-color); 
+}
+.dash__w-list > li:nth-child(1) .dash__w-text {
+    color: var(--main-color);
+}
+
+.dash__w-icon-style-2 {
+    background-color: rgba(211, 47, 47, 0.15);
+}
+.dash__w-icon-style-2 > i {
+    color: var(--danger-color);
+}
+.dash__w-list > li:nth-child(2) .dash__w-text {
+    color: var(--danger-color);
+}
+
+.dash__w-icon-style-3 {
+    background-color: rgba(49, 133, 252, 0.15);
+}
+.dash__w-icon-style-3 > i {
+    color: var(--neutral-color);
+}
+.dash__w-list > li:nth-child(3) .dash__w-text {
+    color: var(--neutral-color);
+}
+/* 8. BẢNG ĐƠN HÀNG GẦN ĐÂY */
+.dash__box.dash__box--shadow.dash__box--bg-white.dash__box--radius {
+    border-radius: 16px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+    overflow: hidden; 
+}
+/* Tiêu đề chính của bảng (ĐƠN HÀNG GẦN ĐÂY) */
+.dash__box .dash__h2.u-s-p-xy-20 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #006B6F;
+    padding: 20px;
+    border-bottom: 1px solid #EEEEEE;
+}
+.dash__table thead th {
+    background-color: var(--main-color); 
+    color: #FFFFFF; 
+    font-weight: 700;
+    text-align: left;
+    padding: 18px 20px; 
+    font-size: 15px;
+}
+
+.dash__table tbody tr {
+    border-bottom: 1px solid rgba(0, 107, 111, 0.3); 
+    transition: background-color 0.2s;
+}
+
+.dash__table tbody tr:last-child {
+    border-bottom: none; 
+}
+
+/* Hover dòng */
+.dash__table tbody tr:hover {
+    background-color: var(--hover-bg); 
+}
+
+/* Dữ liệu trong ô */
+.dash__table th, .dash__table td {
+    padding: 15px 20px;
+    text-align: left;
+    font-weight: 500;
+    color: #333333;
+}
+
+/* Căn giữa cột Hình ảnh/Sản phẩm */
+.dash__table td:nth-child(3) {
+    text-align: center;
+}
+
+/* Căn phải cột Tổng tiền */
+.dash__table td:nth-child(4) {
+    text-align: right;
+}
+
+/* TỔNG TIỀN VÀ LINK QUẢN LÝ */
+.dash__table-total span {
+    font-weight: 700;
+    color: var(--main-color); /* Màu xanh đậm cho Tổng tiền */
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* Link QUẢN LÝ */
+.dash__link--brand a {
+    color: #999999; 
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.dash__link--brand a:hover {
+    text-decoration: underline;
+    color: var(--main-color); /* Link QUẢN LÝ chuyển sang xanh đậm khi hover */
+}
+
+.dash__table-total span {
+    font-weight: 700; 
+    color: #006B6F; 
+    display: block;
+    margin-bottom: 4px;
+}
+
+/* 2. Link QUẢN LÝ: MÀU XANH VÀ HIỆU ỨNG HOVER */
+.dash__link--brand a {
+    color: var(--accent-color); /* MÀU XANH SÁNG (hoặc dùng --main-color) */
+    font-size: 0.9em;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+.dash__link--brand a:hover {
+    text-decoration: underline;
+    color: #006B6F; /* Chuyển sang Xanh Đậm hơn khi hover */
+}
 .manage-o__text {
   font-size: 13px;
   font-weight: 600; }
