@@ -172,37 +172,38 @@
                 <div class="container">
 
                     <style>
-                        /* ===== HEADER FLEX ===== */
+                        /* ===== CONTAINER CHA ===== */
                         .secondary-nav {
                             display: flex;
                             align-items: center;
                             width: 100%;
                         }
                     
-                        /* ===== NAV 2 (MENU CHÍNH) Ở GIỮA ===== */
+                        /* ===== NAV2 (MENU CHÍNH – GIÃN ĐỀU) ===== */
                         #navigation2 {
-                            margin: 0 auto;
+                            margin: 0 auto; /* giữ nav2 ở giữa */
                         }
-                        /* ===== GIÃN ĐỀU NAV2 ===== */
-                        .secondary-nav .ah-list {
+                    
+                        #navigation2 .ah-list {
                             display: flex;
-                            justify-content: space-between; /* giãn đều */
+                            justify-content: space-between; /* giãn đều item */
                             align-items: center;
-                            min-width: 520px; /* điều chỉnh theo độ rộng mong muốn */
+                            min-width: 600px; /* chỉnh độ rộng nav2 theo Figma */
                         }
-
-                        .secondary-nav .ah-list > li > a {
+                    
+                        #navigation2 .ah-list > li > a {
                             font-size: 17px;
                             font-weight: 600;
                             letter-spacing: 0.5px;
                             padding: 18px 6px;
                             white-space: nowrap;
                         }
-                        /* ===== NAV 3 (ICON) Ở PHẢI ===== */
+                    
+                        /* ===== NAV3 (ICON – CĂN PHẢI) ===== */
                         .header-icons,
                         .nav-3,
                         .right-icons {
-                            margin-left: auto;
+                            margin-left: auto; /* đẩy hẳn sang phải */
                             display: flex;
                             align-items: center;
                         }
@@ -212,7 +213,7 @@
                         .right-icons a {
                             margin-left: 18px;
                         }
-                    </style>
+                    </style>                    
                     
                     <!--====== Secondary Nav ======-->
                     <div class="secondary-nav">
