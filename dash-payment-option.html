@@ -1,3 +1,4 @@
+@ -0,0 +1,1699 @@
 <!DOCTYPE html>
 <html class="no-js" lang="en">
 <head>
@@ -1392,7 +1393,7 @@
                                         <a href="index.html">Trang chủ</a></li>
                                     <li class="is-marked">
 
-                                        <a href="dash-my-profile.html">Tài khoản của tôi</a></li>
+                                        <a href="dashboard.html">Tài khoản của tôi</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1412,19 +1413,17 @@
                             <div class="row">
                                 <div class="col-lg-3 col-md-12">
 
-                                    <!--====== Các chức năng trong bảng điều khiển ======-->
+                                    <!--====== Dashboard Features ======-->
                                     <div class="dash__box dash__box--bg-white dash__box--shadow u-s-m-b-30">
                                         <div class="dash__pad-1">
 
-                                            <span class="dash__text u-s-m-b-16">Xin chào, Hân Nguyễn</span>
+                                              <span class="dash__text u-s-m-b-16">Xin chào, Hân Nguyễn</span>
                                             <ul class="dash__f-list">
-                                               
                                                 <li>
 
-                                                    <a href="dashboard.html">Quản lý tài khoản</a></li>
+                                                    <a class="dash-active" href="dashboard.html">Quản lý tài khoản</a></li>
                                                     <li>
-                                 <a class="dash-active" href="dash-my-profile.html">Hồ sơ của tôi</a></li>
-                                                
+                                 <a  href="dash-my-profile.html">Hồ sơ của tôi</a></li>
                                                 
                                                 <li>
 
@@ -1432,96 +1431,19 @@
                                                 <li>
 
                                                     <a href="dash-my-order.html"> Vé của tôi</a></li>
+                                                
                                             </ul>
                                         </div>
                                     </div>
-                                    <div class="dash__box dash__box--bg-white dash__box--shadow dash__box--w">
-                                        <div class="dash__pad-1">
-                                            <ul class="dash__w-list">
-                                                <li>
-                                                    <div class="dash__w-wrap">
-
-                                                        <span class="dash__w-icon dash__w-icon-style-1"><i class="fas fa-cart-arrow-down"></i></span>
-
-                                                        <span class="dash__w-text">4</span>
-
-                                                        <span class="dash__w-name">Đơn đã đặt</span></div>
-                                                </li>
-                                                <li>
-                                                    <div class="dash__w-wrap">
-
-                                                        <span class="dash__w-icon dash__w-icon-style-2"><i class="fas fa-times"></i></span>
-
-                                                        <span class="dash__w-text">0</span>
-
-                                                        <span class="dash__w-name">Đơn đã hủy</span></div>
-                                                </li>
-                                                <li>
-                                                    <div class="dash__w-wrap">
-
-                                                        <span class="dash__w-icon dash__w-icon-style-3"><i class="far fa-heart"></i></span>
-
-                                                        <span class="dash__w-text">0</span>
-
-                                                        <span class="dash__w-name">Yêu thích</span></div>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <!--====== End - Các chức năng trong bảng điều khiển ======-->
+                                    
+                                    <!--====== End - Dashboard Features ======-->
                                 </div>
                                 <div class="col-lg-9 col-md-12">
-                                    <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white u-s-m-b-30">
+                                    <div class="dash__box dash__box--shadow dash__box--radius dash__box--bg-white">
                                         <div class="dash__pad-2">
-                                            <h1 class="dash__h1 u-s-m-b-14">Hồ Sơ Của Tôi</h1>
+                                            <h1 class="dash__h1 u-s-m-b-14">Chọn phương thức thanh toán</h1>
 
-                                            <span class="dash__text u-s-m-b-30">Xem tất cả thông tin của bạn, bạn có thể tùy chỉnh hồ sơ tại đây.</span>
-                                            <div class="row">
-                                                <div class="col-lg-4 u-s-m-b-30">
-                                                    <h2 class="dash__h2 u-s-m-b-8">Họ và tên</h2>
-
-                                                    <span class="dash__text">Hân Nguyễn</span>
-                                                </div>
-                                                <div class="col-lg-4 u-s-m-b-30">
-                                                    <h2 class="dash__h2 u-s-m-b-8">E-mail</h2>
-
-                                                    <span class="dash__text">hannguyen@domain.com</span>
-                                                    <div class="dash__link dash__link--secondary">
-
-                                                        <a href="#">Thay đổi</a></div>
-                                                </div>
-                                                <div class="col-lg-4 u-s-m-b-30">
-                                                    <h2 class="dash__h2 u-s-m-b-8">Số điện thoại</h2>
-
-                                                    <span class="dash__text">Vui lòng nhập số điện thoại</span>
-                                                    <div class="dash__link dash__link--secondary">
-
-                                                        <a href="#">Thêm mới</a></div>
-                                                </div>
-                                                <div class="col-lg-4 u-s-m-b-30">
-                                                    <h2 class="dash__h2 u-s-m-b-8">Ngày sinh</h2>
-
-                                                    <span class="dash__text">1991-02-02</span>
-                                                </div>
-                                                <div class="col-lg-4 u-s-m-b-30">
-                                                    <h2 class="dash__h2 u-s-m-b-8">Giới tính</h2>
-
-                                                    <span class="dash__text">Nam</span>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-lg-12">
-                                                    <div class="dash__link dash__link--secondary u-s-m-b-30">
-
-                                                        <a data-modal="modal" data-modal-id="#dash-newsletter">Đăng ký nhận bản tin qua Email</a></div>
-                                                    <div class="u-s-m-b-16">
-
-                                                        <a class="dash__custom-link btn--e-transparent-brand-b-2" href="dash-edit-profile.html">Chỉnh sửa hồ sơ</a></div>
-                                                    <div>
-
-                                                        <a class="dash__custom-link btn--e-brand-b-2" href="#">Đổi mật khẩu</a></div>
-                                                </div>
-                                            </div>
+                                            <span class="dash__text">Hiện chưa có phương thức thanh toán nào</span>
                                         </div>
                                     </div>
                                 </div>
@@ -1693,36 +1615,6 @@
                 </div>
             </div>
         </footer>
-
-        <!--====== Modal Section ======-->
-
-
-        <!--====== Unsubscribe or Subscribe Newsletter ======-->
-        <div class="modal fade" id="dash-newsletter">
-            <div class="modal-dialog modal-dialog-centered">
-                <div class="modal-content modal--shadow">
-                    <div class="modal-body">
-                        <form class="d-modal__form">
-                            <div class="u-s-m-b-15">
-                                <h1 class="gl-modal-h1">ĐĂNG KÝ NHẬN BẢN TIN</h1>
-
-                                <span class="gl-modal-text">Tôi đã đọc và hiểu</span>
-
-                                <a class="d_modal__link" href="dashboard.html">Chính sách bảo mật của UEH EVENT</a>
-                            </div>
-                            <div class="gl-modal-btn-group">
-
-                                <button class="btn btn--e-brand-b-2" type="submit">ĐĂNG KÝ</button>
-
-                                <button class="btn btn--e-grey-b-2" type="button" data-dismiss="modal">HỦY</button></div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!--====== Unsubscribe or Subscribe Newsletter ======-->
-        <!--====== End - Modal Section ======-->
     </div>
     <!--====== End - Main App ======-->
 
