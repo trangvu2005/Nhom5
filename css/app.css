@@ -657,8 +657,8 @@ body {
 .gl-link {
   font-size: 13px;
   font-weight: 600;
-  color: #ff4500;
-  transition: color 0.5s linear;
+  color: #0e7e9b;
+  transition: color 0.3s linear;
 }
 
 .gl-link:hover {
@@ -4507,7 +4507,7 @@ input::-ms-clear {
 }
 
 .o-card__info-wrap .input-counter__minus,
-.o-card__info-wrap.input-counter__plus {
+.o-card__info-wrap .input-counter__plus {
   top: 0;
   display: inline-block;
   font-size: 6px;
@@ -9284,4 +9284,25 @@ body {
 #js-product-detail-modal-thumbnail:hover .pt-prev,
 #js-product-detail-modal-thumbnail:hover .pt-next {
   opacity: .8;
+}
+
+
+.flying-santa {
+  position: fixed;
+  top: 60px;           /* độ cao ông già Noel */
+  left: -150px;        /* bắt đầu ngoài màn hình */
+  width: 120px;        /* kích thước */
+  animation: santaFly 20s linear infinite;
+  z-index: 9999;
+  pointer-events: none; /* không che click */
+}
+
+/* Animation bay ngang */
+@keyframes santaFly {
+  from {
+    left: -150px;
+  }
+  to {
+    left: 110%;
+  }
 }
