@@ -22,8 +22,11 @@
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
 </head>
-<img src="https://vector6.com/wp-content/uploads/2022/02/png0000563-ong-gia-noel-xe-keo-tuan-loc-giang-sinh-file-png.png" class="flying-santa" alt="Santa">
-<link rel="stylesheet" href="https://vector6.com/wp-content/uploads/2022/02/png0000563-ong-gia-noel-xe-keo-tuan-loc-giang-sinh-file-png.png">
+<img src="https://vector6.com/wp-content/uploads/2022/02/png0000563-ong-gia-noel-xe-keo-tuan-loc-giang-sinh-file-png.png"
+    class="flying-santa" alt="Santa">
+<link rel="stylesheet"
+    href="https://vector6.com/wp-content/uploads/2022/02/png0000563-ong-gia-noel-xe-keo-tuan-loc-giang-sinh-file-png.png">
+
 <body class="config">
     <div class="preloader is-active">
         <div class="preloader__wrap">
@@ -1874,60 +1877,56 @@
                                     <form class="checkout-f__delivery">
 
                                         <div class="u-s-m-b-15">
-                                            <label class="gl-label">
-                                                HỌ TÊN <span class="required">*</span>
-                                            </label>
-                                            <input class="input-text input-text--primary-style" type="text"
-                                                placeholder="Nhập họ và tên" required>
+                                            <label class="gl-label">HỌ TÊN <span class="required">*</span></label>
+                                            <input id="full-name" class="input-text input-text--primary-style"
+                                                type="text" placeholder="Nhập họ và tên">
+                                            <span id="name-error" class="error-text"style="color: red; font-size: 11px; display: block; margin-top: 4px;"></span>
                                         </div>
 
                                         <div class="u-s-m-b-15">
-                                            <label class="gl-label">
-                                                E-MAIL <span class="required">*</span>
-                                            </label>
-                                            <input class="input-text input-text--primary-style" type="email"
-                                                placeholder="example@email.com" required>
+                                            <label class="gl-label">E-MAIL <span class="required">*</span></label>
+                                            <input id="email" class="input-text input-text--primary-style" type="email"
+                                                placeholder="example@email.com">
+                                            <span id="email-error" class="error-text" style="color: red; font-size: 11px; display: block; margin-top: 4px;"></span>
                                         </div>
 
                                         <div class="u-s-m-b-15">
-                                            <label class="gl-label">
-                                                SỐ ĐIỆN THOẠI <span class="required">*</span>
-                                            </label>
-                                            <input class="input-text input-text--primary-style" type="tel"
-                                                placeholder="0xxx xxx xxx" required>
+                                            <label class="gl-label">SỐ ĐIỆN THOẠI <span
+                                                    class="required">*</span></label>
+                                            <input id="phone" class="input-text input-text--primary-style" type="tel"
+                                                placeholder="0xxx xxx xxx">
+                                            <span id="phone-error" class="error-text"style="color: red; font-size: 11px; display: block; margin-top: 4px;"></span>
                                         </div>
+
+
 
                                         <div class="u-s-m-b-15">
                                             <label class="gl-label">
-                                                MÃ SỐ SINH VIÊN 
+                                                MÃ SỐ SINH VIÊN
                                             </label>
                                             <input class="input-text input-text--primary-style" type="text"
                                                 placeholder="DÀNH CHO SINH VIÊN UEH">
                                         </div>
 
                                         <div class="u-s-m-b-10">
-                                            <a class="gl-link" href="#create-account" data-toggle="collapse">
+                                            <a class="gl-link" href="signup.html">
                                                 Muốn tạo tài khoản mới?
                                             </a>
                                         </div>
 
-                                        <div class="collapse u-s-m-b-15" id="create-account">
-                                            <label class="gl-label">Mật khẩu tài khoản *</label>
-                                            <input class="input-text input-text--primary-style" type="password">
-                                        </div>
+                                        
 
                                         <div class="u-s-m-b-10">
                                             <label class="gl-label">GHI CHÚ</label>
                                             <textarea class="text-area text-area--primary-style"></textarea>
                                         </div>
 
-                                        <button class="btn btn--e-transparent-brand-b-2" type="submit">
+                                        <button id="btn-save" class="btn btn--e-transparent-brand-b-2" type="button">
                                             LƯU
                                         </button>
 
                                     </form>
                                 </div>
-
 
                                 <!-- ================= Bên phải bao gồm tóm tắt đơn hàng, tổng tiền và phương thức thanh toán================= -->
                                 <div class="col-lg-6">
@@ -1943,15 +1942,14 @@
 
                                                         <div class="o-card__img-wrap">
                                                             <img class="u-img-fluid"
-                                                                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-fpRTF_gPGXDsjnINQNipGkVKnvfOB6wa8Q&s"
-                                                                alt="">
+                                                                src="images\anh su kien\su kien 1.jpg" alt="">
                                                         </div>
 
                                                         <div class="o-card__info-wrap">
 
                                                             <span class="o-card__name">
-                                                                <a href="product-detail.html">WORKSHOP: TƯ DUY THIẾT
-                                                                    KẾ</a>
+                                                                <a href="product-detail.html">AI TRONG DOANH NGHIỆP – TỪ
+                                                                    CHATBOTS ĐẾN TỰ ĐỘNG HÓA</a>
                                                             </span>
                                                             <div class="u-s-m-b-15">
                                                                 <div class="input-counter">
@@ -2265,48 +2263,95 @@
         </footer>
 
 
-    <!--====== End - Main App ======-->
+        <!--====== End - Main App ======-->
 
 
-    <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
-    <script>
-        window.ga = function () {
-            ga.q.push(arguments)
-        };
-        ga.q = [];
-        ga.l = +new Date;
-        ga('create', 'UA-XXXXX-Y', 'auto');
-        ga('send', 'pageview')
-    </script>
-    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+        <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
+        <script>
+            window.ga = function () {
+                ga.q.push(arguments)
+            };
+            ga.q = [];
+            ga.l = +new Date;
+            ga('create', 'UA-XXXXX-Y', 'auto');
+            ga('send', 'pageview')
+        </script>
+        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
-    <!--====== Vendor Js ======-->
-    <script src="js/vendor.js"></script>
+        <!--====== Vendor Js ======-->
+        <script src="js/vendor.js"></script>
 
-    <!--====== jQuery Shopnav plugin ======-->
-    <script src="js/jquery.shopnav.js"></script>
+        <!--====== jQuery Shopnav plugin ======-->
+        <script src="js/jquery.shopnav.js"></script>
 
-    <!--====== App ======-->
-    <script src="js/app.js"></script>
+        <!--====== App ======-->
+        <script src="js/app.js"></script>
 
-    <!--====== Noscript ======-->
-    <noscript>
-        <div class="app-setting">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="app-setting__wrap">
-                            <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
+        <!--====== Noscript ======-->
+        <noscript>
+            <div class="app-setting">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="app-setting__wrap">
+                                <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
 
-                            <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
-                                JavaScript-capable browser.</span>
+                                <span class="app-setting__text">Please enable JavaScript in your browser or upgrade to a
+                                    JavaScript-capable browser.</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </noscript> 
+        </noscript>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Lấy nút Lưu theo ID
+    const btnSave = document.getElementById('btn-save');
 
+    btnSave.addEventListener('click', function() {
+        let isValid = true;
+
+        // 1. Lấy giá trị các ô nhập
+        const name = document.getElementById('full-name');
+        const email = document.getElementById('email');
+        const phone = document.getElementById('phone');
+
+        // 2. Xóa các thông báo lỗi cũ
+        document.getElementById('name-error').innerText = "";
+        document.getElementById('email-error').innerText = "";
+        document.getElementById('phone-error').innerText = "";
+
+        // 3. Kiểm tra Họ Tên
+        if (name.value.trim() === "") {
+            document.getElementById('name-error').innerText = "Vui lòng nhập họ và tên.";
+            isValid = false;
+        }
+
+        // 4. Kiểm tra Email (định dạng abc@xyz.com)
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(email.value.trim())) {
+            document.getElementById('email-error').innerText = "Email không hợp lệ.";
+            isValid = false;
+        }
+
+        // 5. Kiểm tra Số điện thoại (chỉ số, 10-11 ký tự)
+        const phoneRegex = /^[0-9]{10,11}$/;
+        if (!phoneRegex.test(phone.value.trim())) {
+            document.getElementById('phone-error').innerText = "Số điện thoại phải có 10-11 chữ số.";
+            isValid = false;
+        }
+
+        // 6. Xử lý kết quả
+        if (isValid) {
+            alert("Đã lưu thông tin thành công!");
+            // Nếu muốn gửi dữ liệu thực sự về server, dùng: name.closest('form').submit();
+        } else {
+            console.log("Dữ liệu chưa hợp lệ, vui lòng kiểm tra lại các trường đỏ.");
+        }
+    });
+});
+</script>
 </body>
+
 </html>
- 
