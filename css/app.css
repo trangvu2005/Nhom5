@@ -1010,7 +1010,7 @@ body {
 }
 
 .btn--e-transparent-platinum-b-2:hover {
-  border-color: #083e48;
+  border-color: #ff4500;
 }
 
 .btn--e-white-brand-shadow {
@@ -1020,37 +1020,24 @@ body {
   color: #333333;
   transition: background-color .3s linear, border-color .3s linear, color .3s linear;
 }
-/**co sua**/
+
 .btn--e-white-brand-shadow:hover {
-  border-color: #076358;
-  background-color: #076358;
+  border-color: #ff4500;
+  background-color: #ff4500;
   color: #ffffff;
 }
 
 .btn--e-brand-shadow {
-  border: 1px solid #063b37;
+  border: 1px solid #ff4500;
   box-shadow: 1px 2px 8px 0 rgba(36, 37, 38, 0.08);
-  background-color: #076358;
+  background-color: #ff4500;
   color: #ffffff;
   transition: background-color .3s linear, border-color .3s linear;
 }
 
 .btn--e-brand-shadow:hover {
-  border-color: #060606;
-  background-color: #095442;
-}
-
-/* Trang trí viền và bóng cho Modal */
-.custom-modal-border {
-    border: none !important;
-    overflow: hidden;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15) !important;
-}
-
-/* Hiệu ứng hover cho nút thanh toán */
-.btn--e-brand-shadow:hover {
-    transform: translateY(-2px);
-    opacity: 0.9;
+  border-color: #fa4400;
+  background-color: #fa4400;
 }
 
 /* Countdown Component */
@@ -2622,129 +2609,143 @@ input::-ms-clear {
 /*--------------------------------------------------------------
 6.0 Header
 --------------------------------------------------------------*/
-/* NAV 1 – nền xanh teal */
+.header-wrapper {
+  position: relative;
+}
+
 .header--style-1 {
-  background-color: #006B6F;
+  background-color: #ffffff;
 }
 
+.header--style-2 {
+  background-color: #242424;
+}
+
+.header--style-3 {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.header--box-shadow {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
+}
+
+/* 6.1 Primary Nav */
 .primary-nav-wrapper--border {
-  border-bottom: none;
+  border-bottom: 1px solid #f8f8f8;
 }
 
-/* CHỮ + ICON NAV 1 → MÀU ĐEN */
-.primary-nav a,
-.primary-nav i {
-  color: #000000;
+.primary-nav {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  height: 80px;
+  width: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
-/* SEARCH BAR */
+.main-logo {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.main-logo img {
+  display: block;
+}
+
 .main-form {
+  position: relative;
   width: 35%;
 }
 
 #main-search {
-  height: 40px;
   padding: 0 36px 0 18px;
-  border-radius: 20px;
-  border: none;
-  outline: none;
+  width: 100%;
 }
 
 .main-search-button {
   position: absolute;
   top: 50%;
   right: 15px;
+  -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
   font-size: 18px;
-  color: #000;
-  background: transparent;
-  border: none;
-  cursor: pointer;
 }
 
-/* Icon bên phải nav 1 */
-.header-icons {
-  display: flex;
-  gap: 20px;
-  font-size: 18px;
-}
-
-/* ===============================
-   NAV 2 – MENU GIỮA, ICON PHẢI
-   =============================== */
-
+/* 6.2 Secondary Nav */
 .secondary-nav {
-  position: relative;
-  justify-content: flex-end;
-}
-
-/* Menu căn giữa */
-.secondary-nav .menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
+  display: -ms-flexbox;
   display: flex;
-  gap: 80px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  height: 80px;
+  width: 100%;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-align: center;
+  align-items: center;
 }
-
-/* CHỮ MENU NAV 2 → MÀU ĐEN */
-.menu a {
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
-  color: #000000;
-}
-
-/* Icon nav 2 → MÀU ĐEN */
-.secondary-icons a,
-.secondary-icons i {
-  color: #000000;
-}
-
-/* ===============================
-   SUPERSCRIPT (SALE / HOT / NEW)
-   =============================== */
 
 .has-superscript {
   position: relative;
 }
 
 .has-superscript:before {
+  display: block;
   position: absolute;
-  top: -5px;
-  left: 15px;
+  top: 10px;
+  left: 40px;
   font-size: 10px;
-  padding: 2px 6px;
+  padding: 1px 7px;
   color: #ffffff;
-  border-radius: 10px;
+}
+
+.has-superscript--discount20:before {
+  content: '-20% OFF';
 }
 
 .has-superscript--new:before {
   content: 'NEW';
-  background-color: #ff4500;
 }
 
 .has-superscript--hot:before {
   content: 'HOT';
+}
+
+.has-superscript--sale:before {
+  content: 'SALE';
+}
+
+.has-superscript--purple:before {
+  background-color: #8d54ec;
+}
+
+.has-superscript--orange:before {
+  background-color: #ff4500;
+}
+
+.has-superscript--mud:before {
+  background-color: #878a85;
+}
+
+.has-superscript--ruby:before {
   background-color: #ee1a3d;
 }
 
-/* ===============================
-   RESPONSIVE (MOBILE)
-   =============================== */
 @media (max-width: 991px) {
-  .secondary-nav .menu {
-    position: static;
-    transform: none;
-    justify-content: center;
-    margin-bottom: 10px;
+  .header--style-3 {
+    position: relative;
+    background-color: #242424;
   }
 }
-
 
 /*--------------------------------------------------------------
 7.0 Footer
@@ -4109,12 +4110,9 @@ input::-ms-clear {
   display: inline-block;
   transition: color 0.5s;
 }
-/**sửa**/
+
 .route-box__link:hover {
-  background: #333;
-    color: #fff;
-    transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);;
+  color: #ff4500;
 }
 
 .route-box i {
@@ -4273,68 +4271,6 @@ input::-ms-clear {
   box-shadow: 0 4px 12px rgba(0, 121, 107, 0.3);
 }
 
-/* Container định danh riêng cho trang Wishlist */
-.wishlist-page-intro {
-    padding: 40px 0;
-    background-color: #fcfcfc; /* Nền xám cực nhẹ để phân biệt với phần thân */
-    border-bottom: 1px solid #f0f0f0;
-}
-
-/* Tùy chỉnh tiêu đề h1 bên trong */
-.wishlist-page-intro .section__heading {
-    font-size: 32px;
-    font-weight: 800;
-    letter-spacing: 1px;
-    text-transform: uppercase;
-    position: relative;
-    padding-bottom: 15px;
-    margin-bottom: 0;
-    color: #333 !important; /* Ghi đè màu secondary nếu cần */
-    text-align: center;
-}
-
-/* Hiệu ứng đường kẻ trang trí dưới chữ */
-.wishlist-page-intro .wishlist-line {
-    width: 60px;
-    height: 4px;
-    background-color: #ff4500; /* Màu cam thương hiệu (có thể thay đổi) */
-    margin: 0 auto;
-    border-radius: 10px;
-    position: relative;
-}
-
-/* Thêm hiệu ứng 2 chấm nhỏ 2 bên đường kẻ cho sang trọng */
-.wishlist-page-intro .wishlist-line::before,
-.wishlist-page-intro .wishlist-line::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 6px;
-    height: 6px;
-    border-radius: 50%;
-    background-color: #ff4500;
-    opacity: 0.5;
-}
-
-.wishlist-page-intro .wishlist-line::before { left: -15px; }
-.wishlist-page-intro .wishlist-line::after { right: -15px; }
-
-/* Hiệu ứng mờ dần khi tải trang (Animation) */
-.wishlist-page-intro .section__text-wrap {
-    animation: fadeInUp 0.8s ease-out;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
 /*--------------------------------------------------------------
 12.0 Empty-404-Pages
 --------------------------------------------------------------*/
