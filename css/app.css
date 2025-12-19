@@ -2853,203 +2853,142 @@ Responsive
 }
 
 
-/*--------------------------------------------------------------
-7.0 Footer
---------------------------------------------------------------*/
-/* 7.1 Outer-Footer */
+/* ==================================================
+   FOOTER - UEH EVENT HUB (CUSTOM)
+   ================================================== */
+
+/* ===== NỀN FOOTER ===== */
 .outer-footer {
   padding: 80px 0;
-  background-color: #000000;
+  background: linear-gradient(90deg, #0bb0c3 0%, #006d75 100%);
 }
 
-.outer-footer__content-title {
+/* ===== LOGO CHỮ UEH ===== */
+.footer-logo img {
+  display: none; /* Ẩn logo ảnh */
+}
+
+.footer-logo::before {
+  content: "UEH";
   display: block;
+  font-size: 64px;
+  font-weight: 800;
+  color: #006d75;
+  line-height: 1;
+}
+
+.footer-logo::after {
+  content: "UNIVERSITY";
+  display: block;
+  font-size: 26px;
+  font-weight: 700;
+  color: #f58220;
+  letter-spacing: 2px;
+  margin-top: 6px;
+}
+
+/* ===== TIÊU ĐỀ CỘT ===== */
+.outer-footer__content-title {
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
-.outer-footer__logo-wrap {
-  margin-bottom: 4px;
-}
-
+/* ===== TEXT LIÊN HỆ ===== */
 .outer-footer__text-wrap {
-  margin-bottom: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
 }
 
-.outer-footer__text-wrap>i {
-  margin-right: 6px;
-  font-size: 14px;
+.outer-footer__text-wrap i {
+  margin-right: 10px;
+  font-size: 15px;
   color: #ffffff;
 }
 
 .outer-footer__text-wrap span {
   font-size: 14px;
   color: #ffffff;
+  line-height: 1.6;
 }
 
-.outer-footer__social ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-
-.outer-footer__social ul>li {
-  margin-right: 16px;
-}
-
-.outer-footer__social ul>li>a {
-  font-size: 14px;
-  color: #ffffff;
-  transition: color 0.6s;
-}
-
-.outer-footer__social ul>li:last-child {
-  margin-right: 0;
-}
-
-.outer-footer__list-wrap ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-.outer-footer__list-wrap ul>li {
-  margin-bottom: 8px;
-}
-
-.outer-footer__list-wrap ul>li>a {
-  transition: color 0.6s;
+/* ===== ĐIỀU KHOẢN ===== */
+.footer-col p {
+  margin-bottom: 6px;
   color: #ffffff;
   font-size: 14px;
 }
 
-.outer-footer__list-wrap ul>li>a:hover {
-  color: #ff4500;
-}
-
-.outer-footer__list-wrap ul>li:last-child {
-  margin-bottom: 0;
-}
-
-.newsletter__group {
-  position: relative;
-}
-
-.newsletter__btn {
-  position: absolute;
-  padding: 14px;
-  right: 0;
+.footer-col strong {
+  color: #ffffff;
   font-weight: 600;
-  font-size: 12px;
-  top: 50%;
-  border: none;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
 }
 
-.newsletter__text {
-  margin-top: 10px;
-  display: block;
-  color: #ffffff;
-  font-size: 14px;
-}
-
-.newsletter__radio {
-  margin-right: 20px;
-}
-
-.newsletter__radio .radio-box__label {
-  color: #ffffff;
-}
-
-.newsletter__radio:last-child {
-  margin-right: 0;
-}
-
-#newsletter {
-  width: 100%;
-  padding: 0 100px 0 18px;
-}
-
-/* 7.3 Lower-Footer */
-.lower-footer {
-  background-color: #000000;
-  padding: 20px 0;
-}
-
-.lower-footer__content {
-  display: -ms-flexbox;
+/* ===== SOCIAL ICON ===== */
+.footer-social {
+  margin-top: 30px;
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-align: center;
-  align-items: center;
+  gap: 20px;
 }
 
-.lower-footer__copyright,
-.lower-footer__payment {
-  -ms-flex: 0 1 auto;
-}
-
-.lower-footer__copyright span {
-  font-size: 13px;
+.footer-social a {
+  font-size: 20px;
   color: #ffffff;
+  transition: transform 0.3s, color 0.3s;
 }
 
-.lower-footer__copyright a {
-  margin: 0 1px;
-  font-size: 13px;
-  color: #ff4500;
-  transition: color 0.6s;
+.footer-social a:hover {
+  transform: translateY(-3px);
+  color: #f58220;
 }
+/* ==================================================
+   FOOTER – CĂN THẲNG ĐIỂM BẮT ĐẦU NỘI DUNG 3 KHỐI
+   ================================================== */
 
-.lower-footer__copyright a:hover {
-  color: #ff4500;
-}
-
-.lower-footer__img img {
-  display: block;
-}
-
-.lower-footer__payment ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -ms-flexbox;
+/* 3 cột vẫn chia đều */
+.footer-row {
   display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 
-.lower-footer__payment ul>li {
-  margin-right: 16px;
+.footer-logo,
+.footer-col {
+  flex: 1;
+  padding-left: 40px;   /* 👈 CÙNG MỘT ĐIỂM BẮT ĐẦU */
+  box-sizing: border-box;
 }
 
-.lower-footer__payment ul>li>i {
-  font-size: 25px;
-  color: #ffffff;
+/* TẤT CẢ nội dung chữ căn trái */
+.footer-logo,
+.footer-col {
+  text-align: left;
 }
 
-.lower-footer__payment ul>li:last-child {
-  margin-right: 0;
+/* Logo chữ vẫn nhìn cân trong cột */
+.footer-logo::before,
+.footer-logo::after {
+  text-align: left;
 }
 
-@media (max-width: 767px) {
-  .lower-footer__content {
-    -ms-flex-pack: center;
-    justify-content: center;
+/* Icon + text liên hệ căn trái chuẩn */
+.footer-col .outer-footer__text-wrap {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .footer-logo::before {
+    font-size: 48px;
   }
 
-  .lower-footer__copyright {
-    margin-bottom: 8px;
+  .footer-logo::after {
+    font-size: 20px;
+  }
+
+  .outer-footer {
+    padding: 60px 0;
   }
 }
 
