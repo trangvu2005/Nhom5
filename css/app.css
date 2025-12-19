@@ -2762,6 +2762,14 @@ input::-ms-clear {
 #navigation3 i:hover {
   color: #1c5d6b;
 }
+/* FIX NỀN TRẮNG TOÀN PHẦN CHO NAV 2 */
+.secondary-nav-wrapper {
+  background-color: #ffffff;
+}
+
+.secondary-nav-wrapper .container {
+  background-color: #ffffff;
+}
 
 /* ===== DROPDOWN – GIỮ NGUYÊN ===== */
 .has-dropdown {
