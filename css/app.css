@@ -3301,6 +3301,19 @@ Responsive
   -ms-flex-pack: center;
   justify-content: center;
 }
+.filter__grid-wrapper .row > div {
+  display: flex;
+}
+
+.product-o {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-o__price {
+  margin-top: auto;
+}
 
 .filter__btn--style-1 {
   position: relative;
