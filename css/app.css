@@ -2737,37 +2737,7 @@ input::-ms-clear {
   color: #ffffff;
 }
 
-.has-superscript--discount20:before {
-  content: '-20% OFF';
-}
 
-.has-superscript--new:before {
-  content: 'NEW';
-}
-
-.has-superscript--hot:before {
-  content: 'HOT';
-}
-
-.has-superscript--sale:before {
-  content: 'SALE';
-}
-
-.has-superscript--purple:before {
-  background-color: #8d54ec;
-}
-
-.has-superscript--orange:before {
-  background-color: #ff4500;
-}
-
-.has-superscript--mud:before {
-  background-color: #878a85;
-}
-
-.has-superscript--ruby:before {
-  background-color: #ee1a3d;
-}
 
 @media (max-width: 991px) {
   .header--style-3 {
