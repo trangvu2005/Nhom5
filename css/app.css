@@ -2863,10 +2863,6 @@ Responsive
   background: linear-gradient(90deg, #0bb0c3 0%, #006d75 100%);
 }
 
-/* ===== LOGO CHỮ UEH ===== */
-.footer-logo img {
-  display: none; /* Ẩn logo ảnh */
-}
 
 .footer-logo::before {
   content: "UEH";
