@@ -1026,18 +1026,55 @@ body {
   background-color: #ff4500;
   color: #ffffff;
 }
-
 .btn--e-brand-shadow {
-  border: 1px solid #ff4500;
-  box-shadow: 1px 2px 8px 0 rgba(36, 37, 38, 0.08);
-  background-color: #ff4500;
-  color: #ffffff;
-  transition: background-color .3s linear, border-color .3s linear;
+  border: 1px solid #006B6F; 
+  /* Viền nút dày 1px, màu xanh ngọc – tạo ranh giới rõ cho nút */
+
+  box-shadow: 1px 2px 8px 0 rgba(36, 37, 38, 0.08); 
+  /* Bóng đổ nhẹ giúp nút nổi lên so với nền */
+
+  background-color: #006B6F; 
+  /* Màu nền chính của nút (trạng thái mặc định) */
+
+  color: #ffffff; 
+  /* Màu chữ trắng để tương phản tốt với nền xanh đậm */
+
+  transition: 
+    background-color 0.3s linear,
+    /* Chuyển màu nền mượt trong 0.3s khi hover */
+
+    border-color 0.3s linear,
+    /* Chuyển màu viền mượt khi hover */
+
+    box-shadow 0.3s ease,
+    /* Bóng đổ thay đổi mềm mại */
+
+    transform 0.2s ease;
+    /* Hiệu ứng dịch chuyển (nút nhấc lên) mượt hơn */
 }
 
 .btn--e-brand-shadow:hover {
-  border-color: #fa4400;
-  background-color: #fa4400;
+  border-color: #005A5D;
+  /* Khi hover: viền đậm hơn để báo hiệu có thể tương tác */
+
+  background-color: #005A5D;
+  /* Khi hover: nền đậm hơn giúp người dùng nhận biết trạng thái */
+
+  box-shadow: 0 4px 14px rgba(0, 107, 111, 0.35);
+  /* Bóng đổ mạnh hơn → tạo cảm giác nút nổi lên */
+
+  transform: translateY(-2px);
+  /* Nút dịch lên trên 2px → hiệu ứng “nhấc nút” */
+}
+
+.btn--e-brand-shadow:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 107, 111, 0.25);
+}
+
+.btn--e-brand-shadow:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0, 107, 111, 0.35);
 }
 
 /* Countdown Component */
@@ -7629,33 +7666,184 @@ body {
   border-radius: .25rem;
 }
 
-.is-grid-active .product-m {
-  position: relative;
-  margin-bottom: 30px;
-  transition: 0.3s;
+/* Áp dụng style cho card sự kiện khi ở chế độ hiển thị dạng lưới (grid view) */
+.is-grid-active .product-m{ 
+
+  /* Giúp card chiếm toàn bộ chiều cao của cột chứa → các card cao bằng nhau */
+  height: 100%;
+
+  /* Biến card thành flex container để dễ căn chỉnh các phần bên trong */
+  display: flex;
+
+  /* Sắp xếp các phần tử con theo chiều dọc (ảnh → nội dung → giá) */
+  flex-direction: column;
+
+  /* Bo tròn toàn bộ khung card để giao diện mềm mại hơn */
+  border-radius: 18px;
+
+  overflow: visible;
+
+  /* Thiết lập nền trắng cho card để nội dung dễ đọc */
+  background: #fff;
+
+  /* Tạo viền xám nhạt để phân tách các card với nhau */
+  border: 1px solid #e5e7eb;
+
+  /* Đổ bóng nhẹ giúp card nổi bật và có chiều sâu thị giác */
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+
+  /* Giữ hiệu ứng mượt cho transform, shadow và viền */
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
 }
 
-.is-grid-active .product-m__thumb {
-  position: relative;
+/* ============================= */
+/* Hiệu ứng khi hover vào card   */
+/* ============================= */
+.is-grid-active .product-m:hover{
+
+  /* Nhấc card lên nhẹ để tạo cảm giác nổi */
+  transform: translateY(-6px);
+
+  /* Đổ bóng đậm và rộng hơn khi hover */
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+
+  /* Đổi màu viền sang màu thương hiệu */
+  border-color: #006B6F;
 }
 
+/* Áp dụng cho khung ảnh của sự kiện trong card */
+.is-grid-active .product-m__thumb{
+  position: relative;          /*để .product-m__add-cart absolute bám theo */
+  overflow: hidden;            /*tránh nút/hover tràn ra ngoài */
+  /* Bo tròn góc trên bên trái của ảnh để đồng bộ với card */
+  border-top-left-radius: 18px;
+
+  /* Bo tròn góc trên bên phải của ảnh để tránh ảnh bị vuông */
+  border-top-right-radius: 18px;
+}
+
+/* Hiệu ứng ảnh khi hover        */
+/* ============================= */
+.is-grid-active .product-m__thumb img{
+
+  /* Chuẩn bị cho hiệu ứng zoom ảnh */
+  transition: transform 0.4s ease;
+}
+
+.is-grid-active .product-m:hover .product-m__thumb img{
+
+  /* Zoom ảnh rất nhẹ, tránh gây rối */
+  transform: scale(1.04);
+}
+
+/* ============================= */
+/* Hiệu ứng ánh sáng nhẹ (glow)  */
+/* ============================= */
+.is-grid-active .product-m::after{
+
+  /* Tạo lớp phủ ánh sáng */
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+
+  /* Ánh sáng mờ ban đầu */
+  box-shadow: inset 0 0 0 rgba(0,107,111,0);
+  transition: box-shadow 0.35s ease;
+}
+
+.is-grid-active .product-m:hover::after{
+
+  /* Glow nhẹ bên trong card */
+  box-shadow: inset 0 0 0 2px rgba(0,107,111,0.15);
+}
+
+/* ------------------------------ */
+/* Card: luôn cao bằng nhau        */
+/* ------------------------------ */
+
+/* Áp dụng cho khu vực hiển thị danh sách card trong trang sự kiện */
+.shop-p .row {
+
+  /* Bù trừ lề trái để tạo khoảng cách đều giữa các cột (gutter) */
+  margin-left: -12px;
+
+  /* Bù trừ lề phải tương tự để layout không bị lệch */
+  margin-right: -12px;
+}
+
+/* Áp dụng cho tất cả các cột Bootstrap (col-lg, col-md, col-sm...) */
+.shop-p .row > [class*="col-"] {
+
+  /* Tạo khoảng cách bên trái giữa các card */
+  padding-left: 12px;
+
+  /* Tạo khoảng cách bên phải giữa các card */
+  padding-right: 12px;
+
+  /* Tạo khoảng cách giữa các hàng card theo chiều dọc */
+  margin-bottom: 24px;
+}
+
+/* Nút mặc định ẩn */
 .is-grid-active .product-m__add-cart {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+
+  transform: translateY(12px);
+  transition: 
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 2;
 }
 
-.is-grid-active .product-m__add-cart>a {
-  padding: 12px;
-  border-radius: 0.125rem;
-  font-size: 13px;
-  width: 100%;
-  text-align: center;
+/* Hover card → hiện nút */
+.is-grid-active .product-m:hover .product-m__add-cart {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.is-grid-active .product-m__add-cart > a,
+.is-grid-active .product-m__add-cart > button {
   display: block;
+  display: flex;              /* dùng flex để căn giữa chuẩn */
+  align-items: center;        /* căn giữa theo chiều dọc */
+  justify-content: center;    /* căn giữa theo chiều ngang */
+  text-align: center;         /* dự phòng nếu flex bị override */
+  width: 100%;
+  padding: 12px 14px;
+
+  background-color: #006B6F;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+
+  border-radius: 14px;
+  border: none;
+
+  box-shadow: 0 10px 22px rgba(0, 107, 111, 0.3);
+
+  transition: 
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.is-grid-active .product-m__add-cart > a:hover,
+.is-grid-active .product-m__add-cart > button:hover {
+  background-color: #005A5D;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 107, 111, 0.4);
 }
 
 .is-grid-active .product-m__quick-look {
@@ -7676,9 +7864,18 @@ body {
 .is-grid-active .product-m__quick-look>a:hover {
   color: #a0a0a0;
 }
+/* Hover card → hiện quick look */
+.is-grid-active .product-m:hover .product-m__quick-look{
+  opacity: 1;
+  visibility: visible;
+}
 
-.is-grid-active .product-m__content {
-  padding: 4px 16px 6px;
+/* 1) Content trong card thành flex-column */
+.is-grid-active .product-m__content{
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 12px 16px 16px;
 }
 
 .is-grid-active .product-m__category {
@@ -7712,6 +7909,8 @@ body {
   color: #333333;
   font-size: 14px;
   font-weight: 600;
+  margin-top: auto;            /*đẩy cụm giá xuống đáy */
+  line-height: 1.2;
 }
 
 .is-grid-active .product-m__discount {
@@ -7722,8 +7921,9 @@ body {
   text-decoration: line-through;
 }
 
-.is-grid-active .product-m__rating {
-  margin-bottom: 6px;
+.is-grid-active .product-m__rating{
+  min-height: 18px;           
+  margin-bottom: 10px;
 }
 
 .is-grid-active .product-m__rating i {
@@ -7749,9 +7949,41 @@ body {
   opacity: 0;
   visibility: hidden;
 }
+.is-grid-active .product-m__hover {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 12px 16px;
+  background: #ffffff;
+  border-top: 1px solid #e5e7eb;
+  opacity: 0;
+  transform: translateY(100%);
+  transition: all 0.3s ease;
+}
 
-.is-grid-active .product-m__wishlist {
-  text-align: right;
+.is-grid-active .product-m:hover .product-m__hover {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Tim (wishlist) đặt góc phải DƯỚI ảnh */
+.is-grid-active .product-m__wishlist{
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Hover vào card → tim hiện */
+.is-grid-active .product-m:hover .product-m__wishlist{
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .is-grid-active .product-m__wishlist a {
@@ -7765,30 +7997,56 @@ body {
 }
 
 .is-grid-active .product-m__preview-description {
-  margin-bottom: 8px;
+  margin-top: 6px;
+  margin-bottom: 0;
   font-size: 12px;
   color: #7f7f7f;
 }
 
-.is-grid-active .product-m:hover {
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+/* ============================= */
+/* HOT BADGE – GÓC TRÁI TRÊN ẢNH */
+/* ============================= */
+
+/* đảm bảo thumb là khung bám */
+.is-grid-active .product-m__thumb{
+  position: relative;
 }
 
-.is-grid-active .product-m:hover .product-m__add-cart {
-  opacity: 1;
-  visibility: visible;
+/* badge chung */
+.is-grid-active .event-badge{
+  position: absolute;
+  top: 14px;                 /* sát góc trên */
+  left: 14px;                /* sát góc trái */
+  z-index: 30;
+
+  padding: 8px 14px;
+  border-radius: 10px;       /* bo tròn giống mẫu */
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  color: #fff;
+
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+  user-select: none;
 }
 
-.is-grid-active .product-m:hover .product-m__quick-look {
-  opacity: 1;
-  visibility: visible;
+/* HOT style */
+.is-grid-active .event-badge--hot{
+  background: linear-gradient(135deg, #ff2d2d, #ff9500);
+}
+/* nhịp “pulse” nhẹ */
+@keyframes hotPulse {
+  0%,100% { transform: scale(1); }
+  50%     { transform: scale(1.06); }
 }
 
-.is-grid-active .product-m:hover .product-m__hover {
-  top: 99%;
-  opacity: 1;
-  visibility: visible;
+.is-grid-active .event-badge--hot{
+  animation: hotPulse 1.3s ease-in-out infinite;
 }
+
+/* ========================================================= */
+/* LIST VIEW – đồng bộ style giống GRID VIEW                 */
+/* ========================================================= */
 
 .is-list-active {
   display: block;
@@ -7800,50 +8058,146 @@ body {
   width: 100%;
 }
 
+/* Card list: bo góc + viền + shadow giống grid */
 .is-list-active .product-m {
-  padding: 15px 0;
-  transition: 0.3s;
+  padding: 0;                                /* bỏ padding cũ để card gọn như grid */
+  height: 100%;
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+
+  border-radius: 18px;                       /* giống grid */
+  overflow: visible;                         /* cho phép hiện tim/badge nổi */
+  background: #fff;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 10px 26px rgba(0,0,0,0.10);
+  position: relative;                        /* để ::after bám theo card */
 }
+
+/* Hover card giống grid */
+.is-list-active .product-m:hover{
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0,0,0,0.18);
+  border-color: #006B6F;
+}
+
+/* Glow giống grid */
+.is-list-active .product-m::after{
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  pointer-events: none;
+  box-shadow: inset 0 0 0 rgba(0,107,111,0);
+  transition: box-shadow 0.35s ease;
+}
+
+.is-list-active .product-m:hover::after{
+  box-shadow: inset 0 0 0 2px rgba(0,107,111,0.15);
+}
+
+/* ========================================================= */
+/* THUMB (Ảnh)                                                */
+/* ========================================================= */
 
 .is-list-active .product-m__thumb {
   position: relative;
   -ms-flex: 0 0 33.33333%;
   flex: 0 0 33.33333%;
   max-width: 33.33333%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 0;                          /* bỏ padding để ảnh liền khối */
+  padding-left: 0;
+
+  overflow: hidden;                          /* tránh add-cart/badge tràn */
+  border-top-left-radius: 18px;              /* list: vẫn bo theo card */
+  border-bottom-left-radius: 18px;           /* bo góc trái dưới cho list */
+  background: #fff;
 }
+
+/* Ảnh zoom nhẹ giống grid */
+.is-list-active .product-m__thumb img{
+  transition: transform 0.4s ease;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.is-list-active .product-m:hover .product-m__thumb img{
+  transform: scale(1.04);
+}
+
+/* ========================================================= */
+/* ADD TO CART (giống grid: màu xanh + hover)                 */
+/* ========================================================= */
 
 .is-list-active .product-m__add-cart {
   position: absolute;
-  bottom: 15px;
-  left: 15px;
-  right: 15px;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
   opacity: 0;
   visibility: hidden;
-  transition: 0.3s;
+  transform: translateY(12px);
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
+  z-index: 2;
+}
+
+/* Hover card → hiện nút */
+.is-list-active .product-m:hover .product-m__add-cart {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .is-list-active .product-m__add-cart>a {
-  padding: 12px;
-  border-radius: 0.125rem;
-  font-size: 13px;
+  padding: 12px 14px;
+  border-radius: 14px;                       /* giống grid */
+  font-size: 14px;
   width: 100%;
   text-align: center;
-  display: block;
+
+  display: flex;                              /* căn giữa chuẩn */
+  align-items: center;
+  justify-content: center;
+
+  background-color: #006B6F;                  /* xanh brand */
+  color: #ffffff;
+  font-weight: 600;
+  border: none;
+
+  box-shadow: 0 10px 22px rgba(0, 107, 111, 0.3);
+  transition:
+    background-color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
 }
+
+.is-list-active .product-m__add-cart>a:hover {
+  background-color: #005A5D;                  /* hover xanh đậm */
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(0, 107, 111, 0.4);
+}
+
+/* ========================================================= */
+/* QUICK LOOK (hiện khi hover giống grid)                      */
+/* ========================================================= */
 
 .is-list-active .product-m__quick-look {
   position: absolute;
   top: 8px;
-  right: 22px;
+  right: 12px;
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
+  z-index: 3;
 }
 
 .is-list-active .product-m__quick-look>a {
@@ -7853,16 +8207,31 @@ body {
 }
 
 .is-list-active .product-m__quick-look>a:hover {
-  color: #fa4400;
+  color: #a0a0a0;
 }
+
+/* Hover card → hiện quick look */
+.is-list-active .product-m:hover .product-m__quick-look {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ========================================================= */
+/* CONTENT (canh giống grid)                                   */
+/* ========================================================= */
 
 .is-list-active .product-m__content {
   position: relative;
   -ms-flex: 0 0 66.66667%;
   flex: 0 0 66.66667%;
   max-width: 66.66667%;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 16px;
+  padding-left: 16px;
+  padding-top: 14px;
+  padding-bottom: 14px;
+
+  display: flex;                              /* giống grid */
+  flex-direction: column;
 }
 
 .is-list-active .product-m__category {
@@ -7891,24 +8260,9 @@ body {
   color: #ff4500;
 }
 
-.is-list-active .product-m__price {
-  margin-bottom: 8px;
-  line-height: 1.2;
-  color: #333333;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.is-list-active .product-m__discount {
-  font-weight: 600;
-  margin-left: 30px;
-  color: #ff4500;
-  font-size: 14px;
-  text-decoration: line-through;
-}
-
 .is-list-active .product-m__rating {
-  margin-bottom: 6px;
+  min-height: 18px;
+  margin-bottom: 10px;
 }
 
 .is-list-active .product-m__rating i {
@@ -7924,12 +8278,48 @@ body {
 .is-list-active .product-m__preview-description {
   font-size: 12px;
   color: #7f7f7f;
+  margin-bottom: 10px;
 }
+
+/* giá xuống đáy giống grid */
+.is-list-active .product-m__price {
+ margin-top: 8px;
+  margin-bottom: 0;
+  line-height: 1.2;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.is-list-active .product-m__discount {
+  font-weight: 600;
+  margin-left: 30px;
+  color: #ff4500;
+  font-size: 14px;
+  text-decoration: line-through;
+}
+
+/* ========================================================= */
+/* WISHLIST (tim) – hiện khi hover giống grid                  */
+/* ========================================================= */
 
 .is-list-active .product-m__wishlist {
   position: absolute;
-  right: 12px;
-  bottom: 13px;
+  right: 16px;
+  bottom: 16px;
+  z-index: 20;
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity .25s ease, transform .25s ease;
+}
+
+/* Hover card → tim hiện */
+.is-list-active .product-m:hover .product-m__wishlist {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
 }
 
 .is-list-active .product-m__wishlist a {
@@ -7942,21 +8332,32 @@ body {
   color: #ff4500;
 }
 
-.is-list-active .product-m:hover {
-  background: #ffffff;
-  border-radius: 0.1875rem;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+/* ========================================================= */
+/* HOT BADGE – GÓC TRÁI TRÊN ẢNH (giống grid)                  */
+/* ========================================================= */
+
+.is-list-active .event-badge{
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 30;
+
+  padding: 8px 14px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: .6px;
+  color: #fff;
+
+  box-shadow: 0 10px 22px rgba(0,0,0,.25);
+  user-select: none;
 }
 
-.is-list-active .product-m:hover .product-m__add-cart {
-  opacity: 1;
-  visibility: visible;
+.is-list-active .event-badge--hot{
+  background: linear-gradient(135deg, #ff2d2d, #ff9500);
+  animation: hotPulse 1.3s ease-in-out infinite;
 }
 
-.is-list-active .product-m:hover .product-m__quick-look {
-  opacity: 1;
-  visibility: visible;
-}
 
 .shop-p__pagination {
   margin: 0;
@@ -8039,6 +8440,7 @@ body {
   }
 
   .is-list-active .product-m__content {
+    justify-content: flex-start;
     -ms-flex: 0 0 100%;
     flex: 0 0 100%;
     max-width: 100%;
