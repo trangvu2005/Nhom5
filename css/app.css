@@ -799,7 +799,7 @@ body {
 }
 
 .u-c-secondary {
-  color: #ffffff !important;
+  color: #005A5D !important;
 }
 
 .u-c-white {
@@ -945,12 +945,12 @@ body {
 .btn--e-secondary {
   color: #ffffff;
   border: 1px solid transparent;
-  background-color: #333333;
+  background-color: #114550;
   transition: background-color .5s ease-in;
 }
 
 .btn--e-secondary:hover {
-  background-color: #303030;
+  background-color: #fa4400;
 }
 
 .btn--e-white-brand {
@@ -2607,14 +2607,16 @@ input::-ms-clear {
 }
 
 /*--------------------------------------------------------------
+/*--------------------------------------------------------------
 6.0 Header
 --------------------------------------------------------------*/
 .header-wrapper {
   position: relative;
 }
 
+/* ================= HEADER STYLE ================= */
 .header--style-1 {
-  background-color: #ffffff;
+  background-color: #1c5d6b; /* NAV 1: xanh */
 }
 
 .header--style-2 {
@@ -2632,68 +2634,152 @@ input::-ms-clear {
   box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
 }
 
-/* 6.1 Primary Nav */
+/*--------------------------------------------------------------
+6.1 Primary Nav (NAV 1)
+--------------------------------------------------------------*/
 .primary-nav-wrapper--border {
-  border-bottom: 1px solid #f8f8f8;
+  border-bottom: none;
 }
 
 .primary-nav {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
   height: 80px;
   width: 100%;
-  -ms-flex-pack: justify;
   justify-content: space-between;
-  -ms-flex-align: center;
   align-items: center;
 }
 
+/* Logo chữ */
 .main-logo {
   display: inline-block;
   vertical-align: top;
 }
 
-.main-logo img {
-  display: block;
+.main-logo.text-logo {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
 }
 
+.main-logo.text-logo span {
+  font-size: 16px;
+  font-weight: 400;
+  margin-left: 6px;
+  opacity: 0.9;
+}
+
+/* Search */
 .main-form {
   position: relative;
-  width: 35%;
+  width: 40%;
 }
 
 #main-search {
-  padding: 0 36px 0 18px;
   width: 100%;
+  padding: 10px 45px 10px 20px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
 }
 
 .main-search-button {
   position: absolute;
   top: 50%;
-  right: 15px;
-  -webkit-transform: translateY(-50%);
+  right: 18px;
   transform: translateY(-50%);
   font-size: 18px;
+  color: #000;
+  background: transparent;
 }
 
-/* 6.2 Secondary Nav */
+/* Icon NAV 1 */
+.primary-nav i {
+  color: #000000;
+}
+
+/*--------------------------------------------------------------
+6.2 Secondary Nav (NAV 2)
+--------------------------------------------------------------*/
 .secondary-nav {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   position: relative;
   height: 80px;
   width: 100%;
-  -ms-flex-pack: justify;
+  background-color: #ffffff; /* NAV 2: trắng toàn phần */
+  border-bottom: 1px solid #e6e6e6;
   justify-content: space-between;
-  -ms-flex-align: center;
   align-items: center;
+  padding: 0 40px;
 }
 
+/* Canh giữa menu chính */
+.secondary-nav .menu-init {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+/* Menu cấp 1 */
+.secondary-nav .ah-list--design1 {
+  display: flex;
+  gap: 80px;
+}
+
+/* Link menu */
+.secondary-nav .ah-list--design1 > li > a {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+/* Hover menu */
+.secondary-nav .ah-list--design1 > li > a:hover {
+  color: #1c5d6b;
+}
+
+/* Icon NAV 2 */
+.secondary-nav i {
+  color: #000000;
+  font-size: 18px;
+}
+
+.secondary-nav i:hover {
+  color: #1c5d6b;
+}
+
+/*--------------------------------------------------------------
+Dropdown (GIỮ NGUYÊN HOẠT ĐỘNG)
+--------------------------------------------------------------*/
+/* KHÔNG set display cho ul dropdown */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown > ul {
+  background-color: #ffffff;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Item dropdown */
+.has-dropdown > ul li a {
+  color: #000000;
+  font-size: 14px;
+}
+
+.has-dropdown > ul li a:hover {
+  background-color: #f5f5f5;
+  color: #1c5d6b;
+}
+
+/*--------------------------------------------------------------
+Superscript / Badge
+--------------------------------------------------------------*/
 .has-superscript {
   position: relative;
 }
@@ -2704,12 +2790,14 @@ input::-ms-clear {
   top: 10px;
   left: 40px;
   font-size: 10px;
-  padding: 1px 7px;
+  padding: 2px 6px;
   color: #ffffff;
+  background-color: #e53935;
+  border-radius: 50%;
 }
 
 .has-superscript--discount20:before {
-  content: '-20% OFF';
+  content: '-20%';
 }
 
 .has-superscript--new:before {
@@ -2724,28 +2812,31 @@ input::-ms-clear {
   content: 'SALE';
 }
 
-.has-superscript--purple:before {
-  background-color: #8d54ec;
-}
-
-.has-superscript--orange:before {
-  background-color: #ff4500;
-}
-
-.has-superscript--mud:before {
-  background-color: #878a85;
-}
-
-.has-superscript--ruby:before {
-  background-color: #ee1a3d;
-}
-
+/*--------------------------------------------------------------
+Responsive
+--------------------------------------------------------------*/
 @media (max-width: 991px) {
   .header--style-3 {
     position: relative;
     background-color: #242424;
   }
+
+  .secondary-nav {
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .secondary-nav .ah-list--design1 {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .main-form {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
+
 
 /*--------------------------------------------------------------
 7.0 Footer
@@ -3182,7 +3273,7 @@ input::-ms-clear {
 
 .section__text-wrap {
   text-align: center;
-  background-color: #00796b;
+  background-color: #f7f7f9;
 }
 
 .section__content {
@@ -3192,7 +3283,7 @@ input::-ms-clear {
 .section__heading {
   font-size: 28px;
   font-weight: 800;
-  color: #f7f7f9;
+  color: #00796b;
 
   text-transform: uppercase;
   position: relative;
@@ -3514,7 +3605,7 @@ input::-ms-clear {
 }
 
 .about__h2 {
-  color: #333333;
+  color:#004d40;
   font-weight: 600;
   margin-bottom: 10px;
   font-size: 24px;
@@ -3564,7 +3655,71 @@ input::-ms-clear {
   transition: transform 0.7s ease-in-out;
   transition: transform 0.7s ease-in-out, -webkit-transform 0.7s ease-in-out;
 }
+.nyaf-stats {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #ffffff;
+}
 
+.section-title {
+    font-size: 32px;
+    color: #005a66;
+    margin-bottom: 50px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.stat-card {
+    padding: 40px 25px;
+    border-radius: 15px;
+    background: #f8fdfe;
+    border: 1px solid #e0f2f4;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.stat-card:hover {
+    transform: translateY(-12px);
+    background: #005a66;
+    box-shadow: 0 15px 30px rgba(0, 90, 102, 0.2);
+}
+
+/* Đổi màu icon và chữ khi hover */
+.stat-card:hover .stat-icon, 
+.stat-card:hover .stat-number, 
+.stat-card:hover .stat-text {
+    color: #ffffff;
+}
+
+.stat-icon {
+    font-size: 40px;
+    color: #005a66;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.stat-number {
+    font-size: 42px;
+    font-weight: 800;
+    color: #ff4500;
+    margin-bottom: 10px;
+    font-family: 'Arial', sans-serif;
+}
+
+.stat-text {
+    font-size: 15px;
+    color: #ff4500;
+    font-weight: 500;
+    margin: 0;
+}
 .team-member__wrap {
   position: relative;
 }

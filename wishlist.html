@@ -1721,17 +1721,18 @@
         <div class="u-s-p-b-60">
 
             <!--====== Tiêu đề trang ======-->
-            <div class="section__intro u-s-m-b-60">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="section__text-wrap">
-                                <h1 class="section__heading u-c-secondary">DANH SÁCH YÊU THÍCH</h1>
-                            </div>
-                        </div>
-                    </div>
+            <div class="section__intro u-s-m-b-60 wishlist-page-intro">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="section__text-wrap">
+                    <h1 class="section__heading u-c-secondary">DANH SÁCH YÊU THÍCH</h1>
+                    <div class="wishlist-line"></div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
             <!--======Kết thúc tiêu đề======-->
 
 
@@ -2059,58 +2060,47 @@
    <!--====== KHU VỰC MODAL ======-->
 
 <!--====== MODAL THÊM VÀO GIỎ HÀNG ======-->
-<div class="modal fade" id="add-to-cart">
-    <!-- Modal hiển thị ở giữa màn hình -->
-    <div class="modal-dialog modal-dialog-centered">
+<div class="modal fade" id="add-to-cart" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content modal-radius modal-shadow">
-            <!-- Nút đóng modal -->
-            <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+            <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal" aria-label="Close"></button>
+            
             <div class="modal-body">
                 <div class="row">
-                    <!-- BÊN TRÁI: THÔNG BÁO THÊM THÀNH CÔNG -->
                     <div class="col-lg-6 col-md-12">
                         <div class="success u-s-m-b-30">         
                             <div class="success__text-wrap">
                                 <i class="fas fa-check"></i>
-                                <span>Đã thêm sản phẩm vào giỏ hàng!</span>
+                                <span>Đã thêm vào giỏ hàng!</span>
                             </div>
-                            <!-- Hình ảnh sản phẩm và thông tin sản phẩm -->
                             <div class="success__img-wrap">
-                                <img class="u-img-flui" src="images/product/electronic/product1.jpg" alt=""> </div>
-                            <!-- Thông tin sản phẩm -->
+                                <img class="u-img-fluid" src="images/product/electronic/product1.jpg" alt="Product Image">
+                            </div>
                             <div class="success__info-wrap">
-                                <span class="success__name">GREEN BUSINESS SHOWCASE</span>>
-                                <span class="success__quantity"> Số lượng: 1 </span>
-                                <span class="success__price"> 10.000 VND</span></div>
+                                <span class="success__name">GREEN BUSINESS SHOWCASE</span>
+                                <span class="success__quantity">Số lượng: 1</span>
+                                <span class="success__price">10.000 VND</span>
+                            </div>
                         </div>
                     </div>
-                    <!-- BÊN PHẢI: TÙY CHỌN SAU KHI THÊM VÀO GIỎ -->
+
                     <div class="col-lg-6 col-md-12">
                         <div class="s-option">
                             <span class="s-option__text">
-                                Có 1 sản phẩm trong giỏ hàng
+                                Có 1 sự kiện trong giỏ hàng
                             </span>
-                            <!-- Các hành động tiếp theo -->
                             <div class="s-option__link-box">
-                                <!-- Đóng modal và tiếp tục mua sắm -->
-                                <a class="s-option__link btn--e-white-brand-shadow"  data-dismiss="modal">TIẾP TỤC MUA SẮM</a>
-                                <!-- Chuyển đến trang giỏ hàng -->
-                                <a class="s-option__link btn--e-white-brand-shadow" href="cart.html"> XEM GIỎ HÀNG </a>
-                                <!-- Chuyển đến trang thanh toán -->
-                                <a class="s-option__link btn--e-brand-shadow" href="checkout.html"> TIẾN HÀNH THANH TOÁN </a>
-
+                                <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP TỤC MUA SẮM</a>
+                                <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">XEM GIỎ HÀNG</a>
+                                <a class="s-option__link btn--e-brand-shadow" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 </div>
-<!--====== KẾT THÚC - MODAL THÊM VÀO GIỎ HÀNG ======-->
-<!--====== KẾT THÚC - KHU VỰC MODAL ======-->
-
     </div>
     <!--====== End - Main App ======-->
 
