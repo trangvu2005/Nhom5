@@ -2718,10 +2718,17 @@ input::-ms-clear {
 
 /* Canh giữa menu chính */
 .secondary-nav .menu-init {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
+/* Icon NAV 2 canh phải */
+.secondary-nav .ah-list--icons {
+  margin-left: auto;
+  display: flex;
+  gap: 25px;
+}
+
 
 /* Menu cấp 1 */
 .secondary-nav .ah-list--design1 {
