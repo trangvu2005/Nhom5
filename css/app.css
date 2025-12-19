@@ -2925,6 +2925,37 @@ Responsive
   color: #ffffff;
   font-weight: 600;
 }
+/* ==================================================
+   FOOTER LAYOUT – CANH ĐỀU CÁC CỘT
+   ================================================== */
+
+/* Hàng footer chính */
+.footer-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Cột Thông tin liên hệ */
+.footer-col:nth-of-type(1) {
+  margin-left: 120px;   /* đẩy vào giữa */
+}
+
+/* Cột Điều khoản & Quy định */
+.footer-col:nth-of-type(2) {
+  margin-left: 120px;   /* đẩy vào giữa */
+}
+
+/* Logo UEH – đẩy hẳn sang phải */
+.footer-logo {
+  margin-left: auto;
+  text-align: right;
+}
+
+/* Giữ logo chữ gọn gàng */
+.footer-logo::before,
+.footer-logo::after {
+  text-align: right;
+}
 
 /* ===== SOCIAL ICON ===== */
 .footer-social {
