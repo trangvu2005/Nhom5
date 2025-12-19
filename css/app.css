@@ -2606,49 +2606,75 @@ input::-ms-clear {
   }
 }
 
-/* ==================================================
-   CUSTOM HEADER NAV 1 - UEH EVENT HUB
-   ================================================== */
-
-/* Header background */
-.header--style-1 {
-  background-color: #1c5d6b; /* xanh giống mockup */
+/*--------------------------------------------------------------
+/*--------------------------------------------------------------
+6.0 Header
+--------------------------------------------------------------*/
+.header-wrapper {
+  position: relative;
 }
 
+/* ================= HEADER STYLE ================= */
+.header--style-1 {
+  background-color: #1c5d6b; /* NAV 1: xanh */
+}
+
+.header--style-2 {
+  background-color: #242424;
+}
+
+.header--style-3 {
+  position: absolute;
+  width: 100%;
+  background-color: transparent;
+  z-index: 2;
+}
+
+.header--box-shadow {
+  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
+}
+
+/*--------------------------------------------------------------
+6.1 Primary Nav (NAV 1)
+--------------------------------------------------------------*/
 .primary-nav-wrapper--border {
   border-bottom: none;
 }
 
-/* Primary nav layout giữ nguyên */
 .primary-nav {
-  height: 80px;
   display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  height: 80px;
+  width: 100%;
   justify-content: space-between;
   align-items: center;
 }
 
-/* ================= LOGO TEXT ================= */
-.text-logo {
-  font-size: 40px;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  letter-spacing: 1px;
-  display: inline-flex;
-  align-items: center;
+/* Logo chữ */
+.main-logo {
+  display: inline-block;
+  vertical-align: top;
 }
 
-.text-logo span {
+.main-logo.text-logo {
+  color: #ffffff;
+  font-size: 26px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.main-logo.text-logo span {
   font-size: 16px;
   font-weight: 400;
   margin-left: 6px;
   opacity: 0.9;
 }
 
-/* ================= SEARCH ================= */
+/* Search */
 .main-form {
-  width: 40%;
   position: relative;
+  width: 40%;
 }
 
 #main-search {
@@ -2665,64 +2691,110 @@ input::-ms-clear {
   right: 18px;
   transform: translateY(-50%);
   font-size: 18px;
-  color: #000000;
+  color: #000;
   background: transparent;
 }
 
-/* ================= RIGHT ICON MENU ================= */
-.ah-list--link-color-secondary > li > a {
+/* Icon NAV 1 */
+.primary-nav i {
   color: #000000;
 }
 
-.ah-list--link-color-secondary > li > a i {
-  font-size: 18px;
-}
+/* ==================================================
+   NAV 2 – CANH GIỮA MENU BẰNG "CỤC TRẮNG GIẢ"
+   ================================================== */
 
-.ah-list--link-color-secondary > li > a:hover {
-  color: #333333;
-}
-
-/* ================= DROPDOWN ================= */
-.ah-list ul {
-  background-color: #ffffff;
-}
-
-.ah-list ul li a {
-  color: #000000;
-}
-
-.ah-list ul li a:hover {
-  background-color: #f2f2f2;
-}
-
-/* ================= RESPONSIVE ================= */
-@media (max-width: 768px) {
-  .main-form {
-    width: 100%;
-    margin: 10px 0;
-  }
-
-  .primary-nav {
-    height: auto;
-  }
-}
-
-
-/* 6.2 Secondary Nav */
+/* NAV 2 nền trắng toàn phần */
 .secondary-nav {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   position: relative;
   height: 80px;
   width: 100%;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -ms-flex-align: center;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+
+  display: flex;
   align-items: center;
 }
 
+/* ===== CỤC TRẮNG GIẢ BÊN TRÁI ===== */
+.secondary-nav::before {
+  content: "";
+  flex: 0 0 140px; /* 👈 chỉnh cho BẰNG độ rộng icon bên phải */
+}
+
+/* ===== MENU CHỮ (GIỮ NGUYÊN DROPDOWN) ===== */
+#navigation2 {
+  display: flex;
+  justify-content: center;
+}
+
+/* menu chữ */
+#navigation2 .ah-list--design2 {
+  display: flex;
+  gap: 80px;
+}
+
+#navigation2 .ah-list--design2 > li > a {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#navigation2 .ah-list--design2 > li > a:hover {
+  color: #1c5d6b;
+}
+
+/* ===== ICON – CANH PHẢI ===== */
+#navigation3 {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+}
+
+/* icon */
+#navigation3 i {
+  color: #000000;
+  font-size: 18px;
+}
+
+#navigation3 i:hover {
+  color: #1c5d6b;
+}
+/* FIX NỀN TRẮNG TOÀN PHẦN CHO NAV 2 */
+.secondary-nav-wrapper {
+  background-color: #ffffff;
+}
+
+.secondary-nav-wrapper .container {
+  background-color: #ffffff;
+}
+
+/* ===== DROPDOWN – GIỮ NGUYÊN ===== */
+.has-dropdown {
+  position: relative;
+}
+
+.has-dropdown > ul,
+.has-dropdown > .mini-cart {
+  background-color: #ffffff;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
+
+.has-dropdown > ul li a {
+  color: #000000;
+  font-size: 14px;
+}
+
+.has-dropdown > ul li a:hover {
+  background-color: #f5f5f5;
+  color: #1c5d6b;
+}
+
+/*--------------------------------------------------------------
+Superscript / Badge
+--------------------------------------------------------------*/
 .has-superscript {
   position: relative;
 }
@@ -2733,12 +2805,14 @@ input::-ms-clear {
   top: 10px;
   left: 40px;
   font-size: 10px;
-  padding: 1px 7px;
+  padding: 2px 6px;
   color: #ffffff;
+  background-color: #e53935;
+  border-radius: 50%;
 }
 
 .has-superscript--discount20:before {
-  content: '-20% OFF';
+  content: '-20%';
 }
 
 .has-superscript--new:before {
@@ -2753,28 +2827,31 @@ input::-ms-clear {
   content: 'SALE';
 }
 
-.has-superscript--purple:before {
-  background-color: #8d54ec;
-}
-
-.has-superscript--orange:before {
-  background-color: #ff4500;
-}
-
-.has-superscript--mud:before {
-  background-color: #878a85;
-}
-
-.has-superscript--ruby:before {
-  background-color: #ee1a3d;
-}
-
+/*--------------------------------------------------------------
+Responsive
+--------------------------------------------------------------*/
 @media (max-width: 991px) {
   .header--style-3 {
     position: relative;
     background-color: #242424;
   }
+
+  .secondary-nav {
+    height: auto;
+    padding: 15px 20px;
+  }
+
+  .secondary-nav .ah-list--design1 {
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .main-form {
+    width: 100%;
+    margin: 10px 0;
+  }
 }
+
 
 /*--------------------------------------------------------------
 7.0 Footer
