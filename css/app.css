@@ -2606,57 +2606,27 @@ input::-ms-clear {
   }
 }
 
-/*--------------------------------------------------------------
-/*--------------------------------------------------------------
-6.0 Header
---------------------------------------------------------------*/
-.header-wrapper {
-  position: relative;
-}
+/* ==================================================
+   HEADER - FINAL FIX (NAV1 + NAV2)
+   ================================================== */
 
-/* ================= HEADER STYLE ================= */
+/* ================= NAV 1 ================= */
 .header--style-1 {
-  background-color: #1c5d6b; /* NAV 1: xanh */
+  background-color: #1c5d6b;
 }
 
-.header--style-2 {
-  background-color: #242424;
-}
-
-.header--style-3 {
-  position: absolute;
-  width: 100%;
-  background-color: transparent;
-  z-index: 2;
-}
-
-.header--box-shadow {
-  box-shadow: 0 2px 7px 0 rgba(0, 0, 0, 0.07);
-}
-
-/*--------------------------------------------------------------
-6.1 Primary Nav (NAV 1)
---------------------------------------------------------------*/
 .primary-nav-wrapper--border {
   border-bottom: none;
 }
 
 .primary-nav {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
   height: 80px;
-  width: 100%;
+  display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 /* Logo chữ */
-.main-logo {
-  display: inline-block;
-  vertical-align: top;
-}
-
 .main-logo.text-logo {
   color: #ffffff;
   font-size: 26px;
@@ -2673,54 +2643,36 @@ input::-ms-clear {
 
 /* Search */
 .main-form {
-  position: relative;
   width: 40%;
 }
 
 #main-search {
-  width: 100%;
-  padding: 10px 45px 10px 20px;
   border-radius: 25px;
   border: none;
-  outline: none;
+  padding: 10px 45px 10px 20px;
 }
 
 .main-search-button {
-  position: absolute;
-  top: 50%;
-  right: 18px;
-  transform: translateY(-50%);
-  font-size: 18px;
   color: #000;
-  background: transparent;
 }
 
-/* Icon NAV 1 */
-.primary-nav i {
-  color: #000000;
-}
-
-/*--------------------------------------------------------------
-6.2 Secondary Nav (NAV 2)
---------------------------------------------------------------*/
+/* ================= NAV 2 ================= */
 .secondary-nav {
-  display: flex;
-  flex-wrap: wrap;
-  position: relative;
   height: 80px;
   width: 100%;
-  background-color: #ffffff; /* NAV 2: trắng toàn phần */
+  background-color: #ffffff;   /* ✅ trắng toàn phần */
   border-bottom: 1px solid #e6e6e6;
-  justify-content: space-between;
+  display: flex;
   align-items: center;
+  position: relative;
   padding: 0 40px;
 }
 
-/* Canh giữa menu chính */
+/* ===== MENU (CANH GIỮA TUYỆT ĐỐI) ===== */
 .secondary-nav .menu-init {
-  flex: 1;
-  display: flex;
-  justify-content: center;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Menu cấp 1 */
@@ -2729,7 +2681,7 @@ input::-ms-clear {
   gap: 80px;
 }
 
-/* Link menu */
+/* Chữ menu */
 .secondary-nav .ah-list--design1 > li > a {
   color: #000000;
   font-size: 15px;
@@ -2738,12 +2690,18 @@ input::-ms-clear {
   text-decoration: none;
 }
 
-/* Hover menu */
 .secondary-nav .ah-list--design1 > li > a:hover {
   color: #1c5d6b;
 }
 
-/* Icon NAV 2 */
+/* ===== ICON (CANH PHẢI) ===== */
+.secondary-nav .ah-list--icons,
+.secondary-nav .right-icons {
+  margin-left: auto;
+  display: flex;
+  gap: 25px;
+}
+
 .secondary-nav i {
   color: #000000;
   font-size: 18px;
@@ -2753,20 +2711,16 @@ input::-ms-clear {
   color: #1c5d6b;
 }
 
-/*--------------------------------------------------------------
-Dropdown (GIỮ NGUYÊN HOẠT ĐỘNG)
---------------------------------------------------------------*/
-/* KHÔNG set display cho ul dropdown */
+/* ================= DROPDOWN (GIỮ NGUYÊN) ================= */
 .has-dropdown {
   position: relative;
 }
 
 .has-dropdown > ul {
   background-color: #ffffff;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Item dropdown */
 .has-dropdown > ul li a {
   color: #000000;
   font-size: 14px;
@@ -2777,65 +2731,33 @@ Dropdown (GIỮ NGUYÊN HOẠT ĐỘNG)
   color: #1c5d6b;
 }
 
-/*--------------------------------------------------------------
-Superscript / Badge
---------------------------------------------------------------*/
-.has-superscript {
-  position: relative;
-}
-
+/* ================= BADGE ================= */
 .has-superscript:before {
-  display: block;
-  position: absolute;
-  top: 10px;
-  left: 40px;
-  font-size: 10px;
-  padding: 2px 6px;
-  color: #ffffff;
   background-color: #e53935;
   border-radius: 50%;
+  color: #ffffff;
 }
 
-.has-superscript--discount20:before {
-  content: '-20%';
-}
-
-.has-superscript--new:before {
-  content: 'NEW';
-}
-
-.has-superscript--hot:before {
-  content: 'HOT';
-}
-
-.has-superscript--sale:before {
-  content: 'SALE';
-}
-
-/*--------------------------------------------------------------
-Responsive
---------------------------------------------------------------*/
+/* ================= RESPONSIVE ================= */
 @media (max-width: 991px) {
-  .header--style-3 {
-    position: relative;
-    background-color: #242424;
-  }
-
   .secondary-nav {
     height: auto;
     padding: 15px 20px;
   }
 
+  .secondary-nav .menu-init {
+    position: static;
+    transform: none;
+    margin: 10px auto;
+  }
+
   .secondary-nav .ah-list--design1 {
     gap: 25px;
     flex-wrap: wrap;
-  }
-
-  .main-form {
-    width: 100%;
-    margin: 10px 0;
+    justify-content: center;
   }
 }
+
 
 
 /*--------------------------------------------------------------
