@@ -2899,7 +2899,7 @@ Responsive
 .outer-footer__text-wrap {
   margin-bottom: 10px;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .outer-footer__text-wrap i {
@@ -2928,7 +2928,9 @@ Responsive
 
 /* ===== SOCIAL ICON ===== */
 .footer-social {
-  margin-top: 30px;
+  position: absolute;
+  bottom: 30px;
+  right: 40px;
   display: flex;
   gap: 20px;
 }
