@@ -2719,7 +2719,7 @@ input::-ms-clear {
 }
 
 #main-search {
-  background-color: #ffffff;
+    background-color: #ffffff;
   color: #333333;
   width: 100%;
   padding: 10px 45px 10px 20px;
@@ -2737,16 +2737,7 @@ input::-ms-clear {
   color: #000;
   background: transparent;
 }
-#main-search::placeholder {
-  color: #999999;
-}
-/* Khi click (focus) */
-#main-search:focus {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
-}
+
 /* Icon NAV 1 */
 .primary-nav i {
   color: #000000;
@@ -2926,6 +2917,7 @@ Superscript / Badge
 Responsive
 --------------------------------------------------------------*/
 @media (max-width: 991px) {
+
   .header--style-3 {
     position: relative;
     background-color: #242424;
