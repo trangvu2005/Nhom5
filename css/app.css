@@ -2523,50 +2523,6 @@ input::-ms-clear {
   font-size: 13px;
 }
 
-/* ===== FIX ADD TO CART MODAL - TEXT CHỒNG ẢNH ===== */
-
-.success {
-  display: flex;
-  flex-direction: column;
-}
-
-/* ÉP ẢNH NẰM RIÊNG */
-.success__img-wrap {
-  position: relative !important;
-  width: 100%;
-  max-height: 220px;
-  overflow: hidden;
-  margin-bottom: 12px;
-}
-
-/* ẢNH KHÔNG TRÀN */
-.success__img-wrap img {
-  width: 100%;
-  height: auto;
-  display: block;
-  object-fit: cover;
-}
-
-/* ÉP KHỐI TEXT XUỐNG DƯỚI ẢNH */
-.success__info-wrap {
-  position: relative !important;
-  width: 100%;
-}
-
-/* TEXT TÊN SỰ KIỆN */
-.success__name {
-  display: -webkit-box;
-  -webkit-line-clamp: 3;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  font-size: 16px;
-  line-height: 1.4;
-  margin-bottom: 6px;
-
-  word-break: break-word;
-}
-
 #quick-look .modal-dialog {
   width: 100%;
   max-width: 991px;
@@ -2763,7 +2719,7 @@ input::-ms-clear {
 }
 
 #main-search {
-  background-color: #ffffff;
+    background-color: #ffffff;
   color: #333333;
   width: 100%;
   padding: 10px 45px 10px 20px;
@@ -2781,16 +2737,7 @@ input::-ms-clear {
   color: #000;
   background: transparent;
 }
-#main-search::placeholder {
-  color: #999999;
-}
-/* Khi click (focus) */
-#main-search:focus {
-  background-color: #ffffff !important;
-  color: #333333 !important;
-  outline: none;
-  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
-}
+
 /* Icon NAV 1 */
 .primary-nav i {
   color: #000000;
@@ -2970,6 +2917,7 @@ Superscript / Badge
 Responsive
 --------------------------------------------------------------*/
 @media (max-width: 991px) {
+
   .header--style-3 {
     position: relative;
     background-color: #242424;
