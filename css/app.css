@@ -846,7 +846,20 @@ body {
   max-width: 100%;
   height: auto;
 }
-
+.w-r__img-wrap {
+  width: 100%;
+  max-width: 120px;     /* 👈 chỉnh theo layout bạn muốn */
+  height: 120px;        /* 👈 cố định chiều cao */
+  overflow: hidden;     /* 👈 chặn tràn */
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.w-r__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* 👈 QUAN TRỌNG */
+  display: block;
+}
 /*--------------------------------------------------------------
 5.0 Components
 --------------------------------------------------------------*/
@@ -907,16 +920,38 @@ body {
   background-color: transparent;
   padding: 0;
 }
-
+.btn--e-brand{
+  text-align: center;
+  margin: 40px 0;
+}
 .btn--e-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 40px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #006a6a, #009688);
   color: #ffffff;
-  border: 1px solid transparent;
-  background-color: #ff4500;
-  transition: background-color .5s ease-in;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 150, 136, 0.35);
+
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn--e-brand:hover {
-  background-color: #fa4400;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 150, 136, 0.5);
+  background: linear-gradient(135deg, #00796b, #00bfa5);
 }
 
 .btn--e-grey-b-2 {
@@ -2659,33 +2694,24 @@ input::-ms-clear {
 
 .primary-nav {
   display: flex;
-  flex-wrap: wrap;
+
   position: relative;
   height: 80px;
-  width: 100%;
-  justify-content: space-between;
+  min-height: 80px;
+  overflow: hidden;
   align-items: center;
+  width: 100%;
 }
 
-/* Logo chữ */
+/* Logo hình ảnh */
+.main-logo img {
+  height: 150px;       
+  width: auto;
+  display: block;
+}
 .main-logo {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.main-logo.text-logo {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.main-logo.text-logo span {
-  color: #ff4500;
-  font-size: 16px;
-  font-weight: 600;
-  margin-left: 6px;
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
 }
 
 /* Search */
@@ -2846,38 +2872,31 @@ Superscript / Badge
   content: 'SALE';
 }
 /* ================= CHRISTMAS MARQUEE ================= */
-.header-marquee {
-  background-color: #1c5d6b; /* nền xanh */
+./* Thanh Merry Christmas */
+.christmas-marquee {
+  width: 100%;
+  height: 56px;                 /* 👈 QUAN TRỌNG */
+  background-color: #1c5d6b;    /* cùng màu header */
   overflow: hidden;
-  padding: 10px 0;
-  width: 100vw;
+  display: flex;
+  align-items: center;
 }
 
+/* Chữ chạy */
 .marquee-track {
-  display: inline-block;
   white-space: nowrap;
-  animation: marquee 8s linear infinite; /* nhanh hơn */
-}
-
-/* CHỮ MERRY CHRISTMAS */
-.christmas-text {
-  font-size: 28px;              /* chữ TO */
-  font-weight: 800;
-  letter-spacing: 6px;          /* kéo dài ngang */
-  text-transform: uppercase;
+  font-size: 26px;              /* 👈 tăng size tại đây */
+  font-weight: 700;
   color: #ffffff;
+  letter-spacing: 3px;
 
-  /* hiệu ứng phát sáng nhẹ */
-  text-shadow:
-    0 0 5px #ff3b3b,
-    0 0 10px #ff3b3b,
-    0 0 20px #ff3b3b;
+  animation: marqueeMove 18s linear infinite;
 }
 
-/* chạy từ phải sang trái toàn màn hình */
-@keyframes marquee {
+/* Animation chạy ngang */
+@keyframes marqueeMove {
   from {
-    transform: translateX(100vw);
+    transform: translateX(100%);
   }
   to {
     transform: translateX(-100%);
@@ -4062,7 +4081,7 @@ Responsive
   transform: translateY(-2px);
 }
 
-.table-p tr:hover .u-img-fluid {
+.table-p tr:hover . {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
@@ -4193,6 +4212,24 @@ Responsive
 .w-r__wrap-1,
 .w-r__wrap-2 {
   -ms-flex: 0 1 auto;
+}
+
+.w-r__wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;              /* khoảng cách giữa các nút */
+  flex-wrap: nowrap;     
+}
+.w-r__wrap-2 .w-r__link {
+  white-space: nowrap;    /* không xuống dòng trong nút */
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.w-r__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
 }
 
 .w-r__wrap-1 {
@@ -7442,6 +7479,47 @@ body {
   line-height: 1.4;
 }
 
+/* ===== SECTION: MỌI NGƯỜI CŨNG ĐÃ XEM ===== */
+.related-section-intro {
+  text-align: center;
+  padding: 50px 0 30px;
+}
+
+.related-section-intro .section__text-wrap {
+  display: inline-block;
+  padding: 22px 42px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* Heading */
+.related-section-intro .section__heading {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  color: #1c5d6b; /* màu UEH */
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Gạch nhấn */
+.related-section-intro .section__heading::after {
+  content: "";
+  display: block;
+  width: 64px;
+  height: 3px;
+  background-color: #ff4500;
+  margin: 12px auto 0;
+  border-radius: 3px;
+}
+
+/* Subtitle */
+.related-section-intro .section__span {
+  font-size: 14px;
+  color: #7a7a7a;
+  letter-spacing: 0.6px;
+}
 
 @media (max-width: 991px) {
   .pd-text {
