@@ -2688,20 +2688,17 @@ input::-ms-clear {
 /*--------------------------------------------------------------
 6.1 Primary Nav (NAV 1)
 --------------------------------------------------------------*/
-.primary-nav-wrapper--border {
-  border-bottom: none;
-}
-
 .primary-nav {
   display: flex;
+  align-items: center;
+  justify-content: space-between; /* 👈 CHÌA KHÓA */
 
   position: relative;
   height: 80px;
   min-height: 80px;
-  overflow: hidden;
-  align-items: center;
   width: 100%;
 }
+
 
 /* Logo hình ảnh */
 .main-logo img {
@@ -2718,9 +2715,12 @@ input::-ms-clear {
 .main-form {
   position: relative;
   width: 40%;
+  margin: 0 auto;   /* 👈 ÉP vào giữa */
 }
 
 #main-search {
+  background-color: #ffffff;
+  color: #333333;
   width: 100%;
   padding: 10px 45px 10px 20px;
   border-radius: 25px;
@@ -2737,10 +2737,24 @@ input::-ms-clear {
   color: #000;
   background: transparent;
 }
-
+#main-search::placeholder {
+  color: #999999;
+}
+/* Khi click (focus) */
+#main-search:focus {
+  background-color: #ffffff !important;
+  color: #333333 !important;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.6);
+}
 /* Icon NAV 1 */
 .primary-nav i {
   color: #000000;
+}
+#navigation {
+  margin-left: auto;       /* 👈 ĐẨY QUA PHẢI */
+  display: flex;
+  align-items: center;
 }
 
 /* ==================================================
@@ -2825,6 +2839,10 @@ input::-ms-clear {
 .has-dropdown>.mini-cart {
   background-color: #ffffff;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 9999;           /* 👈 RẤT QUAN TRỌNG */
 }
 
 .has-dropdown>ul li a {
@@ -2933,7 +2951,7 @@ Responsive
 .santa-sticker {
   position: fixed;
   bottom: 40px;
-  width: 250px;          /* chỉnh to nhỏ ở đây */
+  width: 170px;          /* chỉnh to nhỏ ở đây */
   z-index: 30;
   pointer-events: none;
   animation: santa-float 3s ease-in-out infinite;
@@ -3024,30 +3042,17 @@ Responsive
   background: linear-gradient(90deg, #0bb0c3 0%, #006d75 100%);
 }
 
-/* ===== LOGO CHỮ UEH ===== */
+/* ===== FOOTER LOGO ===== */
+.footer-logo {
+  margin-bottom: 20px;
+}
+
 .footer-logo img {
-  display: none;
-  /* Ẩn logo ảnh */
+  max-width: 200px;   /* 👈 chỉnh 140–180 tuỳ bạn */
+  height: auto;
+  display: block;
 }
 
-.footer-logo::before {
-  content: "UEH";
-  display: block;
-  font-size: 64px;
-  font-weight: 800;
-  color: #006d75;
-  line-height: 1;
-}
-
-.footer-logo::after {
-  content: "EVENT HUB";
-  display: block;
-  font-size: 26px;
-  font-weight: 700;
-  color: #f58220;
-  letter-spacing: 2px;
-  margin-top: 6px;
-}
 
 /* ===== TIÊU ĐỀ CỘT ===== */
 .outer-footer__content-title {
@@ -7479,47 +7484,6 @@ body {
   line-height: 1.4;
 }
 
-/* ===== SECTION: MỌI NGƯỜI CŨNG ĐÃ XEM ===== */
-.related-section-intro {
-  text-align: center;
-  padding: 50px 0 30px;
-}
-
-.related-section-intro .section__text-wrap {
-  display: inline-block;
-  padding: 22px 42px;
-  background: #ffffff;
-  border-radius: 14px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-}
-
-/* Heading */
-.related-section-intro .section__heading {
-  font-size: 28px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  color: #1c5d6b; /* màu UEH */
-  margin-bottom: 8px;
-  position: relative;
-}
-
-/* Gạch nhấn */
-.related-section-intro .section__heading::after {
-  content: "";
-  display: block;
-  width: 64px;
-  height: 3px;
-  background-color: #ff4500;
-  margin: 12px auto 0;
-  border-radius: 3px;
-}
-
-/* Subtitle */
-.related-section-intro .section__span {
-  font-size: 14px;
-  color: #7a7a7a;
-  letter-spacing: 0.6px;
-}
 
 @media (max-width: 991px) {
   .pd-text {
@@ -9642,11 +9606,11 @@ body {
 }
 
 .hero-slide--1 {
-  background-image: url(../images/slider/slide-1.png);
+  background-image: url(../images/slider/slide-1.jpg);
 }
 
 .hero-slide--2 {
-  background-image: url(../images/slider/slide-2.png);
+  background-image: url(../images/slider/slide-2.jpg);
 }
 
 .hero-slide--3 {
