@@ -1011,22 +1011,23 @@ body {
 }
 
 .btn--e-white-brand-shadow:hover {
-  border-color: #ff4500;
-  background-color: #ff4500;
+  border-color: var(--main-color);
+  background-color:var(--main-color);
   color: #ffffff;
 }
 
 .btn--e-brand-shadow {
-  border: 1px solid #ff4500;
+  border: 1px solid var(--main-color);
   box-shadow: 1px 2px 8px 0 rgba(36, 37, 38, 0.08);
-  background-color: #ff4500;
+  background-color: var(--main-color);
   color: #ffffff;
   transition: background-color .3s linear, border-color .3s linear;
 }
 
 .btn--e-brand-shadow:hover {
-  border-color: #fa4400;
-  background-color: #fa4400;
+  border-color: var(--main-color);
+  background-color: var(--main-color-darker);
+  transform: translateY(-3px);
 }
 
 /* Countdown Component */
@@ -1126,8 +1127,8 @@ body {
 .input-counter {
   position: relative;
   display: inline-block;
-  max-width: 132px;
-  min-width: 132px;
+  max-width: 100px;
+  min-width: 100px;
 
 }
 
@@ -1135,7 +1136,7 @@ body {
   border-radius: 0px;
   display: block;
   width: 100%;
-  height: 50px;
+  height: 45px;
   font-size: 14px;
   font-weight: 600;
   text-align: center;
@@ -1165,8 +1166,8 @@ body {
   font-size: 10px;
   cursor: pointer;
   position: absolute;
-  width: 50px;
-  line-height: 50px;
+  width: 45px;
+  line-height: 45px;
   height: 100%;
   text-align: center;
   color: #f1f1f1;
@@ -6869,77 +6870,86 @@ body {
 
 
 /* Các option 9:00 / 13:00 */
-.color__radio {
+/* ===== TIME PICKER ===== */
+.time__radio {
+  position: relative;
   display: inline-block;
   margin-right: 10px;
 }
 
-/* Ẩn radio gốc */
-.color__radio input {
-  display: none;
-}
-
-/* Style cho ô chọn */
-.color__radio-label {
-  display: inline-block;
-  padding: 8px 14px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  /* bo góc ô */
+/* input phủ để click */
+.time__radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
   cursor: pointer;
+  z-index: 2;
+}
+
+/* label hiển thị */
+.time__radio-label {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid #ddd;
+  border-radius: 20px; /* bo tròn pill */
   font-size: 14px;
-  transition: all 0.3s ease;
+  background: #fff;
+  transition: all 0.25s ease;
 }
 
-/* Hover */
-.color__radio-label:hover {
-  border-color: #f68b1e;
-  color: #f68b1e;
+/* hover */
+.time__radio:hover .time__radio-label {
+  border-color: #fa4400;
+  color: #fa4400;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(250, 68, 0, 0.2);
 }
 
-/* Khi được chọn */
-.color__radio input:checked+.color__radio-label {
-  background-color: #f68b1e;
+/* checked */
+.time__radio input:checked + .time__radio-label {
+  background-color: #fa4400;
+  border-color: #fa4400;
   color: #fff;
-  border-color: #f68b1e;
+  font-weight: 600;
 }
 
 
 /**Chọn đối tượng**/
-/* Container các ô */
-.pd-detail__size {
-  display: flex;
-  gap: 12px;
-  flex-wrap: wrap;
+/* ===== SIZE / ĐỐI TƯỢNG ===== */
+.size__radio {
+  position: relative;
 }
 
-/* Ẩn radio gốc */
-.size__radio input[type="radio"] {
-  display: none;
+.size__radio input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
 }
 
-/* Ô chọn */
 .size__radio-label {
   display: inline-block;
-  padding: 10px 16px;
+  padding: 10px 18px;
   border: 1px solid #ddd;
-  border-radius: 6px;
-  /* bo tròn góc */
-  cursor: pointer;
+  border-radius: 8px;
   font-size: 14px;
+  background: #fff;
   transition: all 0.25s ease;
-  background-color: #fff;
 }
 
-/* Hover */
-.size__radio-label:hover {
-  border-color: #f68b1e;
+/* hover */
+.size__radio:hover .size__radio-label {
+  border-color: #fa4400;
+  color: #fa4400;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(250, 68, 0, 0.15);
 }
 
-/* Khi được chọn */
-.size__radio input[type="radio"]:checked+.size__radio-label {
-  background-color: #f68b1e;
-  border-color: #f68b1e;
+/* checked */
+.size__radio input:checked + .size__radio-label {
+  background-color: #fa4400;
+  border-color: #fa4400;
   color: #fff;
   font-weight: 600;
 }
@@ -6949,8 +6959,7 @@ body {
 
 
 
-
-.pd-detail__color,
+.pd-detail__time,
 .pd-detail__size {
   display: -ms-flexbox;
   display: flex;
