@@ -462,7 +462,7 @@
                                     <div class="contact-area__heading">
                                         <h2>Liên hệ hỗ trợ</h2>
                                     </div>
-                                    <form class="contact-f" method="post" action="index.html">
+                                    <form class="contact-f" id="contactForm" method="post" action="index.html">
                                         <div class="row">
                                             <div class="col-lg-6 col-md-6 u-h-100">
                                                 <div class="u-s-m-b-30">
@@ -487,7 +487,6 @@
                                                     <label for="c-nội dung"></label><textarea class="text-area text-area--border-radius text-area--primary-style" id="c-nội dung" placeholder="Trình bày nội dung (Cần thiết)" required></textarea></div>
                                             </div>
                                             <div class="col-lg-12">
-
                                                 <button class="btn btn--e-brand-b-2" type="submit">Gửi nội dung</button></div>
                                         </div>
                                     </form>
@@ -571,6 +570,15 @@
         ga('create', 'UA-XXXXX-Y', 'auto');
         ga('send', 'pageview')
     </script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // chặn reload trang
+
+        alert('Gửi thông tin thành công! Chúng tôi sẽ liên hệ sớm.');
+
+        this.reset(); // reset form sau khi gửi
+    });
+</script>
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
 
     <!--====== Vendor Js ======-->
