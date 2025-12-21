@@ -846,7 +846,20 @@ body {
   max-width: 100%;
   height: auto;
 }
-
+.w-r__img-wrap {
+  width: 100%;
+  max-width: 120px;     /* 👈 chỉnh theo layout bạn muốn */
+  height: 120px;        /* 👈 cố định chiều cao */
+  overflow: hidden;     /* 👈 chặn tràn */
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+.w-r__img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;    /* 👈 QUAN TRỌNG */
+  display: block;
+}
 /*--------------------------------------------------------------
 5.0 Components
 --------------------------------------------------------------*/
@@ -907,16 +920,38 @@ body {
   background-color: transparent;
   padding: 0;
 }
-
+.btn--e-brand{
+  text-align: center;
+  margin: 40px 0;
+}
 .btn--e-brand {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 40px;
+  border-radius: 30px;
+
+  background: linear-gradient(135deg, #006a6a, #009688);
   color: #ffffff;
-  border: 1px solid transparent;
-  background-color: #ff4500;
-  transition: background-color .5s ease-in;
+
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+
+  text-decoration: none;
+  box-shadow: 0 10px 25px rgba(0, 150, 136, 0.35);
+
+  transition: all 0.35s ease;
+  position: relative;
+  overflow: hidden;
 }
 
 .btn--e-brand:hover {
-  background-color: #fa4400;
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 150, 136, 0.5);
+  background: linear-gradient(135deg, #00796b, #00bfa5);
 }
 
 .btn--e-grey-b-2 {
@@ -1566,14 +1601,23 @@ input::-ms-clear {
 }
 
 .product-l__name {
-  display: block;
-  margin-bottom: 4px;
+  min-height: 44px;
+  /* 👈 đảm bảo vùng tên cao cố định */
+  margin-bottom: 6px;
 }
 
 .product-l__name>a {
   color: #333333;
   font-size: 14px;
   font-weight: 600;
+  line-height: 1.4;
+
+  /* 👇 GIỚI HẠN 2 DÒNG */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
   transition: color 0.5s;
 }
 
@@ -2644,47 +2688,39 @@ input::-ms-clear {
 /*--------------------------------------------------------------
 6.1 Primary Nav (NAV 1)
 --------------------------------------------------------------*/
-.primary-nav-wrapper--border {
-  border-bottom: none;
-}
-
 .primary-nav {
   display: flex;
-  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between; /* 👈 CHÌA KHÓA */
+
   position: relative;
   height: 80px;
+  min-height: 80px;
   width: 100%;
-  justify-content: space-between;
-  align-items: center;
 }
 
-/* Logo chữ */
+
+/* Logo hình ảnh */
+.main-logo img {
+  height: 150px;       
+  width: auto;
+  display: block;
+}
 .main-logo {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.main-logo.text-logo {
-  color: #ffffff;
-  font-size: 26px;
-  font-weight: 700;
-  text-decoration: none;
-}
-
-.main-logo.text-logo span {
-  font-size: 16px;
-  font-weight: 400;
-  margin-left: 6px;
-  opacity: 0.9;
+  display: flex;
+  align-items: center;
 }
 
 /* Search */
 .main-form {
   position: relative;
   width: 40%;
+  margin: 0 auto;   /* 👈 ÉP vào giữa */
 }
 
 #main-search {
+    background-color: #ffffff;
+  color: #333333;
   width: 100%;
   padding: 10px 45px 10px 20px;
   border-radius: 25px;
@@ -2705,6 +2741,11 @@ input::-ms-clear {
 /* Icon NAV 1 */
 .primary-nav i {
   color: #000000;
+}
+#navigation {
+  margin-left: auto;       /* 👈 ĐẨY QUA PHẢI */
+  display: flex;
+  align-items: center;
 }
 
 /* ==================================================
@@ -2789,6 +2830,10 @@ input::-ms-clear {
 .has-dropdown>.mini-cart {
   background-color: #ffffff;
   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 9999;           /* 👈 RẤT QUAN TRỌNG */
 }
 
 .has-dropdown>ul li a {
@@ -2835,11 +2880,44 @@ Superscript / Badge
 .has-superscript--sale:before {
   content: 'SALE';
 }
+/* ================= CHRISTMAS MARQUEE ================= */
+./* Thanh Merry Christmas */
+.christmas-marquee {
+  width: 100%;
+  height: 56px;                 /* 👈 QUAN TRỌNG */
+  background-color: #1c5d6b;    /* cùng màu header */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Chữ chạy */
+.marquee-track {
+  white-space: nowrap;
+  font-size: 26px;              /* 👈 tăng size tại đây */
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: 3px;
+
+  animation: marqueeMove 18s linear infinite;
+}
+
+/* Animation chạy ngang */
+@keyframes marqueeMove {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+
 
 /*--------------------------------------------------------------
 Responsive
 --------------------------------------------------------------*/
 @media (max-width: 991px) {
+
   .header--style-3 {
     position: relative;
     background-color: #242424;
@@ -2860,6 +2938,90 @@ Responsive
     margin: 10px 0;
   }
 }
+/* ================= SANTA STICKER ================= */
+
+.santa-sticker {
+  position: fixed;
+  bottom: 40px;
+  width: 170px;          /* chỉnh to nhỏ ở đây */
+  z-index: 30;
+  pointer-events: none;
+  animation: santa-float 3s ease-in-out infinite;
+}
+
+/* trái */
+.left-santa {
+  left: 20px;
+}
+
+/* phải (lật gương cho đối xứng) */
+.right-santa {
+  right: 20px;
+  transform: scaleX(-1);
+}
+
+/* animation nhún nhẹ */
+@keyframes santa-float {
+  0%, 100% {
+    transform: translateY(0) scaleX(1);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* fix lật gương + animation */
+.right-santa {
+  animation: santa-float-right 3s ease-in-out infinite;
+}
+
+@keyframes santa-float-right {
+  0%, 100% {
+    transform: translateY(0) scaleX(-1);
+  }
+  50% {
+    transform: translateY(-12px) scaleX(-1);
+  }
+}
+/* ===== CHRISTMAS FALLING STARS ===== */
+.christmas-stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* mỗi ngôi sao */
+.christmas-stars span {
+  position: absolute;
+  font-size: 18px;
+  opacity: 0.9;
+
+  animation:
+    fall linear infinite,
+    spin linear infinite;
+}
+
+/* rơi từ trên xuống */
+@keyframes fall {
+  from {
+    transform: translateY(-10vh);
+  }
+  to {
+    transform: translateY(110vh);
+  }
+}
+
+/* xoay */
+@keyframes spin {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
 
 
 /* ==================================================
@@ -2872,30 +3034,17 @@ Responsive
   background: linear-gradient(90deg, #0bb0c3 0%, #006d75 100%);
 }
 
-/* ===== LOGO CHỮ UEH ===== */
+/* ===== FOOTER LOGO ===== */
+.footer-logo {
+  margin-bottom: 20px;
+}
+
 .footer-logo img {
-  display: none;
-  /* Ẩn logo ảnh */
+  max-width: 200px;   /* 👈 chỉnh 140–180 tuỳ bạn */
+  height: auto;
+  display: block;
 }
 
-.footer-logo::before {
-  content: "UEH";
-  display: block;
-  font-size: 64px;
-  font-weight: 800;
-  color: #006d75;
-  line-height: 1;
-}
-
-.footer-logo::after {
-  content: "UNIVERSITY";
-  display: block;
-  font-size: 26px;
-  font-weight: 700;
-  color: #f58220;
-  letter-spacing: 2px;
-  margin-top: 6px;
-}
 
 /* ===== TIÊU ĐỀ CỘT ===== */
 .outer-footer__content-title {
@@ -3929,7 +4078,7 @@ Responsive
   transform: translateY(-2px);
 }
 
-.table-p tr:hover .u-img-fluid {
+.table-p tr:hover . {
   transform: scale(1.05);
   filter: brightness(1.1);
 }
@@ -4062,6 +4211,24 @@ Responsive
   -ms-flex: 0 1 auto;
 }
 
+.w-r__wrap-2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;              /* khoảng cách giữa các nút */
+  flex-wrap: nowrap;     
+}
+.w-r__wrap-2 .w-r__link {
+  white-space: nowrap;    /* không xuống dòng trong nút */
+  padding: 8px 16px;
+  font-size: 14px;
+}
+.w-r__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
 .w-r__wrap-1 {
   display: -ms-flexbox;
   display: flex;
@@ -4145,37 +4312,49 @@ Responsive
 }
 
 .route-box {
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-align: center;
   align-items: center;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background-color: #f1f1f1;
-  -ms-flex-pack: justify;
+  background-color: #f9f9f9;
   justify-content: space-between;
+  padding: 10px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgb(0 0 0 / 0.1);
 }
 
 .route-box__g {
-  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  margin: 5px;
 }
 
 .route-box__link {
-  color: #333333;
-  font-size: 13px;
-  text-align: center;
-  padding: 17px;
+  color: #333;
+  font-size: 14px;
   font-weight: 600;
-  display: inline-block;
-  transition: color 0.5s;
+  padding: 12px 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+  box-shadow: 0 2px 5px rgb(0 0 0 / 0.1);
+  transition: all 0.3s ease;
+}
+
+.route-box__link i {
+  margin-right: 8px;
+  font-size: 16px;
+  transition: transform 0.3s ease;
 }
 
 .route-box__link:hover {
   color: #ff4500;
+  background-color: #fff3e0;
+  box-shadow: 0 4px 10px rgb(255 69 0 / 0.3);
 }
 
-.route-box i {
-  margin-right: 2px;
+.route-box__link:hover i {
+  transform: translateX(-4px);
 }
 
 .f-cart__pad-box {
@@ -9422,7 +9601,7 @@ body {
 }
 
 .hero-slide--3 {
-  background-image: url(../images/slider/slide-3.jpg);
+  background-image: url(../images/slider/slide-1.png);
 }
 
 .hero-slide--4 {
