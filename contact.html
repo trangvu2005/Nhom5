@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Nền tảng đặt vé sự kiện, workshop và webinar dành cho sinh viên">
     <meta name="author" content="">
-    <link href="images/logo/LOGO2.png" rel="shortcut icon">
+    <link href="images/logo/logoUEH3.png" rel="shortcut icon">
     <title>UEH EVENT HUB</title>
 
     <!--====== Google Font ======-->
@@ -21,20 +21,7 @@
     <!--====== App ======-->
     <link rel="stylesheet" href="css/app.css">
 </head>
-<script src="js/christmas-stars.js"></script>
 <body class="config">
-    <!-- Santa Sticker -->
-    <img src="images/logo/santa-sticker.png"
-        class="santa-sticker left-santa"
-        alt="Santa Claus">
-
-    <img src="images/logo/santa-sticker.png"
-        class="santa-sticker right-santa"
-        alt="Santa Claus">
-    
-    <div class="christmas-stars"></div>
-
-
     <div class="preloader is-active">
         <div class="preloader__wrap">
 
@@ -47,11 +34,6 @@
         <!--====== Main Header ======-->
         <header class="header--style-1">
 
-            <div class="header-marquee">
-                <div class="marquee-track christmas-text">
-                  ✨ 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️ 🎁 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️
-                </div>
-            </div>
             <!--====== Nav 1 ======-->
             <nav class="primary-nav primary-nav-wrapper--border">
                 <div class="container">
@@ -61,8 +43,8 @@
 
                         <!--====== Main Logo ======-->
 
-                        <a class="main-logo image-logo" href="index.html">
-                            <img src="images/logo/LOGO.png" alt="UEH Event Hub">
+                        <a class="main-logo text-logo" href="index.html">
+                            UEH <span>EVENT HUB</span>
                         </a>
                         <!--====== End - Main Logo ======-->
 
@@ -76,7 +58,7 @@
 
                             <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
                         <!--====== End - Search Form ======-->
-                        
+
 
                         <!--====== Dropdown Main plugin ======-->
                         <div class="menu-init" id="navigation">
@@ -185,8 +167,6 @@
                 </div>
             </nav>
             <!--====== End - Nav 1 ======-->
-              
-
             <!--====== Nav 2 ======-->
             <nav class="secondary-nav-wrapper">
                 <div class="container">
@@ -291,7 +271,7 @@
 
                                                             <a class="mini-product__link" href="product-detail.html">
 
-                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 8.jpg" alt=""></a></div>
+                                                                <img class="u-img-fluid" src="images/product/electronic/product3.jpg" alt=""></a></div>
                                                         <div class="mini-product__info-wrapper">
 
                                                             <span class="mini-product__category">
@@ -318,7 +298,7 @@
 
                                                             <a class="mini-product__link" href="product-detail.html">
 
-                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 3.jpg" alt=""></a></div>
+                                                                <img class="u-img-fluid" src="images/product/men/product8.jpg" alt=""></a></div>
                                                         <div class="mini-product__info-wrapper">
 
                                                             <span class="mini-product__category">
@@ -331,7 +311,7 @@
 
                                                             <span class="mini-product__quantity">1 x</span>
 
-                                                            <span class="mini-product__price">Miễn phí</span></div>
+                                                            <span class="mini-product__price">0₫</span></div>
                                                     </div>
 
                                                     <a class="mini-product__delete-link far fa-trash-alt"></a>
@@ -403,19 +383,27 @@
             <!--====== Section 2 ======-->
             <div class="u-s-p-b-60">
 
-                <!--====== Section Content ======-->
-                <div class="section__content">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="g-map">
-                                    <div id="map"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+<!--====== Section Content ======-->
+<div class="section__content">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="g-map">
+                    <iframe
+                        src="https://www.google.com/maps?q=279+Nguyễn+Tri+Phương,+Quận+10,+TP.HCM&output=embed"
+                        width="100%"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
                 </div>
-                <!--====== End - Section Content ======-->
+            </div>
+        </div>
+    </div>
+</div>
+<!--====== End - Section Content ======-->
             </div>
             <!--====== End - Section 2 ======-->
 
@@ -521,7 +509,8 @@
         </div>
         <!--====== End - App Content ======-->
 
-        <!--====== Main Footer ======-->
+
+               <!--====== Main Footer ======-->
             
         <footer class="outer-footer">
             <div class="container">
@@ -529,7 +518,7 @@
             
                     <!-- LOGO UEH -->
                     <div class="footer-logo">
-                        <img src="images/logo/LOGO.png">
+                        <img src="images/logo/logoUEH.png" alt="UEH University">
                     </div>
             
                     <!-- THÔNG TIN LIÊN HỆ -->
@@ -577,8 +566,6 @@
                 </div>
             </div>
         </footer>
-    </div>
-    <!--====== End - Main App ======-->
 
 
     <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
@@ -591,10 +578,42 @@
         ga('create', 'UA-XXXXX-Y', 'auto');
         ga('send', 'pageview')
     </script>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+        e.preventDefault(); // chặn reload trang
+
+        alert('Gửi thông tin thành công! Chúng tôi sẽ liên hệ sớm.');
+
+        this.reset(); // reset form sau khi gửi
+    });
+</script>
+
     <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script>
+function initMap() {
+    const location = { lat: 10.762622, lng: 106.668341 };
+
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 16,
+        center: location,
+    });
+
+    const marker = new google.maps.Marker({
+        position: location,
+        map: map,
+        title: "279 Nguyễn Tri Phương, TP.HCM"
+    });
+}
+</script>
 
     <!--====== Vendor Js ======-->
     <script src="js/vendor.js"></script>
+
+    <!--====== Google Map ======-->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-MO9uPLS-ApTqYs0FpYdVG8cFwdq6apw"></script>
+
+    <!--====== Google Map Init ======-->
+    <script src="js/map-init.js"></script>
 
     <!--====== jQuery Shopnav plugin ======-->
     <script src="js/jquery.shopnav.js"></script>
