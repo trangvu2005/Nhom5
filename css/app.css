@@ -2983,6 +2983,13 @@ Responsive
     transform: translateY(-12px) scaleX(-1);
   }
 }
+@media (max-width: 768px) {
+  .santa-sticker {
+    width: 110px;     /* nhỏ lại */
+    bottom: 20px;
+  }
+}
+
 /* ===== CHRISTMAS FALLING STARS ===== */
 .christmas-stars {
   position: fixed;
@@ -10147,4 +10154,11 @@ body {
   to {
     left: 110%;
   }
+}
+
+
+html, body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
