@@ -826,37 +826,70 @@
             </div>
         </footer>
 
-    <!-- ===== SCRIPT SEARCH ===== -->
-    <script>
-        // Lấy keyword từ URL
-        const params = new URLSearchParams(window.location.search);
-        const keyword = params.get("q")?.toLowerCase() || "";
-
-        // Cập nhật tiêu đề
-        const title = document.getElementById("searchTitle");
-        title.innerText = keyword
-            ? `Kết quả tìm kiếm cho: "${keyword}"`
-            : "Kết quả tìm kiếm";
-
-        // Lấy toàn bộ sự kiện
-        const products = document.querySelectorAll(".product-o");
-        let found = false;
-
-        products.forEach(product => {
-            const name = product.innerText.toLowerCase();
-
-            if (name.includes(keyword)) {
-                product.style.display = "block";
-                found = true;
-            } else {
-                product.style.display = "none";
+        <script>
+            // Hàm chuẩn hóa tiếng Việt: Chuyển có dấu thành không dấu
+            function removeVietnameseTones(str) {
+                if (!str) return "";
+                str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+                str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+                str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+                str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+                str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+                str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+                str = str.replace(/đ/g, "d");
+                // Xử lý dấu kết hợp và khoảng trắng
+                str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+                return str.toLowerCase().trim();
             }
-        });
-
-        if (!found) {
-            document.getElementById("noResult").style.display = "block";
-        }
-    </script>
+        
+        
+            // Lấy keyword từ URL
+            const params = new URLSearchParams(window.location.search);
+            const rawKeyword = params.get("q") || ""; // Giữ nguyên để hiển thị tiêu đề
+            const keyword = removeVietnameseTones(rawKeyword); // Chuẩn hóa để tìm kiếm
+        
+        
+            // Cập nhật tiêu đề hiển thị
+            const title = document.getElementById("searchTitle");
+            title.innerText = rawKeyword
+                ? `Kết quả tìm kiếm cho: "${rawKeyword}"`
+                : "Tất cả sự kiện";
+        
+        
+            // Lọc danh sách sự kiện
+            const products = document.querySelectorAll(".product-o");
+            let foundCount = 0;
+        
+        
+            products.forEach(product => {
+                // Lấy tên sự kiện bên trong thẻ product-o
+                const productNameElement = product.querySelector('.product-o__name');
+                const nameText = productNameElement ? productNameElement.innerText : "";
+               
+                // Chuẩn hóa tên sự kiện sang không dấu
+                const cleanName = removeVietnameseTones(nameText);
+        
+        
+                // KIỂM TRA: Nếu keyword rỗng HOẶC tên sự kiện khớp với keyword
+                if (keyword === "" || cleanName.includes(keyword)) {
+                    product.closest('.filter__item').style.display = "block"; // Hiện cả khung bao ngoài
+                    foundCount++;
+                } else {
+                    product.closest('.filter__item').style.display = "none"; // Ẩn cả khung bao ngoài
+                }
+            });
+        
+        
+            // Hiển thị thông báo nếu không tìm thấy gì
+            const noResultElement = document.getElementById("noResult");
+            if (foundCount === 0) {
+                if (noResultElement) noResultElement.style.display = "block";
+                else console.warn("Vui lòng thêm thẻ <div id='noResult' style='display:none'>Không tìm thấy kết quả</div> vào HTML");
+            } else {
+                if (noResultElement) noResultElement.style.display = "none";
+            }
+        </script>
+        
 
     <!-- JS dùng chung -->
     <script src="js/vendor.js"></script>
