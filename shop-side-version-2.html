@@ -900,27 +900,22 @@
                         <div class="tool-style__form-wrap">
                           <!--====== Chọn số lượng hiển thị ======-->
                           <div class="u-s-m-b-8">
-                            <select
-                              class="select-box select-box--transparent-b-2"
-                            >
-                              <option>Hiển thị: 8</option>
-                              <option selected>Hiển thị: 12</option>
-                              <option>Hiển thị: 16</option>
-                              <option>Hiển thị: 28</option>
-                            </select>
-                          </div>
+                            <select id="displaySelect" class="select-box select-box--transparent-b-2">
+                            <option value="8">Hiển thị: 8</option>
+                            <option value="12" selected>Hiển thị: 12</option>
+                            <option value="16">Hiển thị: 16</option>
+                            <option value="28">Hiển thị: 28</option>
+                          </select>
+                                                    </div>
                           <!--====== Chọn cách sắp xếp ======-->
                           <div class="u-s-m-b-8">
-                            <select
-                              class="select-box select-box--transparent-b-2"
-                            >
-                              <option selected>Sắp xếp theo: Mới nhất</option>
-                              <option>Sắp xếp theo: Gần đây nhất</option>
-                              <option>Sắp xếp theo: Bán chạy nhất</option>
-                              <option>Sắp xếp theo: Đánh giá cao nhất</option>
-                              <option>Sắp xếp theo: Giá thấp nhất</option>
-                              <option>Sắp xếp theo: Giá cao nhất</option>
-                            </select>
+                            <select id="sortSelect" class="select-box select-box--transparent-b-2">
+                            <option value="newest">Sắp xếp theo: Mới nhất</option>
+                            <option value="rating">Sắp xếp theo: Đánh giá cao nhất</option>
+                            <option value="price-asc">Sắp xếp theo: Giá thấp nhất</option>
+                            <option value="price-desc">Sắp xếp theo: Giá cao nhất</option>
+                          </select>
+
                           </div>
                         </div>
                       </form>
@@ -930,7 +925,10 @@
                   <div class="shop-p__collection">
                     <div class="row is-grid-active">
                       <!--====== Sự kiện 1 ======-->
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                            <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                              data-price="20000"
+                              data-rating="3.5"
+                              data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <!--====== Hình ảnh sự kiện ======-->
@@ -1015,7 +1013,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="0"
+                        data-rating="4.5"
+                        data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1092,7 +1093,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="50000"
+                          data-rating="4"
+                          data-date="2025-05-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1170,7 +1174,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="0"
+                          data-rating="5"
+                          data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1248,7 +1255,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="3.5"
+                        data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1326,7 +1336,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="20000"
+                          data-rating="3.5"
+                          data-date="2025-06-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1404,7 +1417,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                              data-price="0"
+                              data-rating="3.5"
+                              data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1481,7 +1497,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="50000"
+                          data-rating="3.5"
+                          data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1563,7 +1582,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="20000"
+                          data-rating="4.5"
+                          data-date="2025-03-15">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1646,7 +1668,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="20000"
+                          data-rating="5"
+                          data-date="2025-03-10">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1727,7 +1752,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="20000"
+                          data-rating="3.5"
+                          data-date="2025-03-15">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1809,7 +1837,10 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6">
+                     <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                          data-price="20000"
+                          data-rating="3.5"
+                          data-date="2025-03-16">
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -2361,6 +2392,8 @@
 
     <!--====== App ======-->
     <script src="js/app.js"></script>
+    <!-- JS sắp xếp -->
+<script src="js/sx.js"></script>
 
     <!--====== Noscript ======-->
     <noscript>
