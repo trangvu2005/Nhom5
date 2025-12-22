@@ -879,7 +879,7 @@
                                                 </div>
                                             </form>
                                             <div id="review-list">
-    <h3>Đánh giá của khách hàng</h3>
+    <h3>Đánh giá của bạn</h3>
 </div>
 
                                         </div>
@@ -1753,12 +1753,13 @@ form.addEventListener("submit", function (e) {
     }
 
     const reviewHTML = `
-        <div class="review-item">
-            <div class="review-stars">${starsHTML}</div>
-            <div class="review-name">${name}</div>
-            <div class="review-text">${text}</div>
-        </div>
-    `;
+    <div class="review-item">
+        <div class="review-stars">${starsHTML}</div>
+        <span class="review-name">${name}</span>
+        <p>${text}</p>
+    </div>
+`;
+
 
     reviewList.insertAdjacentHTML("beforeend", reviewHTML);
 

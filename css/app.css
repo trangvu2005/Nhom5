@@ -4515,11 +4515,16 @@ Responsive
 .review-item {
     border-bottom: 1px solid #eee;
     padding: 12px 0;
+
 }
 
 .review-stars i {
     color: #f5c518;
 }
+.review-name {
+    font-weight: bold;
+}
+
 
 
 /*--------------------------------------------------------------
