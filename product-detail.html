@@ -878,6 +878,10 @@
                                                         GIÁ</button>
                                                 </div>
                                             </form>
+                                            <div id="review-list">
+    <h3>Đánh giá của bạn</h3>
+</div>
+
                                         </div>
                                     </div>
                                 </div>
@@ -1708,6 +1712,63 @@
             });
         });
     </script>
+    <script>
+const stars = document.querySelectorAll("#star-rating i");
+const ratingValue = document.getElementById("rating-value");
+const ratingText = document.getElementById("rating-text");
+
+stars.forEach(star => {
+    star.addEventListener("click", () => {
+        const value = star.getAttribute("data-value");
+        ratingValue.value = value;
+
+        stars.forEach(s => {
+            s.classList.toggle("active", s.getAttribute("data-value") <= value);
+        });
+
+        ratingText.innerText = `Bạn đã chọn ${value} sao`;
+    });
+});
+</script>
+
+    <script>
+const form = document.querySelector(".pd-tab__rev-f2");
+const reviewList = document.getElementById("review-list");
+
+form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const rating = ratingValue.value;
+    const text = document.getElementById("reviewer-text").value;
+    const name = document.getElementById("reviewer-name").value;
+
+    if (!rating || !text || !name) {
+        alert("Vui lòng nhập đầy đủ thông tin!");
+        return;
+    }
+
+    let starsHTML = "";
+    for (let i = 0; i < rating; i++) {
+        starsHTML += `<i class="fas fa-star"></i>`;
+    }
+
+    const reviewHTML = `
+    <div class="review-item">
+        <div class="review-stars">${starsHTML}</div>
+        <span class="review-name">${name}</span>
+        <p>${text}</p>
+    </div>
+`;
+
+
+    reviewList.insertAdjacentHTML("beforeend", reviewHTML);
+
+    form.reset();
+    ratingText.innerText = "Bạn chưa chọn đánh giá";
+    stars.forEach(s => s.classList.remove("active"));
+});
+</script>
+
 
 </body>
 

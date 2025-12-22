@@ -1,0 +1,867 @@
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Nền tảng đặt vé sự kiện, workshop và webinar dành cho sinh viên">
+    <meta name="author" content="">
+    <link href="images/logo/LOGO2.png" rel="shortcut icon">
+    <title>UEH EVENT HUB</title>
+
+    <!--====== Google Font ======-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <!--====== Vendor Css ======-->
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!--====== Utility-Spacing ======-->
+    <link rel="stylesheet" href="css/utility.css">
+
+    <!--====== App ======-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<script src="js/christmas-stars.js"></script>
+<body class="config">
+    <!-- Santa Sticker -->
+    <img src="images/logo/santa-sticker.png"
+        class="santa-sticker left-santa"
+        alt="Santa Claus">
+
+    <img src="images/logo/santa-sticker.png"
+        class="santa-sticker right-santa"
+        alt="Santa Claus">
+    
+    <div class="christmas-stars"></div>
+
+
+    <div class="preloader is-active">
+        <div class="preloader__wrap">
+
+            <img class="preloader__img" src="images/logo/logoUEH3.png" alt=""></div>
+    </div>
+
+    <!--====== Main App ======-->
+    <div id="app">
+
+        <!--====== Main Header ======-->
+        <header class="header--style-1">
+
+            <div class="header-marquee">
+                <div class="marquee-track christmas-text">
+                  ✨ 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️ 🎁 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️
+                </div>
+            </div>
+            <!--====== Nav 1 ======-->
+            <nav class="primary-nav primary-nav-wrapper--border">
+                <div class="container">
+
+                    <!--====== Primary Nav ======-->
+                    <div class="primary-nav">
+
+                        <!--====== Main Logo ======-->
+
+                        <a class="main-logo image-logo" href="index.html">
+                            <img src="images/logo/LOGO.png" alt="UEH Event Hub">
+                        </a>
+                        <!--====== End - Main Logo ======-->
+
+
+                        <!--====== Search Form ======-->
+                        <form class="main-form" action="search.html" method="GET">
+
+                            <label for="main-search"></label>
+
+                            <input
+                                class="input-text input-text--border-radius input-text--style-1"
+                                type="text"
+                                id="main-search"
+                                name="q"
+                                placeholder="Tìm kiếm sự kiện"
+                                required
+                            >
+
+                            <button
+                                class="btn btn--icon fas fa-search main-search-button"
+                                type="submit">
+                            </button>
+
+                        </form>
+                        <!--====== End - Search Form ======-->
+
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation">
+
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Close </span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Tài khoản">
+
+                                        <a><i class="far fa-user-circle"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:120px">
+                                            <li>
+
+                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
+
+                                                    <span>Tài khoản</span></a></li>
+                                            <li>
+
+                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
+
+                                                    <span>Đăng ký</span></a></li>
+                                            <li>
+
+                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
+
+                                                    <span>Đăng nhập</span></a></li>
+                                            <li>
+
+                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
+
+                                                    <span>Đăng xuất</span></a></li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Cài đặt">
+
+                                        <a><i class="fas fa-user-cog"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:120px">
+                                            <li class="has-dropdown has-dropdown--ul-right-100">
+
+                                                <a>Ngôn ngữ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                                <!--====== Dropdown ======-->
+
+                                                <span class="js-menu-toggle"></span>
+                                                <ul style="width:120px">
+                                                    <li>
+
+                                                        <a class="u-c-brand">TIẾNG VIỆT</a></li>
+                                                    <li>
+                                                        <a>ENGLISH</a></li>
+                                                </ul>
+                                                <!--====== End - Dropdown ======-->
+                                            </li>
+                                            <li class="has-dropdown has-dropdown--ul-right-100">
+
+                                                <a>Tiền tệ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                                <!--====== Dropdown ======-->
+
+                                                <span class="js-menu-toggle"></span>
+                                                <ul style="width:225px">
+                                                    <li>
+
+                                                        <a class="u-c-brand">VND - VIỆT NAM ĐỒNG</a></li>
+                                                    <li>
+
+                                                        <a>$ - US DOLLAR</a></li>
+                                                    <li>
+
+                                                        <a>€ - EURO</a></li>
+                                                </ul>
+                                                <!--====== End - Dropdown ======-->
+                                            </li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
+
+                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
+                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
+
+                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+                    </div>
+                    <!--====== End - Primary Nav ======-->
+                </div>
+            </nav>
+            <!--====== End - Nav 1 ======-->
+              
+
+            <!--====== Nav 2 ======-->
+            <nav class="secondary-nav-wrapper">
+                <div class="container">
+                           
+                    <!--====== Secondary Nav ======-->
+                    <div class="secondary-nav">
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation2">
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog" type="button"></button>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Đóng</span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
+                                    <li>
+
+                                        <a href="index.html">TRANG CHỦ</a></li>
+                                    <li class="has-dropdown">
+
+                                        <a href="shop-side-version-2.html">SỰ KIỆN<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:170px">
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Workshop</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Webinar</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Ceremony</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Cuộc thi</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Festival</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Talkshow</a></li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li>
+
+                                        <a href="contact.html">LIÊN HỆ</a></li>
+                                    <li>
+
+                                        <a href="about.html">VỀ CHÚNG TÔI</a></li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation3">                         
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-shopping-bag toggle-button-shop" type="button"></button>
+
+                            <span class="total-item-round">2</span>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Đóng</span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                    <li>
+
+                                        <a href="index.html"><i class="fas fa-home u-c-brand"></i></a></li>
+                                    <li>
+
+                                        <a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                    <li class="has-dropdown">
+
+                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
+
+                                            <span class="total-item-round">2</span></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <div class="mini-cart">
+
+                                            <!--====== Mini Product Container ======-->
+                                            <div class="mini-product-container gl-scroll u-s-m-b-15">
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+
+                                                            <a class="mini-product__link" href="product-detail.html">
+
+                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 8.jpg" alt=""></a></div>
+                                                        <div class="mini-product__info-wrapper">
+
+                                                            <span class="mini-product__category">
+
+                                                                <a href="shop-side-version-2.html">Festival</a></span>
+
+                                                            <span class="mini-product__name">
+
+                                                                <a href="product-detail.html">LỄ HỘI VĂN HÓA CHÀO ĐÓN TÂN SINH VIÊN KHÓA 51 – NỐI VÒNG TAY LỚN 2025: GLOW TRACK</a></span>
+
+                                                            <span class="mini-product__quantity">1 x</span>
+
+                                                            <span class="mini-product__price">50.000₫</span></div>
+                                                    </div>
+
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+
+                                                            <a class="mini-product__link" href="product-detail.html">
+
+                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 3.jpg" alt=""></a></div>
+                                                        <div class="mini-product__info-wrapper">
+
+                                                            <span class="mini-product__category">
+
+                                                                <a href="shop-side-version-2.html">Ceremony</a></span>
+
+                                                            <span class="mini-product__name">
+
+                                                                <a href="product-detail.html">LỄ TUYÊN DƯƠNG SINH VIÊN 5 TỐT VÀ CÁN BỘ ĐOÀN - HỘI XUẤT SẮC 2025</a></span>
+
+                                                            <span class="mini-product__quantity">1 x</span>
+
+                                                            <span class="mini-product__price">Miễn phí</span></div>
+                                                    </div>
+
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+                                            </div>
+                                            <!--====== End - Mini Product Container ======-->
+
+
+                                            <!--====== Mini Product Statistics ======-->
+                                            <div class="mini-product-stat">
+                                                <div class="mini-total">
+
+                                                    <span class="subtotal-text">TỔNG TẠM TÍNH</span>
+
+                                                    <span class="subtotal-value">50.000₫</span></div>
+                                                <div class="mini-action">
+
+                                                    <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
+
+                                                    <a class="mini-link btn--e-transparent-secondary-b-2" href="cart.html">XEM GIỎ VÉ</a></div>
+                                            </div>
+                                            <!--====== End - Mini Product Statistics ======-->
+                                        </div>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+                    </div>
+                    <!--====== End - Secondary Nav ======-->
+                </div>
+            </nav>
+            <!--====== End - Nav 2 ======-->
+        </header>
+        <!--====== End - Main Header ======-->
+
+    <!-- ===== TIÊU ĐỀ KẾT QUẢ ===== -->
+    <div class="container" style="margin-top:40px;">
+        <h2 id="searchTitle" style="text-align:center;"></h2>
+    </div>
+
+            <!--====== Section 2 ======-->
+            <div class="u-s-p-b-60">
+
+                <!--====== Section Intro ======-->
+                <div class="section__intro u-s-m-b-16">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="section__text-wrap">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Intro ======-->
+
+
+                <!--====== Section Content ======-->
+                <div class="section__content">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="filter-category-container">
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1 js-checked" type="button" data-filter="*">TẤT CẢ</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".headphone">Festival</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".smartphone">Workshop</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".sportgadget">Cuộc thi</button></div>
+                                    <div class="filter__category-wrapper">
+
+                                        <button class="btn filter__btn filter__btn--style-1" type="button" data-filter=".dslr">Ceremony</button></div>
+                                </div>
+                                <div class="filter__grid-wrapper u-s-m-t-30">
+                                    <div class="row">
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 8.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo khi mở bán"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Festival</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">LỄ HỘI VĂN HÓA CHÀO ĐÓN TÂN SINH VIÊN KHÓA 51 – NỐI VÒNG TAY LỚN 2025: GLOW TRACK</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(245)</span></div>
+
+                                                <span class="product-o__price">50.000đ
+
+                                                    <span class="product-o__discount">100.000đ</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item headphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 11.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo khi mở bán"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Festival</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">A NEW LIFESTYLE 2025 | UEH CINEBOX – BUỔI CHIẾU PHIM: SÀI GÒN, ANH YÊU EM</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i><i class="far fa-star"></i>
+
+                                                    <span class="product-o__review">(221)</span></div>
+
+                                                <span class="product-o__price">50.000đ
+
+                                                    <span class="product-o__discount">80.000đ</span></span>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 17.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Ceremory</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">LỄ TUYÊN DƯƠNG 2025 - FRONTLINE</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(233)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item sportgadget">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 3.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Ceremory</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">LỄ TUYÊN DƯƠNG SINH VIÊN 5 TỐT VÀ CÁN BỘ ĐOÀN - HỘI XUẤT SẮC 2025</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(214)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item dslr">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 1.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Workshop</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">AI TRONG DOANH NGHIỆP – TỪ CHATBOTS ĐẾN TỰ ĐỘNG HÓA</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(162)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item dslr">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 2.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Webinar</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">STORYTELLING THỜI AI – KHI DỮ LIỆU VÀ CẢM XÚC GẶP NHAU</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(23)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 4.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Cuộc thi</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">HORIZON - CHUNG TAY KIẾN TẠO TƯƠNG LAI DU LỊCH BỀN VỮNG</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(235)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 u-s-m-b-30 filter__item smartphone">
+                                            <div class="product-o product-o--hover-on product-o--radius">
+                                                <div class="product-o__wrap">
+
+                                                    <a class="aspect aspect--bg-grey aspect--square u-d-block" href="product-detail.html">
+
+                                                        <img class="aspect__img" src="images/anh su kien/su kien 5.jpg"alt=""></a>
+                                                    <div class="product-o__action-wrap">
+                                                        <ul class="product-o__action-list">
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#quick-look" data-tooltip="tooltip" data-placement="top" title="Xem nhanh"><i class="fas fa-search-plus"></i></a></li>
+                                                            <li>
+
+                                                                <a data-modal="modal" data-modal-id="#add-to-cart" data-tooltip="tooltip" data-placement="top" title="Đặt vé"><i class="fas fa-plus-circle"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Quan tâm sự kiện"><i class="fas fa-heart"></i></a></li>
+                                                            <li>
+
+                                                                <a href="signin.html" data-tooltip="tooltip" data-placement="top" title="Nhận thông báo"><i class="fas fa-envelope"></i></a></li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+
+                                                <span class="product-o__category">
+
+                                                    <a href="shop-side-version-2.html">Cuộc thi</a></span>
+
+                                                <span class="product-o__name">
+
+                                                    <a href="product-detail.html">DNA – CUỘC THI HỌC THUẬT CHUYÊN NGÀNH TỔ CHỨC SỰ KIỆN</a></span>
+                                                <div class="product-o__rating gl-rating-style"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+
+                                                    <span class="product-o__review">(123)</span></div>
+
+                                                <span class="product-o__price">Miễn phí</span>
+
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="load-more">
+                                  <a href="shop-side-version-2.html" class="btn btn--e-brand">
+                                    Xem thêm sự kiện
+                                  </a>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+                <!--====== End - Section Content ======-->
+            </div>
+            <!--====== End - Section 2 ======-->
+                <!--====== Main Footer ======-->
+            
+        <footer class="outer-footer">
+            <div class="container">
+                <div class="row footer-row">
+            
+                    <!-- LOGO UEH -->
+                    <div class="footer-logo">
+                        <img src="images/logo/LOGO.png">
+                    </div>
+            
+                    <!-- THÔNG TIN LIÊN HỆ -->
+                    <div class="footer-col">
+                        <span class="outer-footer__content-title">Thông tin liên hệ</span>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, TP. Hồ Chí Minh</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>(028) 7306.1976</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="far fa-envelope"></i>
+                            <span>dsa@ueh.edu.vn</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-globe"></i>
+                            <span>ueheventhub.vn</span>
+                        </div>
+                    </div>
+            
+                    <!-- ĐIỀU KHOẢN & QUY ĐỊNH -->
+                    <div class="footer-col">
+                        <span class="outer-footer__content-title">Điều khoản & Quy định</span>
+            
+                        <p><strong>Dành cho Khách hàng</strong></p>
+                        <p>Điều khoản sử dụng cho Khách hàng</p>
+            
+                        <p style="margin-top:12px"><strong>Dành cho Ban tổ chức</strong></p>
+                        <p>Điều khoản sử dụng cho Ban tổ chức</p>
+                    </div>
+            
+                </div>
+            
+                <!-- ICON MXH -->
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+    <!-- ===== SCRIPT SEARCH ===== -->
+    <script>
+        // Lấy keyword từ URL
+        const params = new URLSearchParams(window.location.search);
+        const keyword = params.get("q")?.toLowerCase() || "";
+
+        // Cập nhật tiêu đề
+        const title = document.getElementById("searchTitle");
+        title.innerText = keyword
+            ? `Kết quả tìm kiếm cho: "${keyword}"`
+            : "Kết quả tìm kiếm";
+
+        // Lấy toàn bộ sự kiện
+        const products = document.querySelectorAll(".product-o");
+        let found = false;
+
+        products.forEach(product => {
+            const name = product.innerText.toLowerCase();
+
+            if (name.includes(keyword)) {
+                product.style.display = "block";
+                found = true;
+            } else {
+                product.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            document.getElementById("noResult").style.display = "block";
+        }
+    </script>
+
+    <!-- JS dùng chung -->
+    <script src="js/vendor.js"></script>
+    <script src="js/jquery.shopnav.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
