@@ -2060,7 +2060,7 @@
         <!--====== End - Newsletter Subscribe Modal ======-->
         <!--====== End - Modal Section ======-->
     </div>
-    <!--====== End - Main App ======-->
+    <!--====== End - Main App ======--> 
 
 
     <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
@@ -2084,6 +2084,22 @@
     <!--====== App ======-->
     <script src="js/app.js"></script>
 
+    <script>
+        $(document).ready(function () {
+      
+          const isNewsletterShown = localStorage.getItem("newsletterShown");
+      
+          if (!isNewsletterShown) {
+            setTimeout(function () {
+              $('#newsletter-modal').modal('show');
+            }, 1500);
+      
+            localStorage.setItem("newsletterShown", "true");
+          }
+      
+        });
+      </script>
+      
     <!--====== Noscript ======-->
     <noscript>
         <div class="app-setting">
@@ -2100,5 +2116,35 @@
             </div>
         </div>
     </noscript>
+    <script>
+        function removeVietnameseTones(str) {
+            str = str.replace(/à|á|ạ|ả|ã|â|ầ|ấ|ậ|ẩ|ẫ|ă|ằ|ắ|ặ|ẳ|ẵ/g, "a");
+            str = str.replace(/è|é|ẹ|ẻ|ẽ|ê|ề|ế|ệ|ể|ễ/g, "e");
+            str = str.replace(/ì|í|ị|ỉ|ĩ/g, "i");
+            str = str.replace(/ò|ó|ọ|ỏ|õ|ô|ồ|ố|ộ|ổ|ỗ|ơ|ờ|ớ|ợ|ở|ỡ/g, "o");
+            str = str.replace(/ù|ú|ụ|ủ|ũ|ư|ừ|ứ|ự|ử|ữ/g, "u");
+            str = str.replace(/ỳ|ý|ỵ|ỷ|ỹ/g, "y");
+            str = str.replace(/đ/g, "d");
+            // Xử lý các ký tự hoa và dấu kết hợp
+            str = str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+            return str.toLowerCase().trim();
+        }
+
+
+        document.querySelector('.main-form').addEventListener('submit', function(e) {
+            const input = document.getElementById('main-search');
+            // Nếu người dùng có nhập từ khóa, chuẩn hóa thành không dấu trước khi gửi đi
+            if (input.value.trim() !== "") {
+                input.value = removeVietnameseTones(input.value);
+            }
+            // Nếu input trống, form sẽ gửi q= (rỗng) một cách tự nhiên
+        });
+    </script>
+
+
+    <script src="js/vendor.js"></script>
+    <script src="js/jquery.shopnav.js"></script>
+    <script src="js/app.js"></script>
+
 </body>
 </html>
