@@ -1,376 +1,470 @@
 <!DOCTYPE html>
 <html class="no-js" lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="Nền tảng đặt vé sự kiện, workshop và webinar dành cho sinh viên">
-    <meta name="author" content="">
-    <link href="images/logo/LOGO2.png" rel="shortcut icon">
+  <head>
+    <meta charset="UTF-8" />
+    <!--[if IE
+      ]><meta http-equiv="X-UA-Compatible" content="IE=edge"
+    /><![endif]-->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="Nền tảng đặt vé sự kiện, workshop và webinar dành cho sinh viên"
+    />
+    <meta name="author" content="" />
+    <link href="images/logo/LOGO2.png" rel="shortcut icon" />
     <title>Sự kiện - UEH EVENT HUB</title>
 
     <!--====== Google Font ======-->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800"
+      rel="stylesheet"
+    />
 
     <!--====== Vendor Css ======-->
-    <link rel="stylesheet" href="css/vendor.css">
+    <link rel="stylesheet" href="css/vendor.css" />
 
     <!--====== Utility-Spacing ======-->
-    <link rel="stylesheet" href="css/utility.css">
+    <link rel="stylesheet" href="css/utility.css" />
 
     <!--====== App ======-->
-    <link rel="stylesheet" href="css/app.css">
-</head>
-<script src="js/christmas-stars.js"></script>
-<body class="config">
+    <link rel="stylesheet" href="css/app.css" />
+  </head>
+  <script src="js/christmas-stars.js"></script>
+  <body class="config">
     <!-- Santa Sticker -->
-    <img src="images/logo/santa-sticker.png"
-        class="santa-sticker left-santa"
-        alt="Santa Claus">
+    <img
+      src="images/logo/santa-sticker.png"
+      class="santa-sticker left-santa"
+      alt="Santa Claus"
+    />
 
-    <img src="images/logo/santa-sticker.png"
-        class="santa-sticker right-santa"
-        alt="Santa Claus">
-    
+    <img
+      src="images/logo/santa-sticker.png"
+      class="santa-sticker right-santa"
+      alt="Santa Claus"
+    />
+
     <div class="christmas-stars"></div>
 
-
     <div class="preloader is-active">
-        <div class="preloader__wrap">
-
-            <img class="preloader__img" src="images/logo/logoUEH3.png" alt=""></div>
+      <div class="preloader__wrap">
+        <img class="preloader__img" src="images/logo/logoUEH3.png" alt="" />
+      </div>
     </div>
 
     <!--====== Main App ======-->
     <div id="app">
+      <!--====== Main Header ======-->
+      <header class="header--style-1">
+        <div class="header-marquee">
+          <div class="marquee-track christmas-text">
+            ✨ 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️ 🎁 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨
+            ❄️
+          </div>
+        </div>
+        <!--====== Nav 1 ======-->
+        <nav class="primary-nav primary-nav-wrapper--border">
+          <div class="container">
+            <!--====== Primary Nav ======-->
+            <div class="primary-nav">
+              <!--====== Main Logo ======-->
 
-        <!--====== Main Header ======-->
-        <header class="header--style-1">
+              <a class="main-logo image-logo" href="index.html">
+                <img src="images/logo/LOGO.png" alt="UEH Event Hub" />
+              </a>
+              <!--====== End - Main Logo ======-->
 
-            <div class="header-marquee">
-                <div class="marquee-track christmas-text">
-                  ✨ 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️ 🎁 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️
+              <!--====== Search Form ======-->
+              <form class="main-form">
+                <label for="main-search"></label>
+
+                <input
+                  class="input-text input-text--border-radius input-text--style-1"
+                  type="text"
+                  id="main-search"
+                  placeholder="Tìm kiếm"
+                />
+
+                <button
+                  class="btn btn--icon fas fa-search main-search-button"
+                  type="submit"
+                ></button>
+              </form>
+              <!--====== End - Search Form ======-->
+
+              <!--====== Dropdown Main plugin ======-->
+              <div class="menu-init" id="navigation">
+                <button
+                  class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs"
+                  type="button"
+                ></button>
+
+                <!--====== Menu ======-->
+                <div class="ah-lg-mode">
+                  <span class="ah-close">✕ Close </span>
+
+                  <!--====== List ======-->
+                  <ul
+                    class="ah-list ah-list--design1 ah-list--link-color-secondary"
+                  >
+                    <li
+                      class="has-dropdown"
+                      data-tooltip="tooltip"
+                      data-placement="left"
+                      title="Tài khoản"
+                    >
+                      <a><i class="far fa-user-circle"></i></a>
+
+                      <!--====== Dropdown ======-->
+
+                      <span class="js-menu-toggle"></span>
+                      <ul style="width: 120px">
+                        <li>
+                          <a href="dashboard.html"
+                            ><i class="fas fa-user-circle u-s-m-r-6"></i>
+
+                            <span>Tài khoản</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="signup.html"
+                            ><i class="fas fa-user-plus u-s-m-r-6"></i>
+
+                            <span>Đăng ký</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="signin.html"
+                            ><i class="fas fa-lock u-s-m-r-6"></i>
+
+                            <span>Đăng nhập</span></a
+                          >
+                        </li>
+                        <li>
+                          <a href="signup.html"
+                            ><i class="fas fa-lock-open u-s-m-r-6"></i>
+
+                            <span>Đăng xuất</span></a
+                          >
+                        </li>
+                      </ul>
+                      <!--====== End - Dropdown ======-->
+                    </li>
+                    <li
+                      class="has-dropdown"
+                      data-tooltip="tooltip"
+                      data-placement="left"
+                      title="Cài đặt"
+                    >
+                      <a><i class="fas fa-user-cog"></i></a>
+
+                      <!--====== Dropdown ======-->
+
+                      <span class="js-menu-toggle"></span>
+                      <ul style="width: 120px">
+                        <li class="has-dropdown has-dropdown--ul-right-100">
+                          <a
+                            >Ngôn ngữ<i class="fas fa-angle-down u-s-m-l-6"></i
+                          ></a>
+
+                          <!--====== Dropdown ======-->
+
+                          <span class="js-menu-toggle"></span>
+                          <ul style="width: 120px">
+                            <li>
+                              <a class="u-c-brand">TIẾNG VIỆT</a>
+                            </li>
+                            <li>
+                              <a>ENGLISH</a>
+                            </li>
+                          </ul>
+                          <!--====== End - Dropdown ======-->
+                        </li>
+                        <li class="has-dropdown has-dropdown--ul-right-100">
+                          <a
+                            >Tiền tệ<i class="fas fa-angle-down u-s-m-l-6"></i
+                          ></a>
+
+                          <!--====== Dropdown ======-->
+
+                          <span class="js-menu-toggle"></span>
+                          <ul style="width: 225px">
+                            <li>
+                              <a class="u-c-brand">VND - VIỆT NAM ĐỒNG</a>
+                            </li>
+                            <li>
+                              <a>$ - US DOLLAR</a>
+                            </li>
+                            <li>
+                              <a>€ - EURO</a>
+                            </li>
+                          </ul>
+                          <!--====== End - Dropdown ======-->
+                        </li>
+                      </ul>
+                      <!--====== End - Dropdown ======-->
+                    </li>
+                    <li
+                      data-tooltip="tooltip"
+                      data-placement="left"
+                      title="Liên hệ"
+                    >
+                      <a href="tel:+0900901904"
+                        ><i class="fas fa-phone-volume"></i
+                      ></a>
+                    </li>
+                    <li
+                      data-tooltip="tooltip"
+                      data-placement="left"
+                      title="Mail"
+                    >
+                      <a href="mailto:contact@domain.com"
+                        ><i class="far fa-envelope"></i
+                      ></a>
+                    </li>
+                  </ul>
+                  <!--====== End - List ======-->
                 </div>
+                <!--====== End - Menu ======-->
+              </div>
+              <!--====== End - Dropdown Main plugin ======-->
             </div>
-            <!--====== Nav 1 ======-->
-            <nav class="primary-nav primary-nav-wrapper--border">
-                <div class="container">
+            <!--====== End - Primary Nav ======-->
+          </div>
+        </nav>
+        <!--====== End - Nav 1 ======-->
 
-                    <!--====== Primary Nav ======-->
-                    <div class="primary-nav">
+        <!--====== Nav 2 ======-->
+        <nav class="secondary-nav-wrapper">
+          <div class="container">
+            <!--====== Secondary Nav ======-->
+            <div class="secondary-nav">
+              <!--====== Dropdown Main plugin ======-->
+              <div class="menu-init" id="navigation2">
+                <button
+                  class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog"
+                  type="button"
+                ></button>
 
-                        <!--====== Main Logo ======-->
+                <!--====== Menu ======-->
+                <div class="ah-lg-mode">
+                  <span class="ah-close">✕ Đóng</span>
 
-                        <a class="main-logo image-logo" href="index.html">
-                            <img src="images/logo/LOGO.png" alt="UEH Event Hub">
-                        </a>
-                        <!--====== End - Main Logo ======-->
+                  <!--====== List ======-->
+                  <ul
+                    class="ah-list ah-list--design2 ah-list--link-color-secondary"
+                  >
+                    <li>
+                      <a href="index.html">TRANG CHỦ</a>
+                    </li>
+                    <li class="has-dropdown">
+                      <a href="shop-side-version-2.html"
+                        >SỰ KIỆN<i class="fas fa-angle-down u-s-m-l-6"></i
+                      ></a>
 
+                      <!--====== Dropdown ======-->
 
-                        <!--====== Search Form ======-->
-                        <form class="main-form">
-
-                            <label for="main-search"></label>
-
-                            <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Tìm kiếm">
-
-                            <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
-                        <!--====== End - Search Form ======-->
-                        
-
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation">
-
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
-
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
-
-                                <span class="ah-close">✕ Close </span>
-
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Tài khoản">
-
-                                        <a><i class="far fa-user-circle"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li>
-
-                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
-
-                                                    <span>Tài khoản</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
-
-                                                    <span>Đăng ký</span></a></li>
-                                            <li>
-
-                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
-
-                                                    <span>Đăng nhập</span></a></li>
-                                            <li>
-
-                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
-
-                                                    <span>Đăng xuất</span></a></li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Cài đặt">
-
-                                        <a><i class="fas fa-user-cog"></i></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:120px">
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Ngôn ngữ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:120px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">TIẾNG VIỆT</a></li>
-                                                    <li>
-                                                        <a>ENGLISH</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                            <li class="has-dropdown has-dropdown--ul-right-100">
-
-                                                <a>Tiền tệ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
-
-                                                <!--====== Dropdown ======-->
-
-                                                <span class="js-menu-toggle"></span>
-                                                <ul style="width:225px">
-                                                    <li>
-
-                                                        <a class="u-c-brand">VND - VIỆT NAM ĐỒNG</a></li>
-                                                    <li>
-
-                                                        <a>$ - US DOLLAR</a></li>
-                                                    <li>
-
-                                                        <a>€ - EURO</a></li>
-                                                </ul>
-                                                <!--====== End - Dropdown ======-->
-                                            </li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
-
-                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
-                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
-
-                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
-                                </ul>
-                                <!--====== End - List ======-->
-                            </div>
-                            <!--====== End - Menu ======-->
-                        </div>
-                        <!--====== End - Dropdown Main plugin ======-->
-                    </div>
-                    <!--====== End - Primary Nav ======-->
+                      <span class="js-menu-toggle"></span>
+                      <ul style="width: 170px">
+                        <li>
+                          <a href="shop-side-version-2.html">Workshop</a>
+                        </li>
+                        <li>
+                          <a href="shop-side-version-2.html">Webinar</a>
+                        </li>
+                        <li>
+                          <a href="shop-side-version-2.html">Ceremony</a>
+                        </li>
+                        <li>
+                          <a href="shop-side-version-2.html">Cuộc thi</a>
+                        </li>
+                        <li>
+                          <a href="shop-side-version-2.html">Festival</a>
+                        </li>
+                        <li>
+                          <a href="shop-side-version-2.html">Talkshow</a>
+                        </li>
+                      </ul>
+                      <!--====== End - Dropdown ======-->
+                    </li>
+                    <li>
+                      <a href="contact.html">LIÊN HỆ</a>
+                    </li>
+                    <li>
+                      <a href="about.html">VỀ CHÚNG TÔI</a>
+                    </li>
+                  </ul>
+                  <!--====== End - List ======-->
                 </div>
-            </nav>
-            <!--====== End - Nav 1 ======-->
-              
+                <!--====== End - Menu ======-->
+              </div>
+              <!--====== End - Dropdown Main plugin ======-->
 
-            <!--====== Nav 2 ======-->
-            <nav class="secondary-nav-wrapper">
-                <div class="container">
-                           
-                    <!--====== Secondary Nav ======-->
-                    <div class="secondary-nav">
+              <!--====== Dropdown Main plugin ======-->
+              <div class="menu-init" id="navigation3">
+                <button
+                  class="btn btn--icon toggle-button toggle-button--secondary fas fa-shopping-bag toggle-button-shop"
+                  type="button"
+                ></button>
 
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation2">
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog" type="button"></button>
+                <span class="total-item-round">2</span>
 
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
+                <!--====== Menu ======-->
+                <div class="ah-lg-mode">
+                  <span class="ah-close">✕ Đóng</span>
 
-                                <span class="ah-close">✕ Đóng</span>
+                  <!--====== List ======-->
+                  <ul
+                    class="ah-list ah-list--design1 ah-list--link-color-secondary"
+                  >
+                    <li>
+                      <a href="index.html"
+                        ><i class="fas fa-home u-c-brand"></i
+                      ></a>
+                    </li>
+                    <li>
+                      <a href="wishlist.html"><i class="far fa-heart"></i></a>
+                    </li>
+                    <li class="has-dropdown">
+                      <a class="mini-cart-shop-link"
+                        ><i class="fas fa-shopping-bag"></i>
 
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
-                                    <li>
+                        <span class="total-item-round">2</span></a
+                      >
 
-                                        <a href="index.html">TRANG CHỦ</a></li>
-                                    <li class="has-dropdown">
+                      <!--====== Dropdown ======-->
 
-                                        <a href="shop-side-version-2.html">SỰ KIỆN<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+                      <span class="js-menu-toggle"></span>
+                      <div class="mini-cart">
+                        <!--====== Mini Product Container ======-->
+                        <div
+                          class="mini-product-container gl-scroll u-s-m-b-15"
+                        >
+                          <!--====== Card for mini cart ======-->
+                          <div class="card-mini-product">
+                            <div class="mini-product">
+                              <div class="mini-product__image-wrapper">
+                                <a
+                                  class="mini-product__link"
+                                  href="product-detail.html"
+                                >
+                                  <img
+                                    class="u-img-fluid"
+                                    src="images/anh su kien/su kien 8.jpg"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="mini-product__info-wrapper">
+                                <span class="mini-product__category">
+                                  <a href="shop-side-version-2.html"
+                                    >Festival</a
+                                  ></span
+                                >
 
-                                        <!--====== Dropdown ======-->
+                                <span class="mini-product__name">
+                                  <a href="product-detail.html"
+                                    >LỄ HỘI VĂN HÓA CHÀO ĐÓN TÂN SINH VIÊN KHÓA
+                                    51 – NỐI VÒNG TAY LỚN 2025: GLOW TRACK</a
+                                  ></span
+                                >
 
-                                        <span class="js-menu-toggle"></span>
-                                        <ul style="width:170px">
-                                            <li>
+                                <span class="mini-product__quantity">1 x</span>
 
-                                                <a href="shop-side-version-2.html">Workshop</a></li>
-                                            <li>
-
-                                                <a href="shop-side-version-2.html">Webinar</a></li>
-                                            <li>
-
-                                                <a href="shop-side-version-2.html">Ceremony</a></li>
-                                            <li>
-
-                                                <a href="shop-side-version-2.html">Cuộc thi</a></li>
-                                            <li>
-
-                                                <a href="shop-side-version-2.html">Festival</a></li>
-                                            <li>
-
-                                                <a href="shop-side-version-2.html">Talkshow</a></li>
-                                        </ul>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                    <li>
-
-                                        <a href="contact.html">LIÊN HỆ</a></li>
-                                    <li>
-
-                                        <a href="about.html">VỀ CHÚNG TÔI</a></li>
-                                </ul>
-                                <!--====== End - List ======-->
+                                <span class="mini-product__price">50.000₫</span>
+                              </div>
                             </div>
-                            <!--====== End - Menu ======-->
-                        </div>
-                        <!--====== End - Dropdown Main plugin ======-->
 
+                            <a
+                              class="mini-product__delete-link far fa-trash-alt"
+                            ></a>
+                          </div>
+                          <!--====== End - Card for mini cart ======-->
 
-                        <!--====== Dropdown Main plugin ======-->
-                        <div class="menu-init" id="navigation3">                         
-                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-shopping-bag toggle-button-shop" type="button"></button>
+                          <!--====== Card for mini cart ======-->
+                          <div class="card-mini-product">
+                            <div class="mini-product">
+                              <div class="mini-product__image-wrapper">
+                                <a
+                                  class="mini-product__link"
+                                  href="product-detail.html"
+                                >
+                                  <img
+                                    class="u-img-fluid"
+                                    src="images/anh su kien/su kien 3.jpg"
+                                    alt=""
+                                /></a>
+                              </div>
+                              <div class="mini-product__info-wrapper">
+                                <span class="mini-product__category">
+                                  <a href="shop-side-version-2.html"
+                                    >Ceremony</a
+                                  ></span
+                                >
 
-                            <span class="total-item-round">2</span>
+                                <span class="mini-product__name">
+                                  <a href="product-detail.html"
+                                    >LỄ TUYÊN DƯƠNG SINH VIÊN 5 TỐT VÀ CÁN BỘ
+                                    ĐOÀN - HỘI XUẤT SẮC 2025</a
+                                  ></span
+                                >
 
-                            <!--====== Menu ======-->
-                            <div class="ah-lg-mode">
+                                <span class="mini-product__quantity">1 x</span>
 
-                                <span class="ah-close">✕ Đóng</span>
-
-                                <!--====== List ======-->
-                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
-                                    <li>
-
-                                        <a href="index.html"><i class="fas fa-home u-c-brand"></i></a></li>
-                                    <li>
-
-                                        <a href="wishlist.html"><i class="far fa-heart"></i></a></li>
-                                    <li class="has-dropdown">
-
-                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
-
-                                            <span class="total-item-round">2</span></a>
-
-                                        <!--====== Dropdown ======-->
-
-                                        <span class="js-menu-toggle"></span>
-                                        <div class="mini-cart">
-
-                                            <!--====== Mini Product Container ======-->
-                                            <div class="mini-product-container gl-scroll u-s-m-b-15">
-
-                                                <!--====== Card for mini cart ======-->
-                                                <div class="card-mini-product">
-                                                    <div class="mini-product">
-                                                        <div class="mini-product__image-wrapper">
-
-                                                            <a class="mini-product__link" href="product-detail.html">
-
-                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 8.jpg" alt=""></a></div>
-                                                        <div class="mini-product__info-wrapper">
-
-                                                            <span class="mini-product__category">
-
-                                                                <a href="shop-side-version-2.html">Festival</a></span>
-
-                                                            <span class="mini-product__name">
-
-                                                                <a href="product-detail.html">LỄ HỘI VĂN HÓA CHÀO ĐÓN TÂN SINH VIÊN KHÓA 51 – NỐI VÒNG TAY LỚN 2025: GLOW TRACK</a></span>
-
-                                                            <span class="mini-product__quantity">1 x</span>
-
-                                                            <span class="mini-product__price">50.000₫</span></div>
-                                                    </div>
-
-                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                                </div>
-                                                <!--====== End - Card for mini cart ======-->
-
-                                                <!--====== Card for mini cart ======-->
-                                                <div class="card-mini-product">
-                                                    <div class="mini-product">
-                                                        <div class="mini-product__image-wrapper">
-
-                                                            <a class="mini-product__link" href="product-detail.html">
-
-                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 3.jpg" alt=""></a></div>
-                                                        <div class="mini-product__info-wrapper">
-
-                                                            <span class="mini-product__category">
-
-                                                                <a href="shop-side-version-2.html">Ceremony</a></span>
-
-                                                            <span class="mini-product__name">
-
-                                                                <a href="product-detail.html">LỄ TUYÊN DƯƠNG SINH VIÊN 5 TỐT VÀ CÁN BỘ ĐOÀN - HỘI XUẤT SẮC 2025</a></span>
-
-                                                            <span class="mini-product__quantity">1 x</span>
-
-                                                            <span class="mini-product__price">Miễn phí</span></div>
-                                                    </div>
-
-                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
-                                                </div>
-                                                <!--====== End - Card for mini cart ======-->
-                                            </div>
-                                            <!--====== End - Mini Product Container ======-->
-
-
-                                            <!--====== Mini Product Statistics ======-->
-                                            <div class="mini-product-stat">
-                                                <div class="mini-total">
-
-                                                    <span class="subtotal-text">TỔNG TẠM TÍNH</span>
-
-                                                    <span class="subtotal-value">50.000₫</span></div>
-                                                <div class="mini-action">
-
-                                                    <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
-
-                                                    <a class="mini-link btn--e-transparent-secondary-b-2" href="cart.html">XEM GIỎ VÉ</a></div>
-                                            </div>
-                                            <!--====== End - Mini Product Statistics ======-->
-                                        </div>
-                                        <!--====== End - Dropdown ======-->
-                                    </li>
-                                </ul>
-                                <!--====== End - List ======-->
+                                <span class="mini-product__price"
+                                  >Miễn phí</span
+                                >
+                              </div>
                             </div>
-                            <!--====== End - Menu ======-->
+
+                            <a
+                              class="mini-product__delete-link far fa-trash-alt"
+                            ></a>
+                          </div>
+                          <!--====== End - Card for mini cart ======-->
                         </div>
-                        <!--====== End - Dropdown Main plugin ======-->
-                    </div>
-                    <!--====== End - Secondary Nav ======-->
+                        <!--====== End - Mini Product Container ======-->
+
+                        <!--====== Mini Product Statistics ======-->
+                        <div class="mini-product-stat">
+                          <div class="mini-total">
+                            <span class="subtotal-text">TỔNG TẠM TÍNH</span>
+
+                            <span class="subtotal-value">50.000₫</span>
+                          </div>
+                          <div class="mini-action">
+                            <a
+                              class="mini-link btn--e-brand-b-2"
+                              href="checkout.html"
+                              >TIẾN HÀNH THANH TOÁN</a
+                            >
+
+                            <a
+                              class="mini-link btn--e-transparent-secondary-b-2"
+                              href="cart.html"
+                              >XEM GIỎ VÉ</a
+                            >
+                          </div>
+                        </div>
+                        <!--====== End - Mini Product Statistics ======-->
+                      </div>
+                      <!--====== End - Dropdown ======-->
+                    </li>
+                  </ul>
+                  <!--====== End - List ======-->
                 </div>
-            </nav>
-            <!--====== End - Nav 2 ======-->
-        </header>
-        <!--====== End - Main Header ======-->
+                <!--====== End - Menu ======-->
+              </div>
+              <!--====== End - Dropdown Main plugin ======-->
+            </div>
+            <!--====== End - Secondary Nav ======-->
+          </div>
+        </nav>
+        <!--====== End - Nav 2 ======-->
+      </header>
+      <!--====== End - Main Header ======-->
 
       <!--====== Nội dung chính của trang ======-->
       <div class="app-content">
@@ -542,11 +636,15 @@
                           ></span>
                         </div>
                         <div class="shop-w__wrap collapse show" id="s-rating">
-                          <ul class="shop-w__list gl-scroll">
-                            <!--====== Các mức đánh giá ======-->
+                          <ul class="shop-w__list gl-scroll" id="ratingFilter">
                             <li>
                               <div class="rating__check">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  id="rate5"
+                                  value="5"
+                                  class="rating-filter"
+                                />
                                 <div class="rating__check-star-wrap">
                                   <i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
@@ -555,71 +653,86 @@
                                   ><i class="fas fa-star"></i>
                                 </div>
                               </div>
-
                               <span class="shop-w__total-text">(2)</span>
                             </li>
+
                             <li>
                               <div class="rating__check">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  id="rate4"
+                                  value="4"
+                                  class="rating-filter"
+                                />
                                 <div class="rating__check-star-wrap">
                                   <i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="far fa-star"></i>
-
                                   <span>& Up</span>
                                 </div>
                               </div>
-
                               <span class="shop-w__total-text">(8)</span>
                             </li>
+
                             <li>
                               <div class="rating__check">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  id="rate3"
+                                  value="3"
+                                  class="rating-filter"
+                                />
                                 <div class="rating__check-star-wrap">
                                   <i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i>
-
                                   <span>& Up</span>
                                 </div>
                               </div>
-
                               <span class="shop-w__total-text">(10)</span>
                             </li>
+
                             <li>
                               <div class="rating__check">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  id="rate2"
+                                  value="2"
+                                  class="rating-filter"
+                                />
                                 <div class="rating__check-star-wrap">
                                   <i class="fas fa-star"></i
                                   ><i class="fas fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i>
-
                                   <span>& Up</span>
                                 </div>
                               </div>
-
                               <span class="shop-w__total-text">(12)</span>
                             </li>
+
                             <li>
                               <div class="rating__check">
-                                <input type="checkbox" />
+                                <input
+                                  type="checkbox"
+                                  id="rate1"
+                                  value="1"
+                                  class="rating-filter"
+                                />
                                 <div class="rating__check-star-wrap">
                                   <i class="fas fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i
                                   ><i class="far fa-star"></i>
-
                                   <span>& Up</span>
                                 </div>
                               </div>
-
                               <span class="shop-w__total-text">(1)</span>
                             </li>
                           </ul>
@@ -900,22 +1013,35 @@
                         <div class="tool-style__form-wrap">
                           <!--====== Chọn số lượng hiển thị ======-->
                           <div class="u-s-m-b-8">
-                            <select id="displaySelect" class="select-box select-box--transparent-b-2">
-                            <option value="8">Hiển thị: 8</option>
-                            <option value="12" selected>Hiển thị: 12</option>
-                            <option value="16">Hiển thị: 16</option>
-                            <option value="28">Hiển thị: 28</option>
-                          </select>
-                                                    </div>
+                            <select
+                              id="displaySelect"
+                              class="select-box select-box--transparent-b-2"
+                            >
+                              <option value="8">Hiển thị: 8</option>
+                              <option value="12" selected>Hiển thị: 12</option>
+                              <option value="16">Hiển thị: 16</option>
+                              <option value="28">Hiển thị: 28</option>
+                            </select>
+                          </div>
                           <!--====== Chọn cách sắp xếp ======-->
                           <div class="u-s-m-b-8">
-                            <select id="sortSelect" class="select-box select-box--transparent-b-2">
-                            <option value="newest">Sắp xếp theo: Mới nhất</option>
-                            <option value="rating">Sắp xếp theo: Đánh giá cao nhất</option>
-                            <option value="price-asc">Sắp xếp theo: Giá thấp nhất</option>
-                            <option value="price-desc">Sắp xếp theo: Giá cao nhất</option>
-                          </select>
-
+                            <select
+                              id="sortSelect"
+                              class="select-box select-box--transparent-b-2"
+                            >
+                              <option value="newest">
+                                Sắp xếp theo: Mới nhất
+                              </option>
+                              <option value="rating">
+                                Sắp xếp theo: Đánh giá cao nhất
+                              </option>
+                              <option value="price-asc">
+                                Sắp xếp theo: Giá thấp nhất
+                              </option>
+                              <option value="price-desc">
+                                Sắp xếp theo: Giá cao nhất
+                              </option>
+                            </select>
                           </div>
                         </div>
                       </form>
@@ -925,10 +1051,12 @@
                   <div class="shop-p__collection">
                     <div class="row is-grid-active">
                       <!--====== Sự kiện 1 ======-->
-                            <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                              data-price="20000"
-                              data-rating="3.5"
-                              data-date="2025-03-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="3.5"
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <!--====== Hình ảnh sự kiện ======-->
@@ -980,14 +1108,10 @@
                             </div>
                             <!--====== Đánh giá sự kiện ======-->
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-                              <!--====== Số lượng vé ======-->
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <!--====== Giá vé ======-->
                             <div class="product-m__price">20.000 VND</div>
                             <div class="product-m__hover">
@@ -1013,10 +1137,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
                         data-price="0"
                         data-rating="4.5"
-                        data-date="2025-03-10">
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1062,14 +1188,10 @@
                               </a>
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
-                              <span class="product-m__review">(5)</span>
+                              <span class="stars"></span>
+                              <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">10.000 VND</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1093,10 +1215,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="50000"
-                          data-rating="4"
-                          data-date="2025-05-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="50000"
+                        data-rating="4"
+                        data-date="2025-05-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1142,14 +1266,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">10.000 VND</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1174,10 +1294,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="0"
-                          data-rating="5"
-                          data-date="2025-03-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="0"
+                        data-rating="5"
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1223,14 +1345,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">Miễn phí</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1255,10 +1373,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
                         data-price="20000"
                         data-rating="3.5"
-                        data-date="2025-03-10">
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1304,14 +1424,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">Miễn phí</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1336,10 +1452,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="20000"
-                          data-rating="3.5"
-                          data-date="2025-06-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="3.5"
+                        data-date="2025-06-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1385,14 +1503,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">Miễn phí</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1417,10 +1531,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                              data-price="0"
-                              data-rating="3.5"
-                              data-date="2025-03-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="0"
+                        data-rating="3.5"
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1466,14 +1582,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">Miễn phí</div>
                             <div class="product-m__hover">
                               <div class="product-m__preview-description">
@@ -1497,10 +1609,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="50000"
-                          data-rating="3.5"
-                          data-date="2025-03-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="50000"
+                        data-rating="3.5"
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1546,14 +1660,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">
                               15.000 VND
 
@@ -1582,10 +1692,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="20000"
-                          data-rating="4.5"
-                          data-date="2025-03-15">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="4.5"
+                        data-date="2025-03-15"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1631,14 +1743,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">
                               15.000 VND
 
@@ -1668,10 +1776,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="20000"
-                          data-rating="5"
-                          data-date="2025-03-10">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="5"
+                        data-date="2025-03-10"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1716,14 +1826,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">
                               Miễn phí
 
@@ -1752,10 +1858,12 @@
                           </div>
                         </div>
                       </div>
-                      <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="20000"
-                          data-rating="3.5"
-                          data-date="2025-03-15">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="3.5"
+                        data-date="2025-03-15"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1800,14 +1908,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">
                               Miễn phí
 
@@ -1837,10 +1941,12 @@
                           </div>
                         </div>
                       </div>
-                     <div class="col-lg-4 col-md-6 col-sm-6 product-item"
-                          data-price="20000"
-                          data-rating="3.5"
-                          data-date="2025-03-16">
+                      <div
+                        class="col-lg-4 col-md-6 col-sm-6 product-item"
+                        data-price="20000"
+                        data-rating="3.5"
+                        data-date="2025-03-16"
+                      >
                         <div class="product-m">
                           <div class="product-m__thumb">
                             <a
@@ -1886,14 +1992,10 @@
                               >
                             </div>
                             <div class="product-m__rating gl-rating-style">
-                              <i class="fas fa-star"></i
-                              ><i class="fas fa-star"></i
-                              ><i class="fas fa-star-half-alt"></i
-                              ><i class="far fa-star"></i
-                              ><i class="far fa-star"></i>
-
+                              <span class="stars"></span>
                               <span class="product-m__review">(23)</span>
                             </div>
+
                             <div class="product-m__price">
                               10.000 VND
 
@@ -1958,64 +2060,67 @@
       </div>
       <!--====== Kết thúc - App Content ======-->
 
-        <!--====== Main Footer ======-->
-            
-        <footer class="outer-footer">
-          <div class="container">
-              <div class="row footer-row">
-          
-                  <!-- LOGO UEH -->
-                  <div class="footer-logo">
-                      <img src="images/logo/LOGO.png">
-                  </div>
-          
-                  <!-- THÔNG TIN LIÊN HỆ -->
-                  <div class="footer-col">
-                      <span class="outer-footer__content-title">Thông tin liên hệ</span>
-          
-                      <div class="outer-footer__text-wrap">
-                          <i class="fas fa-map-marker-alt"></i>
-                          <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, TP. Hồ Chí Minh</span>
-                      </div>
-          
-                      <div class="outer-footer__text-wrap">
-                          <i class="fas fa-phone-volume"></i>
-                          <span>(028) 7306.1976</span>
-                      </div>
-          
-                      <div class="outer-footer__text-wrap">
-                          <i class="far fa-envelope"></i>
-                          <span>dsa@ueh.edu.vn</span>
-                      </div>
-          
-                      <div class="outer-footer__text-wrap">
-                          <i class="fas fa-globe"></i>
-                          <span>ueheventhub.vn</span>
-                      </div>
-                  </div>
-          
-                  <!-- ĐIỀU KHOẢN & QUY ĐỊNH -->
-                  <div class="footer-col">
-                      <span class="outer-footer__content-title">Điều khoản & Quy định</span>
-          
-                      <p><strong>Dành cho Khách hàng</strong></p>
-                      <p>Điều khoản sử dụng cho Khách hàng</p>
-          
-                      <p style="margin-top:12px"><strong>Dành cho Ban tổ chức</strong></p>
-                      <p>Điều khoản sử dụng cho Ban tổ chức</p>
-                  </div>
-          
+      <!--====== Main Footer ======-->
+
+      <footer class="outer-footer">
+        <div class="container">
+          <div class="row footer-row">
+            <!-- LOGO UEH -->
+            <div class="footer-logo">
+              <img src="images/logo/LOGO.png" />
+            </div>
+
+            <!-- THÔNG TIN LIÊN HỆ -->
+            <div class="footer-col">
+              <span class="outer-footer__content-title">Thông tin liên hệ</span>
+
+              <div class="outer-footer__text-wrap">
+                <i class="fas fa-map-marker-alt"></i>
+                <span
+                  >279 Nguyễn Tri Phương, Phường 5, Quận 10, TP. Hồ Chí
+                  Minh</span
+                >
               </div>
-          
-              <!-- ICON MXH -->
-              <div class="footer-social">
-                  <a href="#"><i class="fab fa-facebook-f"></i></a>
-                  <a href="#"><i class="fab fa-instagram"></i></a>
+
+              <div class="outer-footer__text-wrap">
+                <i class="fas fa-phone-volume"></i>
+                <span>(028) 7306.1976</span>
               </div>
+
+              <div class="outer-footer__text-wrap">
+                <i class="far fa-envelope"></i>
+                <span>dsa@ueh.edu.vn</span>
+              </div>
+
+              <div class="outer-footer__text-wrap">
+                <i class="fas fa-globe"></i>
+                <span>ueheventhub.vn</span>
+              </div>
+            </div>
+
+            <!-- ĐIỀU KHOẢN & QUY ĐỊNH -->
+            <div class="footer-col">
+              <span class="outer-footer__content-title"
+                >Điều khoản & Quy định</span
+              >
+
+              <p><strong>Dành cho Khách hàng</strong></p>
+              <p>Điều khoản sử dụng cho Khách hàng</p>
+
+              <p style="margin-top: 12px">
+                <strong>Dành cho Ban tổ chức</strong>
+              </p>
+              <p>Điều khoản sử dụng cho Ban tổ chức</p>
+            </div>
           </div>
+
+          <!-- ICON MXH -->
+          <div class="footer-social">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
       </footer>
-            
-        
 
       <!--====== Modal Section ======-->
 
@@ -2197,67 +2302,83 @@
                       </ul>
                     </div>
                     <div class="opt-block">
-                    <!-- THỜI GIAN -->
-                    <div class="filter-block">
-                    <div class="filter-title">Thời gian</div>
+                      <!-- THỜI GIAN -->
+                      <div class="filter-block">
+                        <div class="filter-title">Thời gian</div>
 
-                    <div class="filter-options">
-                      <input type="radio" name="time" id="time-14" checked>
-                      <label for="time-14" class="filter-box">14:00</label>
+                        <div class="filter-options">
+                          <input
+                            type="radio"
+                            name="time"
+                            id="time-14"
+                            checked
+                          />
+                          <label for="time-14" class="filter-box">14:00</label>
 
-                      <input type="radio" name="time" id="time-17">
-                      <label for="time-17" class="filter-box">17:00</label>
-                    </div>
-                  </div>
-                  <!-- ĐỐI TƯỢNG -->
-                  <div class="filter-block">
-                    <div class="filter-title">Đối tượng</div>
-
-                    <div class="filter-options">
-                      <input type="radio" name="target" id="sv-ueh" checked>
-                      <label for="sv-ueh" class="filter-box">Sinh viên UEH</label>
-
-                      <input type="radio" name="target" id="sv-ngoai">
-                      <label for="sv-ngoai" class="filter-box">Sinh viên ngoài trường</label>
-
-                      <input type="radio" name="target" id="khac">
-                      <label for="khac" class="filter-box">Khác</label>
-                    </div>
-                  </div>
-                    <div class="u-s-m-b-15">
-                      <form class="pd-detail__form">
-                        <div class="pd-detail-inline-2">
-                          <div class="u-s-m-b-15">
-                            <!--====== Input Counter ======-->
-                            <div class="input-counter">
-                              <span
-                                class="input-counter__minus fas fa-minus"
-                              ></span>
-
-                              <input
-                                class="input-counter__text input-counter--text-primary-style"
-                                type="text"
-                                value="1"
-                                data-min="1"
-                                data-max="1000"
-                              />
-
-                              <span
-                                class="input-counter__plus fas fa-plus"
-                              ></span>
-                            </div>
-                            <!--====== End - Input Counter ======-->
-                            
-                          </div>
-                          <div class="u-s-m-b-15">
-                            <button class="btn btn--e-brand-b-2" type="submit">
-                              Thêm vào giỏ hàng
-                            </button>
-                              </div>
-                            </div>
-                          </form>
+                          <input type="radio" name="time" id="time-17" />
+                          <label for="time-17" class="filter-box">17:00</label>
                         </div>
                       </div>
+                      <!-- ĐỐI TƯỢNG -->
+                      <div class="filter-block">
+                        <div class="filter-title">Đối tượng</div>
+
+                        <div class="filter-options">
+                          <input
+                            type="radio"
+                            name="target"
+                            id="sv-ueh"
+                            checked
+                          />
+                          <label for="sv-ueh" class="filter-box"
+                            >Sinh viên UEH</label
+                          >
+
+                          <input type="radio" name="target" id="sv-ngoai" />
+                          <label for="sv-ngoai" class="filter-box"
+                            >Sinh viên ngoài trường</label
+                          >
+
+                          <input type="radio" name="target" id="khac" />
+                          <label for="khac" class="filter-box">Khác</label>
+                        </div>
+                      </div>
+                      <div class="u-s-m-b-15">
+                        <form class="pd-detail__form">
+                          <div class="pd-detail-inline-2">
+                            <div class="u-s-m-b-15">
+                              <!--====== Input Counter ======-->
+                              <div class="input-counter">
+                                <span
+                                  class="input-counter__minus fas fa-minus"
+                                ></span>
+
+                                <input
+                                  class="input-counter__text input-counter--text-primary-style"
+                                  type="text"
+                                  value="1"
+                                  data-min="1"
+                                  data-max="1000"
+                                />
+
+                                <span
+                                  class="input-counter__plus fas fa-plus"
+                                ></span>
+                              </div>
+                              <!--====== End - Input Counter ======-->
+                            </div>
+                            <div class="u-s-m-b-15">
+                              <button
+                                class="btn btn--e-brand-b-2"
+                                type="submit"
+                              >
+                                Thêm vào giỏ hàng
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
                     <div class="u-s-m-b-15">
                       <span class="pd-detail__label u-s-m-b-8"
                         >Chính sách hoàn vé:</span
@@ -2393,8 +2514,9 @@
     <!--====== App ======-->
     <script src="js/app.js"></script>
     <!-- JS sắp xếp -->
-<script src="js/sx.js"></script>
-
+    <script src="js/sx.js"></script>
+    <!-- JS rating -->
+    <script src="js/rating.js"></script>
     <!--====== Noscript ======-->
     <noscript>
       <div class="app-setting">
