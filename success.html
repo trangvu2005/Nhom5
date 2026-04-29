@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html class="no-js" lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Nền tảng đặt vé sự kiện, workshop và webinar dành cho sinh viên">
+    <meta name="author" content="">
+    <link href="images/logo/LOGO2.png" rel="shortcut icon">
+    <title>Thanh toán - UEH EVENT HUB</title>
+
+    <!--====== Google Font ======-->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
+
+    <!--====== Vendor Css ======-->
+    <link rel="stylesheet" href="css/vendor.css">
+
+    <!--====== Utility-Spacing ======-->
+    <link rel="stylesheet" href="css/utility.css">
+
+    <!--====== App ======-->
+    <link rel="stylesheet" href="css/app.css">
+</head>
+<script src="js/christmas-stars.js"></script>
+<body class="config">
+    <!-- Santa Sticker -->
+    <img src="images/logo/santa-sticker.png"
+        class="santa-sticker left-santa"
+        alt="Santa Claus">
+
+    <img src="images/logo/santa-sticker.png"
+        class="santa-sticker right-santa"
+        alt="Santa Claus">
+    
+    <div class="christmas-stars"></div>
+
+
+    <div class="preloader is-active">
+        <div class="preloader__wrap">
+
+            <img class="preloader__img" src="images/logo/logoUEH3.png" alt=""></div>
+    </div>
+
+    <!--====== Main App ======-->
+    <div id="app">
+
+        <!--====== Main Header ======-->
+        <header class="header--style-1">
+
+            <div class="header-marquee">
+                <div class="marquee-track christmas-text">
+                  ✨ 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️ 🎁 🎄 MERRY&nbsp;CHRISTMAS 🎄 ✨ ❄️
+                </div>
+            </div>
+            <!--====== Nav 1 ======-->
+            <nav class="primary-nav primary-nav-wrapper--border">
+                <div class="container">
+
+                    <!--====== Primary Nav ======-->
+                    <div class="primary-nav">
+
+                        <!--====== Main Logo ======-->
+
+                        <a class="main-logo image-logo" href="index.html">
+                            <img src="images/logo/LOGO.png" alt="UEH Event Hub">
+                        </a>
+                        <!--====== End - Main Logo ======-->
+
+
+                        <!--====== Search Form ======-->
+                        <form class="main-form">
+
+                            <label for="main-search"></label>
+
+                            <input class="input-text input-text--border-radius input-text--style-1" type="text" id="main-search" placeholder="Tìm kiếm">
+
+                            <button class="btn btn--icon fas fa-search main-search-button" type="submit"></button></form>
+                        <!--====== End - Search Form ======-->
+                        
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation">
+
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cogs" type="button"></button>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Close </span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Tài khoản">
+
+                                        <a><i class="far fa-user-circle"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:120px">
+                                            <li>
+
+                                                <a href="dashboard.html"><i class="fas fa-user-circle u-s-m-r-6"></i>
+
+                                                    <span>Tài khoản</span></a></li>
+                                            <li>
+
+                                                <a href="signup.html"><i class="fas fa-user-plus u-s-m-r-6"></i>
+
+                                                    <span>Đăng ký</span></a></li>
+                                            <li>
+
+                                                <a href="signin.html"><i class="fas fa-lock u-s-m-r-6"></i>
+
+                                                    <span>Đăng nhập</span></a></li>
+                                            <li>
+
+                                                <a href="signup.html"><i class="fas fa-lock-open u-s-m-r-6"></i>
+
+                                                    <span>Đăng xuất</span></a></li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li class="has-dropdown" data-tooltip="tooltip" data-placement="left" title="Cài đặt">
+
+                                        <a><i class="fas fa-user-cog"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:120px">
+                                            <li class="has-dropdown has-dropdown--ul-right-100">
+
+                                                <a>Ngôn ngữ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                                <!--====== Dropdown ======-->
+
+                                                <span class="js-menu-toggle"></span>
+                                                <ul style="width:120px">
+                                                    <li>
+
+                                                        <a class="u-c-brand">TIẾNG VIỆT</a></li>
+                                                    <li>
+                                                        <a>ENGLISH</a></li>
+                                                </ul>
+                                                <!--====== End - Dropdown ======-->
+                                            </li>
+                                            <li class="has-dropdown has-dropdown--ul-right-100">
+
+                                                <a>Tiền tệ<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                                <!--====== Dropdown ======-->
+
+                                                <span class="js-menu-toggle"></span>
+                                                <ul style="width:225px">
+                                                    <li>
+
+                                                        <a class="u-c-brand">VND - VIỆT NAM ĐỒNG</a></li>
+                                                    <li>
+
+                                                        <a>$ - US DOLLAR</a></li>
+                                                    <li>
+
+                                                        <a>€ - EURO</a></li>
+                                                </ul>
+                                                <!--====== End - Dropdown ======-->
+                                            </li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li data-tooltip="tooltip" data-placement="left" title="Liên hệ">
+
+                                        <a href="tel:+0900901904"><i class="fas fa-phone-volume"></i></a></li>
+                                    <li data-tooltip="tooltip" data-placement="left" title="Mail">
+
+                                        <a href="mailto:contact@domain.com"><i class="far fa-envelope"></i></a></li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+                    </div>
+                    <!--====== End - Primary Nav ======-->
+                </div>
+            </nav>
+            <!--====== End - Nav 1 ======-->
+              
+
+            <!--====== Nav 2 ======-->
+            <nav class="secondary-nav-wrapper">
+                <div class="container">
+                           
+                    <!--====== Secondary Nav ======-->
+                    <div class="secondary-nav">
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation2">
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-cog" type="button"></button>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Đóng</span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design2 ah-list--link-color-secondary">
+                                    <li>
+
+                                        <a href="index.html">TRANG CHỦ</a></li>
+                                    <li class="has-dropdown">
+
+                                        <a href="shop-side-version-2.html">SỰ KIỆN<i class="fas fa-angle-down u-s-m-l-6"></i></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <ul style="width:170px">
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Workshop</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Webinar</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Ceremony</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Cuộc thi</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Festival</a></li>
+                                            <li>
+
+                                                <a href="shop-side-version-2.html">Talkshow</a></li>
+                                        </ul>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                    <li>
+
+                                        <a href="contact.html">LIÊN HỆ</a></li>
+                                    <li>
+
+                                        <a href="about.html">VỀ CHÚNG TÔI</a></li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+
+
+                        <!--====== Dropdown Main plugin ======-->
+                        <div class="menu-init" id="navigation3">                         
+                            <button class="btn btn--icon toggle-button toggle-button--secondary fas fa-shopping-bag toggle-button-shop" type="button"></button>
+
+                            <span class="total-item-round">2</span>
+
+                            <!--====== Menu ======-->
+                            <div class="ah-lg-mode">
+
+                                <span class="ah-close">✕ Đóng</span>
+
+                                <!--====== List ======-->
+                                <ul class="ah-list ah-list--design1 ah-list--link-color-secondary">
+                                    <li>
+
+                                        <a href="index.html"><i class="fas fa-home u-c-brand"></i></a></li>
+                                    <li>
+
+                                        <a href="wishlist.html"><i class="far fa-heart"></i></a></li>
+                                    <li class="has-dropdown">
+
+                                        <a class="mini-cart-shop-link"><i class="fas fa-shopping-bag"></i>
+
+                                            <span class="total-item-round">2</span></a>
+
+                                        <!--====== Dropdown ======-->
+
+                                        <span class="js-menu-toggle"></span>
+                                        <div class="mini-cart">
+
+                                            <!--====== Mini Product Container ======-->
+                                            <div class="mini-product-container gl-scroll u-s-m-b-15">
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+
+                                                            <a class="mini-product__link" href="product-detail.html">
+
+                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 8.jpg" alt=""></a></div>
+                                                        <div class="mini-product__info-wrapper">
+
+                                                            <span class="mini-product__category">
+
+                                                                <a href="shop-side-version-2.html">Festival</a></span>
+
+                                                            <span class="mini-product__name">
+
+                                                                <a href="product-detail.html">LỄ HỘI VĂN HÓA CHÀO ĐÓN TÂN SINH VIÊN KHÓA 51 – NỐI VÒNG TAY LỚN 2025: GLOW TRACK</a></span>
+
+                                                            <span class="mini-product__quantity">1 x</span>
+
+                                                            <span class="mini-product__price">50.000₫</span></div>
+                                                    </div>
+
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+
+                                                <!--====== Card for mini cart ======-->
+                                                <div class="card-mini-product">
+                                                    <div class="mini-product">
+                                                        <div class="mini-product__image-wrapper">
+
+                                                            <a class="mini-product__link" href="product-detail.html">
+
+                                                                <img class="u-img-fluid" src="images/anh su kien/su kien 3.jpg" alt=""></a></div>
+                                                        <div class="mini-product__info-wrapper">
+
+                                                            <span class="mini-product__category">
+
+                                                                <a href="shop-side-version-2.html">Ceremony</a></span>
+
+                                                            <span class="mini-product__name">
+
+                                                                <a href="product-detail.html">LỄ TUYÊN DƯƠNG SINH VIÊN 5 TỐT VÀ CÁN BỘ ĐOÀN - HỘI XUẤT SẮC 2025</a></span>
+
+                                                            <span class="mini-product__quantity">1 x</span>
+
+                                                            <span class="mini-product__price">Miễn phí</span></div>
+                                                    </div>
+
+                                                    <a class="mini-product__delete-link far fa-trash-alt"></a>
+                                                </div>
+                                                <!--====== End - Card for mini cart ======-->
+                                            </div>
+                                            <!--====== End - Mini Product Container ======-->
+
+
+                                            <!--====== Mini Product Statistics ======-->
+                                            <div class="mini-product-stat">
+                                                <div class="mini-total">
+
+                                                    <span class="subtotal-text">TỔNG TẠM TÍNH</span>
+
+                                                    <span class="subtotal-value">50.000₫</span></div>
+                                                <div class="mini-action">
+
+                                                    <a class="mini-link btn--e-brand-b-2" href="checkout.html">TIẾN HÀNH THANH TOÁN</a>
+
+                                                    <a class="mini-link btn--e-transparent-secondary-b-2" href="cart.html">XEM GIỎ VÉ</a></div>
+                                            </div>
+                                            <!--====== End - Mini Product Statistics ======-->
+                                        </div>
+                                        <!--====== End - Dropdown ======-->
+                                    </li>
+                                </ul>
+                                <!--====== End - List ======-->
+                            </div>
+                            <!--====== End - Menu ======-->
+                        </div>
+                        <!--====== End - Dropdown Main plugin ======-->
+                    </div>
+                    <!--====== End - Secondary Nav ======-->
+                </div>
+            </nav>
+            <!--====== End - Nav 2 ======-->
+        </header>
+        <!--====== End - Main Header ======-->
+
+
+        <!--====== SUCCESS CONTENT ======-->
+        <div class="app-content">
+            <div class="u-s-p-y-60">
+                <div class="section__content">
+                    <div class="container">
+        
+                        <div style="max-width:600px; margin:auto; text-align:center; background:#fff; padding:40px; border-radius:10px; box-shadow:0 0 10px rgba(0,0,0,0.1);">
+        
+                            <div style="font-size:60px; color:green;">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+        
+                            <h1 style="color:green;">Thanh toán thành công!</h1>
+        
+                            <hr>
+        
+                            <p><strong>Mã đơn hàng:</strong></p>
+                            <h3 id="orderId"></h3>
+        
+                            <p><strong>Số tiền:</strong></p>
+                            <h3 id="amount"></h3>
+        
+                            <p><strong>Phương thức:</strong></p>
+                            <h3 id="method"></h3>
+        
+                            <hr>
+        
+                            <p>Giao dịch đã được xử lý thành công 🎉</p>
+        
+                            <div style="margin-top:30px;">
+                                <a href="index.html" class="btn btn--e-brand-b-2">
+                                    Quay về trang chủ
+                                </a>
+                            </div>
+        
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--====== END SUCCESS CONTENT ======-->
+
+        <!--====== Main Footer ======-->
+            
+        <footer class="outer-footer">
+            <div class="container">
+                <div class="row footer-row">
+            
+                    <!-- LOGO UEH -->
+                    <div class="footer-logo">
+                        <img src="images/logo/LOGO.png">
+                    </div>
+            
+                    <!-- THÔNG TIN LIÊN HỆ -->
+                    <div class="footer-col">
+                        <span class="outer-footer__content-title">Thông tin liên hệ</span>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>279 Nguyễn Tri Phương, Phường 5, Quận 10, TP. Hồ Chí Minh</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-phone-volume"></i>
+                            <span>(028) 7306.1976</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="far fa-envelope"></i>
+                            <span>dsa@ueh.edu.vn</span>
+                        </div>
+            
+                        <div class="outer-footer__text-wrap">
+                            <i class="fas fa-globe"></i>
+                            <span>ueheventhub.vn</span>
+                        </div>
+                    </div>
+            
+                    <!-- ĐIỀU KHOẢN & QUY ĐỊNH -->
+                    <div class="footer-col">
+                        <span class="outer-footer__content-title">Điều khoản & Quy định</span>
+            
+                        <p><strong>Dành cho Khách hàng</strong></p>
+                        <p>Điều khoản sử dụng cho Khách hàng</p>
+            
+                        <p style="margin-top:12px"><strong>Dành cho Ban tổ chức</strong></p>
+                        <p>Điều khoản sử dụng cho Ban tổ chức</p>
+                    </div>
+            
+                </div>
+            
+                <!-- ICON MXH -->
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </footer>
+
+
+                        <!--====== End - Main App ======-->
+ <!--====== Modal Section ======-->
+
+
+    <!--====== Quick Look Modal ======-->
+    <div class="modal fade" id="quick-look">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal--shadow">
+
+                <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal">
+                </button>
+
+                <div class="modal-body">
+                    <div class="row">
+
+                        <div class="col-lg-5">
+
+                            <div class="pd-breadcrumb u-s-m-b-30">
+                                <ul class="pd-breadcrumb__list">
+                                    <li class="has-separator">
+                                        <a href="index.html">TRANG CHỦ</a>
+                                    </li>
+                                    <li class="has-separator">
+                                        <a href="shop-side-version-2.html">CUỘC THI</a>
+                                    </li>
+                                    <li class="is-marked">
+                                        <a href="shop-side-version-2.html">UEH ZERO WASTE CAMPUS</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="pd u-s-m-b-30">
+                                <div class="pd-wrap">
+                                    <div id="js-product-detail-modal">
+                                        <div>
+                                            <img class="u-img-fluid" src="images/anh su kien/su kien 21.png"
+                                                alt="Poster sự kiện">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/anh su kien/su kien 21-2.jpg"
+                                                alt="Hoạt động workshop">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-t-15">
+                                    <div id="js-product-detail-modal-thumbnail">
+                                        <div>
+                                            <img class="u-img-fluid" src="images/anh su kien/su kien 21.png" alt="">
+                                        </div>
+                                        <div>
+                                            <img class="u-img-fluid" src="images/anh su kien/su kien 21-2.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-7">
+
+                            <div class="pd-detail">
+
+                                <span class="pd-detail__name">
+                                    <a href="product-detail.html">
+                                        UEH Zero Waste Campus: Workshop Creation – “Tái chế hộp giấy
+                                    </a>
+                                </span>
+
+                                <div class="pd-detail__inline">
+                                    <span class="pd-detail__price">25.000 VND</span>
+                                    <span class="pd-detail__discount">(Giảm 50%)</span>
+                                    <del class="pd-detail__del">50.000 VND</del>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__rating gl-rating-style">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+
+                                        <span class="pd-detail__review u-s-m-l-4">
+                                            <a href="#">23 đánh giá</a>
+                                        </span>
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <div class="pd-detail__inline">
+                                        <span class="pd-detail__stock">200 vé</span>
+                                        <span class="pd-detail__left">Chỉ còn 2 vé cuối</span>
+                                    </div>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__preview-desc">
+                                        UEH Zero Waste Campus: Workshop Creation là buổi workshop thực
+                                        hành giúp người tham dự khám phá cách tái chế – tái sử dụng vật
+                                        liệu, lan tỏa lối sống xanh và giảm rác thải thông qua các hoạt
+                                        động trải nghiệm trực tiếp.
+                                    </span>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__click-wrap">
+                                        <i class="far fa-heart u-s-m-r-6"></i>
+                                        <a href="signin.html">Thêm vào yêu thích</a>
+                                        <span class="pd-detail__click-count">(20)</span>
+                                    </span>
+                                </div>
+
+                                <div class="u-s-m-b-15">
+                                    <span class="pd-detail__click-wrap">
+                                        <i class="far fa-envelope u-s-m-r-6"></i>
+                                        <a href="signin.html">Nhận thông báo</a>
+                                        <span class="pd-detail__click-count">(20)</span>
+                                    </span>
+                                </div>
+
+                                <form class="pd-detail__form">
+
+                                    <div class="u-s-m-b-15">
+                                        <div class="time-box u-s-m-b-15">
+                                            <span class="pd-detail__label u-s-m-b-8">Thời gian:</span>
+                                            <div class="pd-detail__color">
+                                                <div class="time__radio">
+                                                    <input type="radio" id="jet" name="time" checked>
+                                                    <label class="time__radio-label" for="jet">9:00</label>
+                                                </div>
+                                                <div class="time__radio">
+                                                    <input type="radio" id="folly" name="time">
+                                                    <label class="time__radio-label" for="folly">13:00</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="u-s-m-b-15">
+                                        <span class="pd-detail__label u-s-m-b-8">Địa điểm: UEH cơ sở B</span>
+                                    </div>
+
+                                    <div class="u-s-m-b-15">
+                                        <span class="pd-detail__label u-s-m-b-8">Đối tượng</span>
+                                        <div class="pd-detail__size">
+                                            <div class="size__radio">
+                                                <input type="radio" id="xs" name="size" checked>
+                                                <label class="size__radio-label" for="xs">Sinh Viên UEH</label>
+                                            </div>
+                                            <div class="size__radio">
+                                                <input type="radio" id="small" name="size">
+                                                <label class="size__radio-label" for="small">
+                                                    Sinh viên ngoài trường
+                                                </label>
+                                            </div>
+                                            <div class="size__radio">
+                                                <input type="radio" id="medium" name="size">
+                                                <label class="size__radio-label" for="medium">Khác</label>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="pd-detail-inline-2">
+                                        <div class="u-s-m-b-15">
+                                            <div class="input-counter">
+                                                <span class="input-counter__minus fas fa-minus"></span>
+                                                <input class="input-counter__text input-counter--text-primary-style"
+                                                    type="text" value="1" data-min="1" data-max="1000">
+                                                <span class="input-counter__plus fas fa-plus"></span>
+                                            </div>
+                                        </div>
+
+                                        <div class="u-s-m-b-15">
+                                            <button class="btn btn--e-brand-b-2" type="submit">
+                                                Thêm vào giỏ hàng
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== Modal Thêm vào giỏ hàng ======-->
+    <div class="modal fade" id="add-to-cart">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content modal-radius modal-shadow">
+                <button class="btn dismiss-button fas fa-times" type="button" data-dismiss="modal"></button>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-12">
+                            <div class="success u-s-m-b-30">
+                                <div class="success__text-wrap">
+                                    <i class="fas fa-check"></i>
+
+                                    <span>Thêm vé sự kiện thành công!</span>
+                                </div>
+                                <div class="success__img-wrap">
+                                    <img class="u-img-fluid" src="images/anh su kien/su kien 1.jpg" alt="" />
+                                </div>
+                                <div class="success__info-wrap">
+                                    <span class="success__name">AI TRONG DOANH NGHIỆP – TỪ CHATBOTS ĐẾN TỰ ĐỘNG
+                                        HÓA</span>
+
+                                    <span class="success__quantity">Số lượng: 1</span>
+
+                                    <span class="success__price">10.000 VND</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-12">
+                            <div class="s-option">
+                                <span class="s-option__text">1 vé sự kiện đã được thêm vào giỏ</span>
+                                <div class="s-option__link-box">
+                                    <a class="s-option__link btn--e-white-brand-shadow" data-dismiss="modal">TIẾP TỤC
+                                        XEM SỰ KIỆN</a>
+
+                                    <a class="s-option__link btn--e-white-brand-shadow" href="cart.html">XEM GIỎ
+                                        HÀNG</a>
+
+                                    <a class="s-option__link btn--e-brand-shadow" href="checkout.html">TIẾN HÀNH THANH
+                                        TOÁN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--====== End - Add to Cart Modal ======-->
+    <!--====== End - Modal Section ======-->
+    </div>
+
+                        <!--====== Google Analytics: change UA-XXXXX-Y to be your site's ID ======-->
+                        <script>
+                            window.ga = function () {
+                                ga.q.push(arguments)
+                            };
+                            ga.q = [];
+                            ga.l = +new Date;
+                            ga('create', 'UA-XXXXX-Y', 'auto');
+                            ga('send', 'pageview')
+                        </script>
+                        <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+                        <!--====== Vendor Js ======-->
+                        <script src="js/vendor.js"></script>
+
+                        <!--====== jQuery Shopnav plugin ======-->
+                        <script src="js/jquery.shopnav.js"></script>
+
+                        <!--====== App ======-->
+                        <script src="js/app.js"></script>
+
+                        <!--====== Noscript ======-->
+                        <noscript>
+                            <div class="app-setting">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="app-setting__wrap">
+                                                <h1 class="app-setting__h1">JavaScript is disabled in your browser.</h1>
+
+                                                <span class="app-setting__text">Please enable JavaScript in your browser
+                                                    or upgrade to a
+                                                    JavaScript-capable browser.</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </noscript>
+                        <script>
+                            document.addEventListener('DOMContentLoaded', function () {
+                                const orderIdInput = document.getElementById('orderId');
+                                // tạo mã đơn hàng tự động
+                                if (orderIdInput) {
+                                    const newOrderId = "UEH" + Date.now();
+                                    orderIdInput.value = newOrderId;
+                                    console.log("Generated Order ID:", newOrderId);
+                                }
+                                const btnSave = document.getElementById('btn-save');
+
+                                btnSave.addEventListener('click', function () {
+                                    let isValid = true;
+                                    // 1. Lấy giá trị các ô nhập
+                                    const name = document.getElementById('full-name');
+                                    const email = document.getElementById('email');
+                                    const phone = document.getElementById('phone');
+
+                                    // 2. Xóa các thông báo lỗi
+                                    document.getElementById('name-error').innerText = "";
+                                    document.getElementById('email-error').innerText = "";
+                                    document.getElementById('phone-error').innerText = "";
+                                    // 3. Kiểm tra Họ Tên
+                                    if (name.value.trim() === "") {
+                                        document.getElementById('name-error').innerText = "Vui lòng nhập họ và tên.";
+                                        isValid = false;
+                                    }
+                                    // 4. Kiểm tra Email 
+                                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                                    if (!emailRegex.test(email.value.trim())) {
+                                        document.getElementById('email-error').innerText = "Email không hợp lệ.";
+                                        isValid = false;
+                                    }
+                                    // 5. Kiểm tra Số điện thoại (chỉ số, 10-11 ký tự)
+                                    const phoneRegex = /^[0-9]{10,11}$/;
+                                    if (!phoneRegex.test(phone.value.trim())) {
+                                        document.getElementById('phone-error').innerText = "Số điện thoại phải có 10-11 chữ số.";
+                                        isValid = false;
+                                    }
+                                    // 6. Xử lý kết quả
+                                    if (isValid) {
+                                        alert("Đã lưu thông tin thành công!");
+                                    } else {
+                                        console.log("Dữ liệu chưa hợp lệ, vui lòng kiểm tra lại các trường đỏ.");
+                                    }
+                                });
+                                const paymentForm = document.querySelector('.checkout-f__payment');
+
+                                paymentForm.addEventListener('submit', function (e) {
+                                    e.preventDefault(); // chặn submit mặc định
+
+                                    // lấy dữ liệu
+                                    const orderId = document.getElementById('orderId').value;
+                                    const amount = document.querySelector('input[name="amount"]').value;
+
+                                    // kiểm tra đã chọn phương thức chưa
+                                    const selectedMethod = document.querySelector('input[name="payment"]:checked');
+                                    if (!selectedMethod) {
+                                        alert("Vui lòng chọn phương thức thanh toán!");
+                                        return;
+                                    }
+
+                                    // kiểm tra checkbox điều khoản
+                                    const agree = document.getElementById('term-and-condition');
+                                    if (!agree.checked) {
+                                        alert("Bạn cần đồng ý điều khoản!");
+                                        return;
+                                    }
+
+                                    // giả lập gửi request thanh toán
+                                    console.log("=== PAYMENT REQUEST ===");
+                                    console.log({
+                                        orderId: orderId,
+                                        amount: amount,
+                                        method: methodText
+                                    });
+
+                                    // loading giả lập
+                                    alert("Đang xử lý thanh toán...");
+
+                                    // chuyển sang trang thành công
+                                    window.location.href = "success.html?orderId=" + orderId + "&amount=" + amount + "&method" + encodeURIComponent(methodText);
+                                });
+                            });
+                        </script>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                                const params = new URLSearchParams(window.location.search);
+                                const orderId = params.get("orderId");
+                        
+                                if (orderId) {
+                                    document.getElementById("orderId").innerText = orderId;
+                                } else {
+                                    document.getElementById("orderId").innerText = "Không xác định";
+                                }
+                            });
+                        </script>
+                        <script>
+                            document.addEventListener("DOMContentLoaded", function () {
+                            
+                                const params = new URLSearchParams(window.location.search);
+                            
+                                const orderId = params.get("orderId");
+                                const amount = params.get("amount");
+                                const method = params.get("method");
+                            
+                                document.getElementById("orderId").innerText = orderId || "N/A";
+                                document.getElementById("amount").innerText = amount ? amount + " VND" : "N/A";
+                                document.getElementById("method").innerText = method || "N/A";
+                            
+                            });
+                        </script>
+</body>
+<script src="js/checkout.js"></script>
+</html>
