@@ -623,7 +623,7 @@
                                                                 <div class="input-counter">
                                                                     <span
                                                                         class="input-counter__minus fas fa-minus"></span>
-                                                                    <input
+                                                                    <input id="quantity"
                                                                         class="input-counter__text input-counter--text-primary-style"
                                                                         type="text" value="1" data-min="1"
                                                                         data-max="1000">
@@ -649,7 +649,7 @@
 
                                                     <tr>
                                                         <td>GIÁ VÉ</td>
-                                                        <td>15.000 VND </td>
+                                                        <td id="price">15.000</td>
                                                     </tr>
                                                     <tr>
                                                         <td>KHUYẾN MÃI</td>
@@ -657,7 +657,7 @@
                                                     </tr>
                                                     <tr>
                                                         <td>TỔNG CỘNG</td>
-                                                        <td>15.000 VND</td>
+                                                        <td id="total">15.000</td>
                                                     </tr>
                                                 </tbody>
                                             </table>
@@ -668,7 +668,11 @@
                                         <div class="o-summary__box">
                                             <h1 class="checkout-f__h1">PHƯƠNG THỨC THANH TOÁN</h1>
 
-                                            <form class="checkout-f__payment">
+                                            <form class="checkout-f__payment" method="GET" action="payment-demo.html">
+                                                <input type="hidden" name="orderId" id="orderId">
+                                                <input type="hidden" name="amount" id="amount"> 
+                                                <input type="hidden" name="description" value="Thanh toan ve su kien UEH">
+                                                <input type="hidden" name="method" id="method">
                                                 <div class="u-s-m-b-10">
                                                     <div class="radio-box">
                                                         <input type="radio" id="bank-transfer" name="payment">
@@ -1211,7 +1215,7 @@
                                         <div class="u-s-m-b-15">
                                             <div class="input-counter">
                                                 <span class="input-counter__minus fas fa-minus"></span>
-                                                <input class="input-counter__text input-counter--text-primary-style"
+                                                <input id="quantity" class="input-counter__text input-counter--text-primary-style"
                                                     type="text" value="1" data-min="1" data-max="1000">
                                                 <span class="input-counter__plus fas fa-plus"></span>
                                             </div>
@@ -1325,7 +1329,15 @@
                             </div>
                         </noscript>
                         <script>
+
                             document.addEventListener('DOMContentLoaded', function () {
+                                const orderIdInput = document.getElementById('orderId');
+                                // tạo mã đơn hàng tự động
+                                if (orderIdInput) {
+                                    const newOrderId = "UEH" + Date.now();
+                                    orderIdInput.value = newOrderId;
+                                    console.log("Generated Order ID:", newOrderId);
+                                }
                                 const btnSave = document.getElementById('btn-save');
 
                                 btnSave.addEventListener('click', function () {
@@ -1363,6 +1375,71 @@
                                         console.log("Dữ liệu chưa hợp lệ, vui lòng kiểm tra lại các trường đỏ.");
                                     }
                                 });
+                                const paymentForm = document.querySelector('.checkout-f__payment');
+
+                                paymentForm.addEventListener('submit', function (e) {
+                                    // KHÔNG preventDefault nữa ❗
+
+                                    const selectedMethod = document.querySelector('input[name="payment"]:checked');
+
+                                    if (!selectedMethod) {
+                                        alert("Vui lòng chọn phương thức thanh toán!");
+                                        e.preventDefault();
+                                        return;
+                                    }
+
+                                    let methodText = "";
+                                    if (selectedMethod.id === "bank-transfer") methodText = "Chuyển khoản ngân hàng";
+                                    if (selectedMethod.id === "card") methodText = "Thẻ tín dụng";
+                                    if (selectedMethod.id === "paypal") methodText = "PayPal";
+
+                                    document.getElementById("method").value = methodText;
+
+                                    const agree = document.getElementById('term-and-condition');
+                                    if (!agree.checked) {
+                                        alert("Bạn cần đồng ý điều khoản!");
+                                        e.preventDefault();
+                                        return;
+                                    }
+
+                                    alert("Đang xử lý thanh toán...");
+                                });
+                                const priceElement = document.getElementById("price");
+                                const totalElement = document.getElementById("total");
+                                const quantityInput = document.getElementById("quantity");
+
+                                // lấy giá gốc (15000)
+                                const basePrice = parseInt(priceElement.innerText.replace(/\./g, ''));
+
+                                function updateTotal() {
+                                    let quantity = parseInt(quantityInput.value) || 1;
+
+                                    if (quantity < 1) quantity = 1;
+
+                                    const total = basePrice * quantity;
+
+                                    // format lại kiểu 15.000
+                                    const formatted = total.toLocaleString("vi-VN");
+
+                                    totalElement.innerText = formatted + " VND";
+
+                                    // update luôn hidden input amount
+                                    document.getElementById("amount").value = total;
+                                }
+
+                                // bắt sự kiện khi đổi số lượng
+                                quantityInput.addEventListener("input", updateTotal);
+
+                                // nếu bạn dùng nút + -
+                                document.querySelectorAll(".input-counter__plus, .input-counter__minus")
+                                    .forEach(btn => {
+                                        btn.addEventListener("click", () => {
+                                            setTimeout(updateTotal, 100); // chờ value update
+                                        });
+                                    });
+
+                                // chạy lần đầu
+                                updateTotal();
                             });
                         </script>
 </body>
