@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Processing</title>
+</head>
+<body style="text-align:center; padding:100px">
+    <h2>Đang xử lý thanh toán...</h2>
+
+<script>
+    const params = new URLSearchParams(window.location.search);
+
+    const orderId = params.get("orderId");
+    const amount = params.get("amount");
+    const method = params.get("method");
+
+    setTimeout(() => {
+        window.location.href = `success.html?orderId=${orderId}&amount=${amount}&method=${encodeURIComponent(method)}`;
+    }, 1500);
+</script>
+
+</body>
+</html>
