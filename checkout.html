@@ -1338,71 +1338,96 @@
                                     orderIdInput.value = newOrderId;
                                     console.log("Generated Order ID:", newOrderId);
                                 }
-                                const btnSave = document.getElementById('btn-save');
 
-                                btnSave.addEventListener('click', function () {
+                                const paymentForm = document.querySelector('.checkout-f__payment');
+
+                                paymentForm.addEventListener('submit', async function (e) {
+                                    e.preventDefault(); // 🚀 CHẶN redirect
+                                    // ===== VALIDATE Ở ĐÂY =====
                                     let isValid = true;
-                                    // 1. Lấy giá trị các ô nhập
-                                    const name = document.getElementById('full-name');
-                                    const email = document.getElementById('email');
-                                    const phone = document.getElementById('phone');
 
-                                    // 2. Xóa các thông báo lỗi
+                                    const nameInput = document.getElementById('full-name');
+                                    const emailInput = document.getElementById('email');
+                                    const phoneInput = document.getElementById('phone');
+
+                                    // reset lỗi
                                     document.getElementById('name-error').innerText = "";
                                     document.getElementById('email-error').innerText = "";
                                     document.getElementById('phone-error').innerText = "";
-                                    // 3. Kiểm tra Họ Tên
-                                    if (name.value.trim() === "") {
-                                        document.getElementById('name-error').innerText = "Vui lòng nhập họ và tên.";
-                                        isValid = false;
-                                    }
-                                    // 4. Kiểm tra Email 
-                                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                    if (!emailRegex.test(email.value.trim())) {
-                                        document.getElementById('email-error').innerText = "Email không hợp lệ.";
-                                        isValid = false;
-                                    }
-                                    // 5. Kiểm tra Số điện thoại (chỉ số, 10-11 ký tự)
-                                    const phoneRegex = /^[0-9]{10,11}$/;
-                                    if (!phoneRegex.test(phone.value.trim())) {
-                                        document.getElementById('phone-error').innerText = "Số điện thoại phải có 10-11 chữ số.";
-                                        isValid = false;
-                                    }
-                                    // 6. Xử lý kết quả
-                                    if (isValid) {
-                                        alert("Đã lưu thông tin thành công!");
-                                    } else {
-                                        console.log("Dữ liệu chưa hợp lệ, vui lòng kiểm tra lại các trường đỏ.");
-                                    }
-                                });
-                                const paymentForm = document.querySelector('.checkout-f__payment');
 
-                                paymentForm.addEventListener('submit', function (e) {
-                                    // KHÔNG preventDefault nữa ❗
+                                    // ===== NAME =====
+                                    if (nameInput.value.trim() === "") {
+                                        document.getElementById('name-error').innerText = "Vui lòng nhập họ tên";
+                                        isValid = false;
+                                    }
+
+                                    // ===== EMAIL (phải gmail) =====
+                                    const emailRegex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+                                    if (!emailRegex.test(emailInput.value.trim())) {
+                                        document.getElementById('email-error').innerText = "Phải nhập Gmail (@gmail.com)";
+                                        isValid = false;
+                                    }
+
+                                    // ===== PHONE (10 số) =====
+                                    const phoneRegex = /^[0-9]{10}$/;
+                                    if (!phoneRegex.test(phoneInput.value.trim())) {
+                                        document.getElementById('phone-error').innerText = "SĐT phải đúng 10 số";
+                                        isValid = false;
+                                    }
+
+                                    // ❌ CHẶN SUBMIT
+                                    if (!isValid) {
+                                        return;
+                                    }
+                                    const name = document.getElementById('full-name').value;
+                                    const email = document.getElementById('email').value;
+                                    const phone = document.getElementById('phone').value;
+                                    const amount = document.getElementById("amount").value;
+                                    const orderId = document.getElementById("orderId").value;
 
                                     const selectedMethod = document.querySelector('input[name="payment"]:checked');
 
                                     if (!selectedMethod) {
                                         alert("Vui lòng chọn phương thức thanh toán!");
-                                        e.preventDefault();
                                         return;
                                     }
 
                                     let methodText = "";
-                                    if (selectedMethod.id === "bank-transfer") methodText = "Chuyển khoản ngân hàng";
-                                    if (selectedMethod.id === "card") methodText = "Thẻ tín dụng";
+                                    if (selectedMethod.id === "bank-transfer") methodText = "Bank";
+                                    if (selectedMethod.id === "card") methodText = "Card";
                                     if (selectedMethod.id === "paypal") methodText = "PayPal";
-
-                                    document.getElementById("method").value = methodText;
 
                                     const agree = document.getElementById('term-and-condition');
                                     if (!agree.checked) {
                                         alert("Bạn cần đồng ý điều khoản!");
-                                        e.preventDefault();
                                         return;
                                     }
 
-                                    alert("Đang xử lý thanh toán...");
+                                    try {
+                                        const res = await fetch("http://localhost:3000/create-order", {
+                                            method: "POST",
+                                            headers: {
+                                                "Content-Type": "application/json"
+                                            },
+                                            body: JSON.stringify({
+                                                order_id: orderId,
+                                                name,
+                                                email,
+                                                phone,
+                                                amount,
+                                                payment_method: methodText
+                                            })
+                                        });
+
+                                        const data = await res.json();
+                                        console.log(data);
+
+                                        window.location.href = `payment-demo.html?orderId=${orderId}&amount=${amount}&method=${methodText}`;
+
+                                    } catch (err) {
+                                        console.error(err);
+                                        alert("❌ Lỗi khi gửi dữ liệu!");
+                                    }
                                 });
                                 const priceElement = document.getElementById("price");
                                 const totalElement = document.getElementById("total");
